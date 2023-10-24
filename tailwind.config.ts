@@ -92,6 +92,7 @@ const config: Config = {
       },
       spacing: {
         "large": "265px",
+        "medium": "120px",
       },
     },
   },
