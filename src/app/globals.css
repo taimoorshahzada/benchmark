@@ -43,3 +43,12 @@ body {
   .lenis.lenis-scrolling iframe {
     pointer-events: none;
   }
+
+.selected-projects-image-blur {
+  transition: all 0.25s linear;
+}
+
+.selected-projects:has(.selected-projects-image-container:hover) .selected-projects-image-container:not(:hover) .selected-projects-image-blur {
+  background: rgba(255, 255, 255, 0.20);
+  backdrop-filter: blur(10px);
+}

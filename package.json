@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sanity/client": "^6.7.1",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.18.1",
     "@studio-freight/lenis": "^1.0.27",
@@ -19,8 +20,8 @@
     "next-seo": "^6.1.0",
     "react": "^18",
     "react-dom": "^18",
-    "sanity": "^3.18.1",
-    "styled-components": "5.2"
+    "styled-components": "5.2",
+    "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
     "@types/node": "^20",

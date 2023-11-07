@@ -16,12 +16,9 @@ import LatestProjects from "@/components/latestProjects";
 import SlideMenu from "@/components/SlideMenu";
 
 export default function Home() {
-
-
-
 	return (
 		<Layout>
-			{/* <SlideMenu /> */}
+			<SlideMenu />
 			<Header />
 			<LazyMotion features={domAnimation}>
 				<m.main
@@ -32,7 +29,7 @@ export default function Home() {
 				>
 					<m.article variants={fade}>
 						<Container>
-							<h1 className="font-medium text-3xl col-span-11 -translate-x-5 -translate-y-10 mb-large">
+							<h1 className="font-medium text-xl lg:text-2xl xl:text-3xl col-span-11 -translate-x-5 -translate-y-10 mb-large">
 								Benchmark <br /> Homes
 							</h1>
 
