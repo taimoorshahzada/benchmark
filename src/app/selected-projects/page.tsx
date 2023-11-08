@@ -3,41 +3,42 @@ import Layout from "@/components/layout";
 import SlideMenu from "@/components/SlideMenu";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import Image from "next/image";
 
 interface ProjectImage {
-  imageUrl: string
+	imageUrl: string;
 }
 
 interface ProjectReference {
-  _ref: string;
-  _type: string;
+	_ref: string;
+	_type: string;
 }
 
 export interface SelectedProject {
-  mainImage: ProjectImage;
-  mainImageTitle: string;
-  mainImageCol: string;
-  image1: ProjectImage;
-  Image1Title: string;
-  image2: ProjectImage;
-  Image2Title: string;
-  _id: string;
-  _rev: string;
-  _type: string;
-  _updatedAt: string;
-  _createdAt: string;
-  mainProject: ProjectReference;
-  firstProject: ProjectReference;
-  secondProject: ProjectReference;
+	mainImage: ProjectImage;
+	mainImageTitle: string;
+	mainImageCol: string;
+	image1: ProjectImage;
+	Image1Title: string;
+	image2: ProjectImage;
+	Image2Title: string;
+	_id: string;
+	_rev: string;
+	_type: string;
+	_updatedAt: string;
+	_createdAt: string;
+	mainProject: ProjectReference;
+	firstProject: ProjectReference;
+	secondProject: ProjectReference;
 }
 
 export default async function SelectedProjects() {
-  const selectedProjectsSections = await getProjects()
-  return (
+	const selectedProjectsSections = await getProjects();
+	return (
 		<Layout>
 			<SlideMenu />
 			<Header />
-			<div className="h-screen overflow-scroll top-0 fixed scrollbar-hide">
+			<div className="h-screen w-full overflow-scroll top-0 fixed scrollbar-hide">
 				<h1 className="font-medium text-xl lg:text-2xl xl:text-3xl mb-large">
 					Selected <br /> Projects
 				</h1>
@@ -61,18 +62,23 @@ export default async function SelectedProjects() {
 												href={`project/${project.mainProject._ref}`}
 												className="selected-projects-image-container relative"
 											>
-												<img
+												<Image
 													className="selected-projects-image"
 													src={project.mainImage.imageUrl}
+													alt={project.mainImageTitle}
 												/>
-												<img className="selected-projects-image-blur absolute w-full h-full top-0 left-0"></img>
+												<div className="selected-projects-image-blur absolute w-full h-full top-0 left-0"></div>
 											</a>
 										) : (
 											<div className="selected-projects-image-container relative">
-												<img
+												<Image
 													className="selected-projects-image"
 													src={project.mainImage.imageUrl}
+													alt={project.mainImageTitle}
+													width={1000}
+													height={1000}
 												/>
+
 												<div className="selected-projects-image-blur absolute w-full h-full top-0 left-0"></div>
 											</div>
 										)}
@@ -90,19 +96,24 @@ export default async function SelectedProjects() {
 												href={`project/${project.firstProject._ref}`}
 												className="selected-projects-image-container relative"
 											>
-												<img
-													alt=""
+												<Image
 													className="selected-projects-image"
 													src={project.image1.imageUrl}
+													alt={project.Image1Title}
+													width={1000}
+													height={1000}
 												/>
+
 												<div className="selected-projects-image-blur absolute w-full h-full top-0 left-0"></div>
 											</a>
 										) : (
 											<div className="selected-projects-image-container relative">
-												<img
+												<Image
 													className="selected-projects-image"
 													src={project.image1.imageUrl}
-													alt=""
+													alt={project.Image1Title}
+													width={1000}
+													height={1000}
 												/>
 												<div className="selected-projects-image-blur absolute w-full h-full top-0 left-0"></div>
 											</div>
@@ -121,17 +132,24 @@ export default async function SelectedProjects() {
 												href={`project/${project.secondProject._ref}`}
 												className="selected-projects-image-container relative"
 											>
-												<img
+												<Image
 													className="selected-projects-image"
 													src={project.image2.imageUrl}
+													alt={project.Image2Title}
+													width={1000}
+													height={1000}
 												/>
+
 												<div className="selected-projects-image-blur absolute w-full h-full top-0 left-0"></div>
 											</a>
 										) : (
 											<div className="selected-projects-image-container relative">
-												<img
+												<Image
 													className="selected-projects-image"
 													src={project.image2.imageUrl}
+													alt={project.Image2Title}
+													width={1000}
+													height={1000}
 												/>
 												<div className="selected-projects-image-blur absolute w-full h-full top-0 left-0"></div>
 											</div>

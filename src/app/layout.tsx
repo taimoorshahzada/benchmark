@@ -36,8 +36,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${moderat.variable} font-sans`}>
-      <body>{children}</body>
-    </html>
-  );
+		<html lang="en" className={`${moderat.variable} font-sans`}>
+			<body>{children}</body>
+		</html>
+	);
 }
