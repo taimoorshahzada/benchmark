@@ -28,10 +28,10 @@ export default async function UpcomingProjects() {
 }
 
 const client = createClient({
-  projectId: "8h2p2lvb",
-  dataset: "production",
-  apiVersion: "2023-11-13",
-  useCdn: true,
+	projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+	dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+	apiVersion: "2023-11-13",
+	useCdn: true,
 });
 
 async function getAllUpcomingProjects() {
