@@ -5,28 +5,14 @@ import {createClient} from "next-sanity";
 import Footer from "@/components/footer";
 import React from "react";
 import Image from "next/image";
-
-interface ProjectImage {
-  imageUrl: string
-}
+import { Showhome } from "../../../types/Showhome";
+import { ProjectImage } from "../../../types/ProjectImage";
 
 interface DateTimeOccurrence {
-  day_range: string;
-  time_range: string;
+	day_range: string;
+	time_range: string;
 }
 
-interface Showhome {
-  landscape_hero: ProjectImage;
-  portrait_hero: ProjectImage;
-  title: string;
-  description: string;
-  features: string[];
-  interest_points: string[];
-  images: ProjectImage[];
-  hero_display: string;
-  _id: string;
-  showhome_times: DateTimeOccurrence[];
-}
 
 export default async function Project({ params }: { params: { id: string } }) {
   const showhomes = await getAllShowhomes()

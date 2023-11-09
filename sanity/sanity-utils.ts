@@ -8,12 +8,12 @@ export async function getData() {
     useCdn: true,
   });
 
-  return client.fetch(
-    groq`*[_type == "homepage"]{
+  client.fetch(
+		groq`*[_type == "homepage"]{
         text,
         description,
         mainImage,
         alt
     }`
-  );
+	);
 }
