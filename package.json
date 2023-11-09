@@ -19,6 +19,7 @@
     "next-sanity": "^5.5.8",
     "next-seo": "^6.1.0",
     "react": "^18",
+    "react-countup": "^6.5.0",
     "react-dom": "^18",
     "server-only": "^0.0.1",
     "styled-components": "5.2",

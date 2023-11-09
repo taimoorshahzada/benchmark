@@ -136,7 +136,7 @@ export default function UpcomingProjectsList({ projects }: any) {
 			{projects.map((upcomingProject: Project, index: number) => (
 				<div
 					key={index}
-					className="upcoming-project cursor-pointer border-[#999999] border-dashed border-t border-1 mb-[60px] grid grid-cols-12 gap-x-5"
+					className="upcoming-project cursor-pointer border-grey border-dashed border-t border-1 mb-[60px] grid grid-cols-12 gap-x-5"
 				>
 					<div className="col-span-2 mb-9">Suburb</div>
 					<div className="col-span-2 col-start-3">

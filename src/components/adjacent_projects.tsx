@@ -5,6 +5,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+
 interface ProjectImage {
 	imageUrl: string;
 }
@@ -34,7 +35,7 @@ export default function AdjacentProjects({ projects, id }: any) {
 			: projects[projectIndex + 1];
 
 	return (
-		<div className="col-span-12 grid grid-cols-12 gap-x-5 border-[#999999] border-dashed border-t border-1 text-xs-medium mb-[200px]">
+		<div className="col-span-12 grid grid-cols-12 gap-x-5 border-grey border-dashed border-t border-1 text-xs-medium mb-[200px]">
 			{project._id != prevProject._id ? (
 				<div className="col-span-3 flex flex-col mt-[10px]">
 					<div className="flex justify-between w-full mb-9">

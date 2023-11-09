@@ -31,7 +31,7 @@ export default async function SelectedProjects() {
 					{selectedProjectsSections.props.selectedProjectsSections.map(
 						(project: SelectedProject) => (
 							<div key={project._id} className="mx-5 mb-[200px]">
-								<div className="grid grid-cols-12 gap-x-5 text-xs-medium mx-auto w-full border-[#999999] border-dashed border-t border-1">
+								<div className="grid grid-cols-12 gap-x-5 text-xs-medium mx-auto w-full border-grey border-dashed border-t border-1">
 									<div
 										className={`col-span-6 row-start-1 flex-col flex ${
 											project.mainImageCol == "First"
