@@ -1,11 +1,12 @@
-import {createClient} from "next-sanity";
+import { createClient } from "next-sanity";
 import Layout from "@/components/layout";
 import SlideMenu from "@/components/SlideMenu";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Image from "next/image";
-import { getData } from "../../../sanity/sanity-utils";
-import { SelectedProject } from "../../../types/SelectedProject";
+import { getData } from "../../../../sanity/sanity-utils";
+import { SelectedProject } from "../../../../types/SelectedProject";
+import Link from "next/link";
 
 interface ProjectImage {
 	imageUrl: string;
@@ -15,8 +16,6 @@ interface ProjectReference {
 	_ref: string;
 	_type: string;
 }
-
-
 
 export default async function SelectedProjects() {
 	const selectedProjectsSections = await getProjects();
@@ -44,7 +43,7 @@ export default async function SelectedProjects() {
 									>
 										<div className="mb-9 mt-2">{project.mainImageTitle}</div>
 										{project.mainProject ? (
-											<a
+											<Link
 												href={`project/${project.mainProject._ref}`}
 												className="selected-projects-image-container relative"
 											>
@@ -54,7 +53,7 @@ export default async function SelectedProjects() {
 													alt={project.mainImageTitle}
 												/>
 												<div className="selected-projects-image-blur absolute w-full h-full top-0 left-0"></div>
-											</a>
+											</Link>
 										) : (
 											<div className="selected-projects-image-container relative">
 												<Image
@@ -78,7 +77,7 @@ export default async function SelectedProjects() {
 									>
 										<div className="mb-9 mt-2">{project.Image1Title}</div>
 										{project.firstProject ? (
-											<a
+											<Link
 												href={`project/${project.firstProject._ref}`}
 												className="selected-projects-image-container relative"
 											>
@@ -91,7 +90,7 @@ export default async function SelectedProjects() {
 												/>
 
 												<div className="selected-projects-image-blur absolute w-full h-full top-0 left-0"></div>
-											</a>
+											</Link>
 										) : (
 											<div className="selected-projects-image-container relative">
 												<Image
@@ -114,7 +113,7 @@ export default async function SelectedProjects() {
 									>
 										<div className="mb-9 mt-2">{project.Image2Title}</div>
 										{project.secondProject ? (
-											<a
+											<Link
 												href={`project/${project.secondProject._ref}`}
 												className="selected-projects-image-container relative"
 											>
@@ -127,7 +126,7 @@ export default async function SelectedProjects() {
 												/>
 
 												<div className="selected-projects-image-blur absolute w-full h-full top-0 left-0"></div>
-											</a>
+											</Link>
 										) : (
 											<div className="selected-projects-image-container relative">
 												<Image
@@ -161,15 +160,14 @@ const client = createClient({
 });
 
 async function getProjects() {
-  const selectedProjectsSections = await client.fetch(
-    `*[_type == "selected-projects"]{..., mainImage{'imageUrl': asset->url}, image1{'imageUrl': asset->url}, image2{'imageUrl': asset->url}}`
-  );
+	const selectedProjectsSections = await client.fetch(
+		`*[_type == "selected-projects"]{..., mainImage{'imageUrl': asset->url}, image1{'imageUrl': asset->url}, image2{'imageUrl': asset->url}}`
+	);
 
-  return {
-    props: {
-      selectedProjectsSections,
-    },
-    revalidate: 10,
-  };
+	return {
+		props: {
+			selectedProjectsSections,
+		},
+		revalidate: 10,
+	};
 }
-

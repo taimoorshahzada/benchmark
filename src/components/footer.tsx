@@ -1,8 +1,9 @@
+import Link from "next/link";
 import Container from "./container";
 import React from "react";
 
 export default function Footer() {
-  return (
+	return (
 		<footer
 			className="bg-white bg-opacity-20 backdrop-blur-xl h-screen relative z-50"
 			id="footer"
@@ -25,33 +26,48 @@ export default function Footer() {
 					</svg>
 				</div>
 				<div className="col-start-10 col-span-3 flex flex-col text-base mb-[233px]">
-					<a
+					<Link
 						href="/"
 						className="hover:opacity-50 transition duration-250 w-fit"
 					>
 						Home
-					</a>
-					<a
+					</Link>
+					<Link
 						href="/selected-projects"
 						className="hover:opacity-50 transition duration-250 w-fit"
 					>
 						Selected Projects
-					</a>
-					<a href="" className="hover:opacity-50 transition duration-250 w-fit">
+					</Link>
+					<Link
+						href=""
+						className="hover:opacity-50 transition duration-250 w-fit"
+					>
 						Showhomes
-					</a>
-					<a href="" className="hover:opacity-50 transition duration-250 w-fit">
+					</Link>
+					<Link
+						href=""
+						className="hover:opacity-50 transition duration-250 w-fit"
+					>
 						Upcoming Projects
-					</a>
-					<a href="" className="hover:opacity-50 transition duration-250 w-fit">
+					</Link>
+					<Link
+						href=""
+						className="hover:opacity-50 transition duration-250 w-fit"
+					>
 						Our Process
-					</a>
-					<a href="" className="hover:opacity-50 transition duration-250 w-fit">
+					</Link>
+					<Link
+						href=""
+						className="hover:opacity-50 transition duration-250 w-fit"
+					>
 						About Us
-					</a>
-					<a href="" className="hover:opacity-50 transition duration-250 w-fit">
+					</Link>
+					<Link
+						href=""
+						className="hover:opacity-50 transition duration-250 w-fit"
+					>
 						Contact Us
-					</a>
+					</Link>
 				</div>
 				<div className="col-span-2 w-fit bg-[#F5F5F5] rounded-[5px] flex text-xs p-3 mb-[80px] cursor-pointer hover:opacity-50">
 					Login
@@ -71,7 +87,10 @@ export default function Footer() {
 					</div>
 				</div>
 				<div className="col-start-10 flex gap-x-1">
-					<a href="" className="hover:opacity-50 transition duration-250 w-fit">
+					<Link
+						href=""
+						className="hover:opacity-50 transition duration-250 w-fit"
+					>
 						<svg
 							width="20"
 							height="20"
@@ -99,8 +118,11 @@ export default function Footer() {
 								</clipPath>
 							</defs>
 						</svg>
-					</a>
-					<a href="" className="hover:opacity-50 transition duration-250 w-fit">
+					</Link>
+					<Link
+						href=""
+						className="hover:opacity-50 transition duration-250 w-fit"
+					>
 						<svg
 							width="20"
 							height="20"
@@ -120,22 +142,22 @@ export default function Footer() {
 								</clipPath>
 							</defs>
 						</svg>
-					</a>
+					</Link>
 				</div>
 
 				<div className="col-span-3 flex flex-col text-xs-medium">
-					<a
+					<Link
 						href="tel:033438260"
 						className="hover:opacity-50 transition duration-250 w-fit"
 					>
 						03 343 8260
-					</a>
-					<a
+					</Link>
+					<Link
 						href="mailto:info@benchmarkhomes.co.nz"
 						className="hover:opacity-50 transition duration-250 w-fit"
 					>
 						info@benchmarkhomes.co.nz
-					</a>
+					</Link>
 				</div>
 				<div className="col-start-4 col-span-3 text-xs-medium">
 					12 Whitburn Ave, Milns Park, Halswell, Christchurch, New Zealand

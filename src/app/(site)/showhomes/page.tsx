@@ -1,23 +1,23 @@
 import SlideMenu from "@/components/SlideMenu";
 import Header from "@/components/header";
 import Layout from "../layout";
-import {createClient} from "next-sanity";
+import { createClient } from "next-sanity";
 import Footer from "@/components/footer";
 import React from "react";
 import Image from "next/image";
-import { Showhome } from "../../../types/Showhome";
-import { ProjectImage } from "../../../types/ProjectImage";
+import { Showhome } from "../../../../types/Showhome";
+import { ProjectImage } from "../../../../types/ProjectImage";
+import Link from "next/link";
 
 interface DateTimeOccurrence {
 	day_range: string;
 	time_range: string;
 }
 
-
 export default async function Project({ params }: { params: { id: string } }) {
-  const showhomes = await getAllShowhomes()
+	const showhomes = await getAllShowhomes();
 
-  return (
+	return (
 		<Layout>
 			<SlideMenu />
 			<Header />
@@ -63,7 +63,7 @@ export default async function Project({ params }: { params: { id: string } }) {
 									height={2000}
 								/>
 
-								<a
+								<Link
 									href={`/showhome/${showhome._id}`}
 									className="mt-[10px] w-fit bg-[#F5F5F5] rounded-[5px] flex text-xs p-3 cursor-pointer hover:opacity-50 col-span-6"
 								>
@@ -82,7 +82,7 @@ export default async function Project({ params }: { params: { id: string } }) {
 											/>
 										</svg>
 									</div>
-								</a>
+								</Link>
 							</div>
 						)
 					)}
@@ -102,15 +102,14 @@ const client = createClient({
 });
 
 async function getAllShowhomes() {
-  const showhomes = await client.fetch(
-    `*[_type == "showhome"]{..., landscape_hero{"imageUrl": asset->url}, portrait_hero{"imageUrl": asset->url}, images[]{'imageUrl': asset->url}}`
-  );
+	const showhomes = await client.fetch(
+		`*[_type == "showhome"]{..., landscape_hero{"imageUrl": asset->url}, portrait_hero{"imageUrl": asset->url}, images[]{'imageUrl': asset->url}}`
+	);
 
-  return {
-    props: {
-      showhomes,
-    },
-    revalidate: 10,
-  };
+	return {
+		props: {
+			showhomes,
+		},
+		revalidate: 10,
+	};
 }
-

@@ -9,6 +9,18 @@ import { showhome } from "./schemas/showhome"
 import { openTimes } from "./schemas/open-times";
 import { upcomingProject } from "./schemas/upcoming-project";
 
+
 export const schema = {
-  types: [selectedProjectsSections, project, showhome, upcomingProject, openTimes, homepage, post, author, category, blockContent],
+	types: [
+		homepage,
+		selectedProjectsSections,
+		project,
+		showhome,
+		upcomingProject,
+		openTimes,
+		post,
+		author,
+		category,
+		blockContent,
+	],
 };

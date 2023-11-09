@@ -3,30 +3,37 @@
 import {next} from "slate";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface ProjectImage {
-  imageUrl: string
+	imageUrl: string;
 }
 
 interface Project {
-  landscape_hero: ProjectImage;
-  portrait_hero: ProjectImage;
-  title: string;
-  description: string;
-  features: string[];
-  interest_points: string[];
-  images: ProjectImage[];
-  hero_display: string;
-  _id: string;
+	landscape_hero: ProjectImage;
+	portrait_hero: ProjectImage;
+	title: string;
+	description: string;
+	features: string[];
+	interest_points: string[];
+	images: ProjectImage[];
+	hero_display: string;
+	_id: string;
 }
 
-export default function AdjacentProjects({projects, id}: any) {
-  const projectIndex = projects.findIndex((project: any) => project._id === id);
-  const project: Project = projects[projectIndex]
-  const prevProject: Project = projectIndex == 0 ? projects[projects.length - 1] : projects[projectIndex - 1]
-  const nextProject: Project = projectIndex == projects.length - 1 ? projects[0] : projects[projectIndex + 1]
+export default function AdjacentProjects({ projects, id }: any) {
+	const projectIndex = projects.findIndex((project: any) => project._id === id);
+	const project: Project = projects[projectIndex];
+	const prevProject: Project =
+		projectIndex == 0
+			? projects[projects.length - 1]
+			: projects[projectIndex - 1];
+	const nextProject: Project =
+		projectIndex == projects.length - 1
+			? projects[0]
+			: projects[projectIndex + 1];
 
-  return (
+	return (
 		<div className="col-span-12 grid grid-cols-12 gap-x-5 border-[#999999] border-dashed border-t border-1 text-xs-medium mb-[200px]">
 			{project._id != prevProject._id ? (
 				<div className="col-span-3 flex flex-col mt-[10px]">
@@ -44,7 +51,7 @@ export default function AdjacentProjects({projects, id}: any) {
 						alt={prevProject.title}
 					/>
 
-					<a
+					<Link
 						href={`/project/${prevProject._id}`}
 						className="w-fit bg-[#F5F5F5] rounded-[5px] flex text-xs p-3 cursor-pointer hover:opacity-50"
 					>
@@ -63,7 +70,7 @@ export default function AdjacentProjects({projects, id}: any) {
 								/>
 							</svg>
 						</div>
-					</a>
+					</Link>
 				</div>
 			) : (
 				""
@@ -84,7 +91,7 @@ export default function AdjacentProjects({projects, id}: any) {
 						alt={nextProject.title}
 					/>
 
-					<a
+					<Link
 						href={`/project/${prevProject._id}`}
 						className="w-fit bg-[#F5F5F5] rounded-[5px] flex text-xs p-3 cursor-pointer hover:opacity-50"
 					>
@@ -103,7 +110,7 @@ export default function AdjacentProjects({projects, id}: any) {
 								/>
 							</svg>
 						</div>
-					</a>
+					</Link>
 				</div>
 			) : (
 				""
