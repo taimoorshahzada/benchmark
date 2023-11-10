@@ -1,10 +1,10 @@
 import Layout from "@/app/(site)/layout";
-import SlideMenu from "@/components/SlideMenu";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import SlideMenu from "@/app/(site)/components/SlideMenu";
+import Header from "@/app/(site)/components/header";
+import Footer from "@/app/(site)/components/footer";
 import { createClient } from "next-sanity";
 import React from "react";
-import UpcomingProjectsList from "@/components/upcoming_project_list";
+import UpcomingProjectsList from "@/app/(site)/components/upcoming_project_list";
 
 export default async function UpcomingProjects() {
 	const upcomingProjects = await getAllUpcomingProjects();

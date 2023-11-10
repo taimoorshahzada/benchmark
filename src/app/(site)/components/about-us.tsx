@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Photo from "../app/assets/images/Home-Benchmark-Homes-1000-x-1000-High-Res-560x400.jpg";
+import Photo from "../assets/images/Home-Benchmark-Homes-1000-x-1000-High-Res-560x400.jpg";
 import CountUp from "react-countup";
 
 function AboutSection() {

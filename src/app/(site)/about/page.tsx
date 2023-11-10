@@ -1,10 +1,10 @@
 "use client";
 
-import Layout from "../../../components/layout";
-import Header from "../../../components/header";
-import Footer from "../../../components/footer";
-import Container from "../../../components/container";
-import FancyLink from "../../../components/fancyLink";
+import Layout from "../components/layout";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import Container from "../components/container";
+import FancyLink from "../components/fancyLink";
 import { fade } from "@/app/helpers/transitions";
 import { LazyMotion, domAnimation, m } from "framer-motion";
 import { NextSeo } from "next-seo";

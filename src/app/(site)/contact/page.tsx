@@ -1,7 +1,7 @@
-import SlideMenu from "@/components/SlideMenu";
-import Footer from "@/components/footer";
-import Header from "@/components/header";
-import SocialIcons from "@/components/social-icons";
+import SlideMenu from "@/app/(site)/components/SlideMenu";
+import Footer from "@/app/(site)/components/footer";
+import Header from "@/app/(site)/components/header";
+import SocialIcons from "@/app/(site)/components/social-icons";
 import Link from "next/link";
 import React from "react";
 

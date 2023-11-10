@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import Layout from "@/components/layout";
+import Layout from "@/app/(site)/components/layout";
 
 import { fade } from "@/app/helpers/transitions";
 import { LazyMotion, domAnimation, m } from "framer-motion";

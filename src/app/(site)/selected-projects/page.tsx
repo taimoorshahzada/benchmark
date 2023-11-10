@@ -1,8 +1,8 @@
 import { createClient } from "next-sanity";
-import Layout from "@/components/layout";
-import SlideMenu from "@/components/SlideMenu";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
+import Layout from "@/app/(site)/components/layout";
+import SlideMenu from "@/app/(site)/components/SlideMenu";
+import Header from "@/app/(site)/components/header";
+import Footer from "@/app/(site)/components/footer";
 import Image from "next/image";
 import { getData } from "../../../../sanity/sanity-utils";
 import { SelectedProject } from "../../../../types/SelectedProject";

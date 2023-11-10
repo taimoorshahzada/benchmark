@@ -1,8 +1,8 @@
-import SlideMenu from "@/components/SlideMenu";
-import Header from "@/components/header";
+import SlideMenu from "@/app/(site)/components/SlideMenu";
+import Header from "@/app/(site)/components/header";
 import Layout from "../layout";
 import { createClient } from "next-sanity";
-import Footer from "@/components/footer";
+import Footer from "@/app/(site)/components/footer";
 import React from "react";
 import Image from "next/image";
 import { Showhome } from "../../../../types/Showhome";

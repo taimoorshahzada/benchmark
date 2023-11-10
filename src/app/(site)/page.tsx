@@ -1,20 +1,20 @@
 "use client";
 
 import Image from "next/image";
-import Header from "../../components/header";
-import Layout from "../../components/layout";
-import FancyLink from "../../components/fancyLink";
+import Header from "./components/header";
+import Layout from "./components/layout";
+import FancyLink from "./components/fancyLink";
 import { fade } from "@/app/helpers/transitions";
 import { LazyMotion, domAnimation, m } from "framer-motion";
-import Container from "../../components/container";
-import Footer from "../../components/footer";
+import Container from "./components/container";
+import Footer from "./components/footer";
 import Lenis from "@studio-freight/lenis";
-import Mortimer from "../assets/images/Projects-Mortimer-1500-x-1000-High-Res-2.jpg";
+import Mortimer from "./assets/images/Projects-Mortimer-1500-x-1000-High-Res-2.jpg";
 import { createClient } from "next-sanity";
 import { useEffect, useRef } from "react";
-import LatestProjects from "@/components/latestProjects";
-import SlideMenu from "@/components/SlideMenu";
-import AboutSection from "@/components/about-us";
+import LatestProjects from "@/app/(site)/components/latestProjects";
+import SlideMenu from "@/app/(site)/components/SlideMenu";
+import AboutSection from "@/app/(site)/components/about-us";
 
 export default function Home() {
 	return (

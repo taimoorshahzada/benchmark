@@ -1,11 +1,11 @@
-import SlideMenu from "@/components/SlideMenu";
-import Header from "@/components/header";
+import SlideMenu from "@/app/(site)/components/SlideMenu";
+import Header from "@/app/(site)/components/header";
 import Layout from "../../layout";
 import { createClient } from "next-sanity";
-import Footer from "@/components/footer";
-import ProjectImages from "@/components/project_images";
-import ProjectInfo from "@/components/project_info";
-import AdjacentProjects from "@/components/adjacent_projects";
+import Footer from "@/app/(site)/components/footer";
+import ProjectImages from "@/app/(site)/components/project_images";
+import ProjectInfo from "@/app/(site)/components/project_info";
+import AdjacentProjects from "@/app/(site)/components/adjacent_projects";
 
 export default async function Project({ params }: { params: { id: string } }) {
 	const projects = await getAllProjects();

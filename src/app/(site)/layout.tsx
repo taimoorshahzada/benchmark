@@ -2,26 +2,26 @@ import type { Metadata } from "next";
 import "../globals.css";
 import Lenis from "@studio-freight/lenis";
 import localFont from "next/font/local";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-import SlideMenu from "@/components/SlideMenu";
+import Header from "@/app/(site)/components/header";
+import Footer from "@/app/(site)/components/footer";
+import SlideMenu from "@/app/(site)/components/SlideMenu";
 
 const moderat = localFont({
 	src: [
 		{
-			path: "../assets/fonts/Moderat-Regular.woff2",
+			path: "./assets/fonts/Moderat-Regular.woff2",
 			weight: "400",
 		},
 		{
-			path: "../assets/fonts/Moderat-Regular.woff",
+			path: "./assets/fonts/Moderat-Regular.woff",
 			weight: "400",
 		},
 		{
-			path: "../assets/fonts/Moderat-Medium.woff2",
+			path: "./assets/fonts/Moderat-Medium.woff2",
 			weight: "500",
 		},
 		{
-			path: "../assets/fonts/Moderat-Medium.woff",
+			path: "./assets/fonts/Moderat-Medium.woff",
 			weight: "500",
 		},
 	],

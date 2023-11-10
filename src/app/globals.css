@@ -11,19 +11,6 @@ body {
   text-edge: cap;
   }
 
-@font-face {
-    font-family: "Moderat-Regular";
-    src:
-      url("./assets/fonts/Moderat-Regular.otf") format("opentype"),
-  }
-
-  
-@font-face {
-    font-family: "Moderat-Medium";
-    src:
-      url("./assets/fonts/Moderat-Medium.otf") format("opentype"),
-  }
-
   html.lenis {
     height: auto;
   }
