@@ -10,10 +10,12 @@
 
 import { NextStudio } from "next-sanity/studio";
 import config from "../../../../../sanity.config";
+import StudioHeader from "../../components/studio-header";
 
 export default function StudioPage() {
 	return (
 		<main>
+			<StudioHeader />
 			<NextStudio config={config} />
 		</main>
 	);
