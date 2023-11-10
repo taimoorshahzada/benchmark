@@ -92,7 +92,21 @@ export default function Footer() {
 				</div>
 
 				<div className="col-span-3 flex flex-col text-xs-medium">
-					
+				<span>
+								<Link
+									href="tel:033438260"
+									className="hover:opacity-50 transition duration-250 w-fit"
+								>
+									+64 3 343 8260
+								</Link>
+								<br />
+								<Link
+									href="mailto:info@benchmarkhomes.co.nz"
+									className="hover:opacity-50 transition duration-250 w-fit"
+								>
+									info@benchmarkhomes.co.nz
+								</Link>
+							</span>
 				</div>
 				<div className="col-start-4 col-span-3 text-xs-medium">
 					12 Whitburn Ave, Milns Park,

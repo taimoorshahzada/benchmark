@@ -16,7 +16,7 @@ function LatestProjects() {
 				translateX: 0,
 			},
 			{
-				translateX: "-200vw",
+				translateX: "-300vw",
 				ease: "none",
 				duration: 1,
 				scrollTrigger: {
