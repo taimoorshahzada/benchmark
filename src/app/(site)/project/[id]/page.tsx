@@ -6,6 +6,7 @@ import Footer from "@/app/(site)/components/footer";
 import ProjectImages from "@/app/(site)/components/project_images";
 import ProjectInfo from "@/app/(site)/components/project_info";
 import AdjacentProjects from "@/app/(site)/components/adjacent_projects";
+import {getAllProjects} from "../../../../../sanity/sanity-utils";
 
 export default async function Project({ params }: { params: { id: string } }) {
 	const projects = await getAllProjects();
@@ -25,24 +26,4 @@ export default async function Project({ params }: { params: { id: string } }) {
 			<Footer />
 		</Layout>
 	);
-}
-
-const client = createClient({
-	projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-	dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-	apiVersion: "2023-11-12",
-	useCdn: true,
-});
-
-async function getAllProjects() {
-	const projects = await client.fetch(
-		`*[_type == "project"]{..., landscape_hero{"imageUrl": asset->url}, portrait_hero{"imageUrl": asset->url}, images[]{'imageUrl': asset->url}}`
-	);
-
-	return {
-		props: {
-			projects,
-		},
-		revalidate: 10,
-	};
 }

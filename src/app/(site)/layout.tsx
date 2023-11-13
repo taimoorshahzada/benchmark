@@ -1,10 +1,6 @@
-import type { Metadata } from "next";
+import type {Metadata} from "next";
 import "../globals.css";
-import Lenis from "@studio-freight/lenis";
 import localFont from "next/font/local";
-import Header from "@/app/(site)/components/header";
-import Footer from "@/app/(site)/components/footer";
-import SlideMenu from "@/app/(site)/components/SlideMenu";
 
 const moderat = localFont({
 	src: [

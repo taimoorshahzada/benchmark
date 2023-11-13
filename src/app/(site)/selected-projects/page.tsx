@@ -1,21 +1,13 @@
-import { createClient } from "next-sanity";
+import {createClient} from "next-sanity";
 import Layout from "@/app/(site)/components/layout";
 import SlideMenu from "@/app/(site)/components/SlideMenu";
 import Header from "@/app/(site)/components/header";
 import Footer from "@/app/(site)/components/footer";
 import Image from "next/image";
-import { getData } from "../../../../sanity/sanity-utils";
-import { SelectedProject } from "../../../../types/SelectedProject";
+import {SelectedProject} from "../../../../types/SelectedProject";
 import Link from "next/link";
+import {getProjects} from "../../../../sanity/sanity-utils";
 
-interface ProjectImage {
-	imageUrl: string;
-}
-
-interface ProjectReference {
-	_ref: string;
-	_type: string;
-}
 
 export default async function SelectedProjects() {
 	const selectedProjectsSections = await getProjects();
@@ -150,24 +142,4 @@ export default async function SelectedProjects() {
 			<Footer />
 		</Layout>
 	);
-}
-
-const client = createClient({
-	projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-	dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-	apiVersion: "2023-11-04",
-	useCdn: true,
-});
-
-async function getProjects() {
-	const selectedProjectsSections = await client.fetch(
-		`*[_type == "selected-projects"]{..., mainImage{'imageUrl': asset->url}, image1{'imageUrl': asset->url}, image2{'imageUrl': asset->url}}`
-	);
-
-	return {
-		props: {
-			selectedProjectsSections,
-		},
-		revalidate: 10,
-	};
 }

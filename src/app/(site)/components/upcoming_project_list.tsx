@@ -75,7 +75,7 @@ export default function UpcomingProjectsList({ projects }: any) {
 					</div>
 					<button
 						onClick={closeLightbox}
-						className="flex fixed top-[10px] right-[10px] text-xxs bg-white p-3 rounded-[5px] z-10 border border-black border-solid transition duration-300 hover:bg-opacity-50"
+						className="flex fixed top-[10px] right-[10px] text-xxs bg-white cursor-pointer p-3 rounded-[5px] z-10 border border-black border-solid transition duration-300 hover:bg-opacity-50"
 						id={"closeMenuButton"}
 					>
 						Close <div className="ml-12 rotate-45">+</div>
@@ -103,7 +103,7 @@ export default function UpcomingProjectsList({ projects }: any) {
 					</div>
 					<Image
 						alt=""
-						className="fixed inset-2/4 transform -translate-y-1/2 -translate-x-1/2"
+						className="fixed inset-2/4 transform -translate-y-1/2 object-contain -translate-x-1/2 max-h-[80%]"
 						src={project.images[currentIndex].imageUrl}
 						width={1000}
 						height={1000}
@@ -138,8 +138,8 @@ export default function UpcomingProjectsList({ projects }: any) {
 					key={index}
 					className="upcoming-project cursor-pointer border-grey border-dashed border-t border-1 mb-[60px] grid grid-cols-12 gap-x-5"
 				>
-					<div className="col-span-2 mb-9">Suburb</div>
-					<div className="col-span-2 col-start-3">
+					<div className="col-span-2 mt-[10px] mb-9">Suburb</div>
+					<div className="col-span-2 mt-[10px] col-start-3">
 						Test {upcomingProject.suburb}
 					</div>
 					<Image

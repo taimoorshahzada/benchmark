@@ -1,12 +1,13 @@
 import { createClient, groq } from "next-sanity";
 
+
+const client = createClient({
+	projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+	dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+	apiVersion: "2023-11-28",
+	useCdn: true,
+});
 export async function getData() {
-	const client = createClient({
-		projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-		dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-		apiVersion: "2023-10-19",
-		useCdn: true,
-	});
 
 	return client.fetch(
 		groq`*[_type == "homepage"]{
@@ -18,18 +19,99 @@ export async function getData() {
 	);
 }
 
-export async function getAllProjects(projects: any) {
-	const client = createClient({
-		projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-		dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-		apiVersion: "2023-10-19",
-		useCdn: true,
-	});
-
-	return client.fetch(
-		groq`*[_type == "project"]{
-      ..., landscape_hero{"imageUrl": asset->url},
-       portrait_hero{"imageUrl": asset->url}, 
-       images[]{'imageUrl': asset->url}}`
+export async function getProjects() {
+	const selectedProjectsSections = await client.fetch(
+		`*[_type == "selected-projects"]{..., mainImage{'imageUrl': asset->url}, image1{'imageUrl': asset->url}, image2{'imageUrl': asset->url}}`
 	);
+
+	return {
+		props: {
+			selectedProjectsSections,
+		},
+		revalidate: 10,
+	};
 }
+
+
+export async function getAllProjects() {
+	const projects = await client.fetch(
+		`*[_type == "project"]{..., landscape_hero{"imageUrl": asset->url}, portrait_hero{"imageUrl": asset->url}, images[]{'imageUrl': asset->url}}`
+	);
+
+	return {
+		props: {
+			projects,
+		},
+		revalidate: 10,
+	};
+}
+
+
+export async function getAllUpcomingProjects() {
+	const upcomingProjects = await client.fetch(
+		`*[_type == "upcoming_project"]{..., hero_image{"imageUrl": asset->url}, featured_image_1{"imageUrl": asset->url}, featured_image_2{"imageUrl": asset->url}, images[]{'imageUrl': asset->url}}`
+	);
+
+	return {
+		props: {
+			upcomingProjects,
+		},
+		revalidate: 10,
+	};
+}
+
+export async function getAllShowhomes() {
+	const showhomes = await client.fetch(
+		`*[_type == "showhome"]{..., landscape_hero{"imageUrl": asset->url}, portrait_hero{"imageUrl": asset->url}, images[]{'imageUrl': asset->url}}`
+	);
+
+	return {
+		props: {
+			showhomes,
+		},
+		revalidate: 10,
+	};
+}
+
+export async function getAllProcesses() {
+
+	const processes = await client.fetch(
+		`*[_type == "process"]{..., hero_image{"imageUrl": asset->url}} | order(order asc)`
+	);
+
+	return {
+		props: {
+			processes,
+		},
+		revalidate: 10,
+	};
+}
+
+export async function getAllWalkthroughs() {
+
+	const walkthroughs = await client.fetch(
+		`*[_type == "walkthrough"]`
+	);
+
+	return {
+		props: {
+			walkthroughs,
+		},
+		revalidate: 10,
+	};
+}
+
+export async function getAboutPageInfo() {
+
+	const [info] = await client.fetch(
+		`*[_type == "about_info"]`
+	);
+
+	return {
+		props: {
+			info,
+		},
+		revalidate: 10,
+	};
+}
+

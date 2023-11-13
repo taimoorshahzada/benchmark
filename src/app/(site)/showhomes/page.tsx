@@ -8,6 +8,7 @@ import Image from "next/image";
 import { Showhome } from "../../../../types/Showhome";
 import { ProjectImage } from "../../../../types/ProjectImage";
 import Link from "next/link";
+import {getAllShowhomes} from "../../../../sanity/sanity-utils";
 
 interface DateTimeOccurrence {
 	day_range: string;
@@ -92,24 +93,4 @@ export default async function Project({ params }: { params: { id: string } }) {
 			<Footer />
 		</Layout>
 	);
-}
-
-const client = createClient({
-	projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-	dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-	apiVersion: "2023-11-12",
-	useCdn: true,
-});
-
-async function getAllShowhomes() {
-	const showhomes = await client.fetch(
-		`*[_type == "showhome"]{..., landscape_hero{"imageUrl": asset->url}, portrait_hero{"imageUrl": asset->url}, images[]{'imageUrl': asset->url}}`
-	);
-
-	return {
-		props: {
-			showhomes,
-		},
-		revalidate: 10,
-	};
 }

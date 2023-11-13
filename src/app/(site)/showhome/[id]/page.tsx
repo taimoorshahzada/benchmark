@@ -1,12 +1,11 @@
 import SlideMenu from "@/app/(site)/components/SlideMenu";
 import Header from "@/app/(site)/components/header";
 import Layout from "../../layout";
-import { createClient } from "next-sanity";
 import Footer from "@/app/(site)/components/footer";
 import ProjectImages from "@/app/(site)/components/project_images";
 import ProjectInfo from "@/app/(site)/components/project_info";
-import AdjacentProjects from "@/app/(site)/components/adjacent_projects";
 import ShowhomeInfo from "@/app/(site)/components/showhome_info";
+import {getAllShowhomes} from "../../../../../sanity/sanity-utils";
 
 export default async function Showhome({ params }: { params: { id: string } }) {
 	const showhomes = await getAllShowhomes();
@@ -28,22 +27,3 @@ export default async function Showhome({ params }: { params: { id: string } }) {
 	);
 }
 
-const client = createClient({
-	projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-	dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-	apiVersion: "2023-11-13",
-	useCdn: true,
-});
-
-async function getAllShowhomes() {
-	const showhomes = await client.fetch(
-		`*[_type == "showhome"]{..., landscape_hero{"imageUrl": asset->url}, portrait_hero{"imageUrl": asset->url}, images[]{'imageUrl': asset->url}}`
-	);
-
-	return {
-		props: {
-			showhomes,
-		},
-		revalidate: 10,
-	};
-}

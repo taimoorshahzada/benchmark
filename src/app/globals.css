@@ -39,3 +39,21 @@ body {
   background: rgba(255, 255, 255, 0.20);
   backdrop-filter: blur(10px);
 }
+
+.accordion-panel {
+  transition: grid-template-rows 0.2s ease-in-out;
+}
+
+.accordion-panel.expanded {
+  grid-template-rows: 1fr;
+  height: auto;
+}
+
+.accordion:after {
+  content: "+";
+  float: right;
+}
+
+.accordion.expanded:after {
+  content: "-";
+}

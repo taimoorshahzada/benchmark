@@ -6,19 +6,19 @@ import localFont from "next/font/local";
 const moderat = localFont({
 	src: [
 		{
-			path: "../assets/fonts/Moderat-Regular.woff2",
+			path: "../(site)/assets/fonts/Moderat-Regular.woff2",
 			weight: "400",
 		},
 		{
-			path: "../assets/fonts/Moderat-Regular.woff",
+			path: "../(site)/assets/fonts/Moderat-Regular.woff",
 			weight: "400",
 		},
 		{
-			path: "../assets/fonts/Moderat-Medium.woff2",
+			path: "../(site)/assets/fonts/Moderat-Medium.woff2",
 			weight: "500",
 		},
 		{
-			path: "../assets/fonts/Moderat-Medium.woff",
+			path: "../(site)/assets/fonts/Moderat-Medium.woff",
 			weight: "500",
 		},
 	],

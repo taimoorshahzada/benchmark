@@ -5,6 +5,7 @@ import Footer from "@/app/(site)/components/footer";
 import { createClient } from "next-sanity";
 import React from "react";
 import UpcomingProjectsList from "@/app/(site)/components/upcoming_project_list";
+import {getAllUpcomingProjects} from "../../../../sanity/sanity-utils";
 
 export default async function UpcomingProjects() {
 	const upcomingProjects = await getAllUpcomingProjects();
@@ -27,24 +28,4 @@ export default async function UpcomingProjects() {
 			<Footer />
 		</Layout>
 	);
-}
-
-const client = createClient({
-	projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-	dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-	apiVersion: "2023-11-13",
-	useCdn: true,
-});
-
-async function getAllUpcomingProjects() {
-	const upcomingProjects = await client.fetch(
-		`*[_type == "upcoming_project"]{..., hero_image{"imageUrl": asset->url}, featured_image_1{"imageUrl": asset->url}, featured_image_2{"imageUrl": asset->url}, images[]{'imageUrl': asset->url}}`
-	);
-
-	return {
-		props: {
-			upcomingProjects,
-		},
-		revalidate: 10,
-	};
 }
