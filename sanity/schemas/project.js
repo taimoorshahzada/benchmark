@@ -1,6 +1,6 @@
 export const project = {
 	name: "project",
-	title: "Project",
+	title: "All Projects",
 	type: "document",
 	fields: [
 		{

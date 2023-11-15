@@ -13,8 +13,7 @@ export default async function Project({ params }: { params: { id: string } }) {
 
 	return (
 		<Layout>
-			<SlideMenu />
-			<Header />
+			
 			<div className="h-screen overflow-scroll top-0 fixed scrollbar-hide">
 				<div className="grid grid-cols-12 gap-x-5 text-xs px-5 w-full mt-[10px]">
 					<ProjectInfo projects={projects.props.projects} id={params.id} />
@@ -23,7 +22,7 @@ export default async function Project({ params }: { params: { id: string } }) {
 				</div>
 			</div>
 			<div className="h-screen"></div>
-			<Footer />
+			
 		</Layout>
 	);
 }

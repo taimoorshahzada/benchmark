@@ -1,6 +1,6 @@
 import SlideMenu from "@/app/(site)/components/SlideMenu";
 import Header from "@/app/(site)/components/header";
-import Layout from "../layout";
+
 import { createClient } from "next-sanity";
 import Footer from "@/app/(site)/components/footer";
 import React from "react";
@@ -8,7 +8,7 @@ import Image from "next/image";
 import { Showhome } from "../../../../types/Showhome";
 import { ProjectImage } from "../../../../types/ProjectImage";
 import Link from "next/link";
-import {getAllShowhomes} from "../../../../sanity/sanity-utils";
+import { getAllShowhomes } from "../../../../sanity/sanity-utils";
 
 interface DateTimeOccurrence {
 	day_range: string;
@@ -19,10 +19,8 @@ export default async function Project({ params }: { params: { id: string } }) {
 	const showhomes = await getAllShowhomes();
 
 	return (
-		<Layout>
-			<SlideMenu />
-			<Header />
-			<div className="h-screen overflow-scroll top-0 fixed scrollbar-hide">
+		<>
+			<div className="h-screen w-full overflow-scroll top-0 fixed scrollbar-hide">
 				<div className="grid grid-cols-12 gap-x-5 text-xs px-5 w-full mt-[10px] mb-[200px]">
 					<h1 className="font-medium text-xl lg:text-2xl xl:text-3xl col-span-11 mb-large">
 						Showhomes
@@ -90,7 +88,6 @@ export default async function Project({ params }: { params: { id: string } }) {
 				</div>
 			</div>
 			<div className="h-screen"></div>
-			<Footer />
-		</Layout>
+		</>
 	);
 }

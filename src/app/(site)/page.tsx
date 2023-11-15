@@ -17,13 +17,12 @@ import SlideMenu from "@/app/(site)/components/SlideMenu";
 import AboutSection from "@/app/(site)/components/about-us";
 
 export default function Home() {
+
+	
 	return (
 		<Layout>
-			<SlideMenu />
-			<Header />
-
 			<Container>
-				<h1 className="font-medium text-xl lg:text-2xl xl:text-3xl col-span-11 -translate-x-5 -translate-y-10 mb-large">
+				<h1 className="font-medium text-3xl col-span-11 -translate-x-5 -translate-y-10 mb-large">
 					Benchmark <br /> Homes
 				</h1>
 
@@ -49,12 +48,9 @@ export default function Home() {
 					this. Working with you to turn your wants and needs into a tangible
 					reality is what inspires and drives us to do what we do.
 				</p>
-
-				<LatestProjects />
-				<AboutSection />
 			</Container>
-
-			<Footer />
+			<LatestProjects />
+			<AboutSection />
 		</Layout>
 	);
 }

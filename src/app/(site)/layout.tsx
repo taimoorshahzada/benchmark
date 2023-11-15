@@ -1,6 +1,12 @@
 import type {Metadata} from "next";
 import "../globals.css";
 import localFont from "next/font/local";
+import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
+import { LenisProvider } from "./components/lenis-provider";
+import { LenisScroller } from "./components/lenis-scroller";
+import Footer from "./components/footer";
+import Header from "./components/header";
+import SlideMenu from "./components/SlideMenu";
 
 const moderat = localFont({
 	src: [
@@ -36,7 +42,21 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className={`${moderat.variable} font-sans`}>
-			<body>{children}</body>
+			<body>
+				<Header />
+				<SlideMenu />
+				{/* <LenisProvider
+					options={{
+						lerp: 0.1,
+						wheelMultiplier: 0.8,
+						smoothWheel: true,
+					}}
+				> */}
+				{children}
+				{/* </LenisProvider> */}
+				{/*<LenisScroller /> */}
+				<Footer />
+			</body>
 		</html>
 	);
 }

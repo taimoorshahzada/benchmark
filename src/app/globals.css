@@ -11,49 +11,16 @@ body {
   text-edge: cap;
   }
 
-  html.lenis {
-    height: auto;
-  }
-  
-  .lenis.lenis-smooth {
-    scroll-behavior: auto;
-  }
-  
-  .lenis.lenis-smooth [data-lenis-prevent] {
-    overscroll-behavior: contain;
-  }
-  
-  .lenis.lenis-stopped {
-    overflow: hidden;
-  }
-  
-  .lenis.lenis-scrolling iframe {
-    pointer-events: none;
-  }
+
 
 .selected-projects-image-blur {
-  transition: all 0.25s linear;
+  background: rgba(255, 255, 255, 0.20);
+  transition: all 0.25s ease-in-out;
+  opacity:0
 }
 
 .selected-projects:has(.selected-projects-image-container:hover) .selected-projects-image-container:not(:hover) .selected-projects-image-blur {
-  background: rgba(255, 255, 255, 0.20);
-  backdrop-filter: blur(10px);
+  opacity:1;
+  backdrop-filter: blur(100px);
 }
 
-.accordion-panel {
-  transition: grid-template-rows 0.2s ease-in-out;
-}
-
-.accordion-panel.expanded {
-  grid-template-rows: 1fr;
-  height: auto;
-}
-
-.accordion:after {
-  content: "+";
-  float: right;
-}
-
-.accordion.expanded:after {
-  content: "-";
-}

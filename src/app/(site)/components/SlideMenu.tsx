@@ -133,7 +133,7 @@ export default function SlideMenu() {
 						</a>
 					</div>
 				</div>
-				<div className="mt-auto w-full flex justify-between text-xxs text-white m-5">
+				<div className="mt-auto w-full flex justify-between text-xs text-white m-5">
 					<div className="flex flex-col">
 						<a
 							href="tel:033438260"

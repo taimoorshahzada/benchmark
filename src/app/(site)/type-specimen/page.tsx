@@ -20,7 +20,7 @@ export default function Home() {
           <m.article variants={fade}>
             <div className="flex flex-col space-y-12 mx-3">
               <p className="text-xxs">
-                Moderat Regular 14/17 -1%
+                Moderat Regular 14/17 -1% - xxs
                 <br />
                 Non tempus mattis nibh lacus arcu dui ligula mi. Dapibus ad
                 interdum nam id nec natoque curae cras purus. Commodo erat
@@ -28,7 +28,7 @@ export default function Home() {
                 ridiculus himenaeos.
               </p>
               <p className="text-xs">
-                Moderat Regular 18/21 -1%
+                Moderat Regular 18/21 -1% - xs
                 <br />
                 Non tempus mattis nibh lacus arcu dui ligula mi. Dapibus ad
                 interdum nam id nec natoque curae cras purus. Commodo erat
@@ -36,7 +36,7 @@ export default function Home() {
                 ridiculus himenaeos.
               </p>
               <p className="font-medium text-xs-medium">
-                Moderat Medium 18/21 -1.2% <br />A curae viverra platea morbi
+                Moderat Medium 18/21 -1.2% - text-xs-medium<br />A curae viverra platea morbi
                 etiam vivamus amet malesuada. Tempor finibus volutpat imperdiet
                 tristique donec purus aenean ipsum mauris himenaeos. Sem eu
                 malesuada egestas elit faucibus lobortis integer eros urna
@@ -48,7 +48,7 @@ export default function Home() {
                 fringilla imperdiet eros himenaeos nostra scelerisque.
               </p>
               <p className="font-medium text-sm">
-                Moderat Medium 22/25 -1.2%
+                Moderat Medium 22/25 -1.2% - text-sm
                 <br />
                 Non tempus mattis nibh lacus arcu dui ligula mi. Dapibus ad
                 interdum nam id nec natoque curae cras purus. Commodo erat
@@ -56,16 +56,16 @@ export default function Home() {
                 ridiculus himenaeos.
               </p>
               <p className="font-medium text-base">
-                Moderat Medium 27/30 -1.2% <br />
+                Moderat Medium 27/30 -1.2% - text-base <br />
                 Placerat in dui cras elit pretium quam morbi ex. Integer netus
                 interdum ac primis auctor vulputate inceptos. Pede maecenas sed
                 purus platea consectetuer turpis in convallis. Tincidunt euismod
                 nam potenti platea morbi orci iaculis dictum quis litora mattis.
               </p>
-              <p className="font-medium text-lg">Moderat Medium 40/45 -1.2%</p>
-              <p className="font-medium text-xl">Moderat Medium 120/110 -3%</p>
-              <p className="font-medium text-2xl">Medium 200/180 -4%</p>
-              <p className="font-medium text-3xl">Medium 270/240 -4%</p>
+              <p className="font-medium text-lg">Moderat Medium 40/45 -1.2% - text-lg</p>
+              <p className="font-medium text-xl">Moderat Medium 120/110 -3% - text-xl</p>
+              <p className="font-medium text-2xl">Medium 200/180 -4% - text-2xl</p>
+              <p className="font-medium text-3xl">Medium 270/240 -4% text-3xl</p>
             </div>
           </m.article>
         </m.main>

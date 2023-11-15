@@ -3,8 +3,11 @@ import React from "react";
 
 function SocialIcons() {
 	return (
-		<div className="flex space-x-1">
-			<Link href="" className="hover:opacity-50 transition duration-250 w-fit">
+		<div className="flex">
+			<Link
+				href=""
+				className="hover:opacity-50 transition duration-250 w-fit mr-2"
+			>
 				<svg
 					width="20"
 					height="20"

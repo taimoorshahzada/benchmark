@@ -22,9 +22,11 @@ function LatestProjects() {
 				scrollTrigger: {
 					trigger: triggerRef.current,
 					start: "top top",
-					end: "2000 top",
-					scrub: 0,
+					end: "bottom top",
+					scrub: 1,
 					pin: true,
+					snap: [0.33, 0.66, 1],
+					markers: true,
 				},
 			}
 		);
@@ -35,12 +37,14 @@ function LatestProjects() {
 	}, []);
 
 	return (
-		<section className="scroll-section-outer overflow-hidden col-span-12">
+		<section className="scroll-section-outer overflow-x-hidden col-span-12">
 			<div ref={triggerRef} className="pt-2 pb-10">
-				<p className="font-medium text-sm mb-5 col-span-12">Latest Projects</p>
+				<p className="font-medium text-sm mb-5 col-span-12 pl-5">
+					Latest Projects
+				</p>
 				<div
 					ref={sectionRef}
-					className="scroll-section-inner w-[400%] flex flex-row relative "
+					className="scroll-section-inner w-[400vw] flex flex-row relative "
 				>
 					<Project />
 					<Project />

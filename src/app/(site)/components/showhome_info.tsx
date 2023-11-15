@@ -28,7 +28,7 @@ export default function ShowhomeInfo({showhomes, id}: any) {
   const showhome: Showhome = showhomes.find((showhome: Showhome) => showhome._id === id);
 
   return (
-    <div className="col-span-12 flex px-5 gap-x-5 mb-[200px]">
+    <div className="col-span-12 flex  gap-x-5 mb-[200px]">
       <div className="w-1/2 flex gap-x-5">
         <div className="w-1/2 grid grid-cols-3 gap-x-5">
           <div className="col-span-3 mb-5 text-xs-medium">

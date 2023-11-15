@@ -4,13 +4,11 @@ import Wilson from "../assets/images/Projects-Wilson-1500x1000-High-Res-1.jpg";
 
 function Project() {
 	return (
-		<div className="w-full pr-5 relative">
-			<div className="w-full scroll-section">
+		<div className="w-full flex flex-col relative h-[90vh] scroll-section px-5">
+			<div className="w-full">
 				<Image
-					className="object-cover w-full"
+					className="object-cover w-full "
 					src={Wilson}
-					width={1000}
-					height={1200}
 					alt="Wilson House"
 				/>
 			</div>
