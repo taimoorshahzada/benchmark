@@ -55,7 +55,7 @@ export default function RootLayout({
 				{children}
 				{/* </LenisProvider> */}
 				{/*<LenisScroller /> */}
-				<Footer />
+				{/* <Footer /> */}
 			</body>
 		</html>
 	);

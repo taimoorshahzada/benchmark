@@ -25,7 +25,6 @@ function LatestProjects() {
 					end: "bottom top",
 					scrub: 1,
 					pin: true,
-					snap: [0.33, 0.66, 1],
 					markers: true,
 				},
 			}
@@ -44,7 +43,7 @@ function LatestProjects() {
 				</p>
 				<div
 					ref={sectionRef}
-					className="scroll-section-inner w-[400vw] flex flex-row relative "
+					className="scroll-section-inner w-[400vw] flex flex-row relative h-[80vh]"
 				>
 					<Project />
 					<Project />
