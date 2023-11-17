@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <>
       <Container>
-        <h1 className="font-medium text-3xl col-span-11 -translate-x-5 -translate-y-10 mb-large mt-12">
+        <h1 className="font-medium text-3xl col-span-11 -translate-x-5 mb-large mt-3">
           Benchmark <br /> Homes
         </h1>
 
