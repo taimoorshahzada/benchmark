@@ -8,7 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../components/ui/accordion";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import ScrollTrigger from "react-scroll-trigger";
 import Link from "next/link";
 

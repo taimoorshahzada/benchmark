@@ -9,9 +9,7 @@ body {
   text-rendering: geometricPrecision;
   leading-trim: both;
   text-edge: cap;
-  }
-
-
+}
 
 .selected-projects-image-blur {
   background: rgba(255, 255, 255, 0.20);
@@ -28,3 +26,12 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+#footer {
+  position: fixed;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 10; 
+  transition: top 0.3s; 
+}

@@ -52,7 +52,7 @@ export default function RootLayout({
 						smoothWheel: true,
 					}}
 				> */}
-        {children}
+        <div className="main-content">{children}</div>
         {/* </LenisProvider> */}
         {/*<LenisScroller /> */}
         <Footer />
