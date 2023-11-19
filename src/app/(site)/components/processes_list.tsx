@@ -55,7 +55,7 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
 	}, []);
 
 	return (
-		<div className="flex">
+		<div className="flex relative">
 			<div className="w-1/2 bg-black relative">
 				<div className="sticky top-0 h-screen">
 					<div className="h-full flex flex-col justify-end pl-3 pb-10">

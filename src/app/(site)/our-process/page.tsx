@@ -16,7 +16,7 @@ export default async function OurProcess() {
 	return (
 		<section>
 			<div
-				className="h-screen overflow-scroll top-0 fixed scrollbar-hide w-full"
+				className="h-screen overflow-scroll relative scrollbar-hide w-full"
 				id="processes-container"
 			>
 				<ProcessesList
@@ -24,7 +24,6 @@ export default async function OurProcess() {
 					walkthroughs={walkthroughs}
 				/>
 			</div>
-			<div className="h-screen"></div>
 		</section>
 	);
 }
