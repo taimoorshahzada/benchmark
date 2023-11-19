@@ -20,14 +20,14 @@ export default function Home() {
   return (
     <>
       <Container>
-        <h1 className="font-medium text-3xl col-span-11 -translate-x-5 mb-large mt-3">
+        <h1 className="font-medium text-3xl col-span-11 -translate-x-5 mb-large mt-24 md:mt-3">
           Benchmark <br /> Homes
         </h1>
 
-        <p className="col-span-2 font-medium text-sm">
+        <p className="col-span-12 md:col-span-2 font-medium text-sm mb-3 md:mb-0">
           Design and build architecture
         </p>
-        <div className="col-start-7 col-span-6">
+        <div className="col-start-1 col-span-12 md:col-start-7 md:col-span-6">
           <Image
             className="aspect-[3/2] object-cover"
             src={Mortimer}

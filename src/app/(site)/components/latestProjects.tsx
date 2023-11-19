@@ -45,7 +45,7 @@ function LatestProjects() {
       </p>
       <div
         ref={sectionRef}
-        className="scroll-section-inner w-[400vw] flex flex-row relative h-[90vh]"
+        className="scroll-section-inner w-[400vw] flex flex-row relative h-[45vh] md:h-[90vh]"
       >
         <Project />
         <Project />

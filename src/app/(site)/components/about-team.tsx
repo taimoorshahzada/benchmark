@@ -41,7 +41,7 @@ function AboutTeam({ info }: any) {
         <div></div>
         <div
           ref={sectionRef}
-          className={`p-6 py-32 about-team-section ${
+          className={`p-6 py-32 fade-in-section ${
             isInView ? "bg-black text-white" : ""
           }`}
         >
