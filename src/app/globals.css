@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    font-size: 0.5rem;
-  }
-
-  @screen lg {
-    html {
-      font-size: 1rem;
-    }
-  }
-}
-
 body {
   text-rendering: auto;
   text-rendering: optimizeSpeed;

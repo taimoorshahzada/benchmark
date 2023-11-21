@@ -22,7 +22,7 @@ export default async function Project({ params }: { params: { id: string } }) {
     <>
       <div className="h-screen w-full overflow-scroll top-0 fixed scrollbar-hide">
         <div className="grid grid-cols-12 gap-x-5 text-xs px-5 w-full mt-[10px] mb-[200px]">
-          <h1 className="font-medium text-xl lg:text-2xl xl:text-3xl col-span-11 mb-large">
+          <h1 className="font-medium text-sm-3xl md:text-3xl my-24 md:mt-0 md:mb-large">
             Showhomes
           </h1>
           <div className="border-[#999999] col-span-12 border-dashed border-t border-1 w-full"></div>

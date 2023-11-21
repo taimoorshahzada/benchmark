@@ -31,7 +31,7 @@ export default function AboutInfo({ info }: any) {
         />
       </div>
       <div className="w-1/2 h-fit">
-        <h1 className="font-medium text-xl col-span-11 mb-medium mx-5">
+        <h1 className="font-medium text-sm-xl md:text-xl col-span-11 mb-medium mx-5">
           About Us
         </h1>
         <div className="text-base mb-[450px] mx-5">{info.description}</div>
@@ -65,15 +65,15 @@ export default function AboutInfo({ info }: any) {
         </div>
         <div className="border-grey border-dashed border-t border-1 pt-[10px] mb-[100px] mx-5">
           <div className="text-xs-medium mb-10">Years of Experience</div>
-          <div className="text-2xl">25+</div>
+          <div className="text-sm-2xl md:text-2xl">25+</div>
         </div>
         <div className="border-grey border-dashed border-t border-1 pt-[10px] mb-[100px] mx-5">
           <div className="text-xs-medium mb-10">Master Builder Awards</div>
-          <div className="text-2xl">250+</div>
+          <div className="text-sm-2xl md:text-2xl">250+</div>
         </div>
         <div className="border-grey border-dashed border-t border-1 pt-[10px] mb-[100px] mx-5">
           <div className="text-xs-medium mb-10">Houses built</div>
-          <div className="text-2xl">1500+</div>
+          <div className="text-sm-2xl md:text-2xl">1500+</div>
         </div>
         <div className="border-grey border-dashed border-t border-1 text-base mb-[300px] mx-5">
           <div className="accordion mr-2 cursor-pointer flex justify-between items-center py-6">

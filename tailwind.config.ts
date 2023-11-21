@@ -57,10 +57,26 @@ module.exports = {
           fontWeight: "500",
         },
       ],
+      "sm-lg": [
+        "1.125rem",
+        {
+          lineHeight: "1.25rem",
+          letterSpacing: "-0.48px",
+          fontWeight: "500",
+        },
+      ],
       xl: [
         "7.5rem",
         {
           lineHeight: "6.875rem",
+          letterSpacing: "-3.6px",
+          fontWeight: "500",
+        },
+      ],
+      "sm-xl": [
+        "4.375rem",
+        {
+          lineHeight: "4.375rem",
           letterSpacing: "-3.6px",
           fontWeight: "500",
         },
@@ -73,10 +89,26 @@ module.exports = {
           fontWeight: "500",
         },
       ],
+      "sm-2xl": [
+        "8.125rem",
+        {
+          lineHeight: "9.375rem",
+          letterSpacing: "-8px",
+          fontWeight: "500",
+        },
+      ],
       "3xl": [
         "16.875rem",
         {
           lineHeight: "15rem",
+          letterSpacing: "-8.64px",
+          fontWeight: "500",
+        },
+      ],
+      "sm-3xl": [
+        "4.375rem",
+        {
+          lineHeight: "3.75rem",
           letterSpacing: "-8.64px",
           fontWeight: "500",
         },
@@ -111,10 +143,6 @@ module.exports = {
       },
       color: {
         grey: "#999999",
-      },
-      fontSize: {
-        "body-lg": "1rem",
-        body: ".875rem",
       },
     },
   },

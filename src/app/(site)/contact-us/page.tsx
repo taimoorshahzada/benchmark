@@ -14,7 +14,7 @@ function Contact() {
         <div className="grid grid-cols-2 h-screen">
           <div className="flex flex-col justify-between px-5 mt-3">
             <div className="flex justify-between items-start">
-              <h1 className="text-xl">Contact</h1>
+              <h1 className="text-sm-xl md:text-xl">Contact</h1>
               <div className="flex space-x-5 mt-5">
                 <SocialIcons />
               </div>

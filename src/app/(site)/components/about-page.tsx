@@ -33,7 +33,7 @@ function AboutSection({ info }: any) {
           />
         </div>
         <div className="mx-5 mt-6">
-          <h1 className="font-medium text-xl col-span-11 mb-medium ">
+          <h1 className="font-medium text-sm-xl md:text-xl col-span-11 mb-medium ">
             About Us
           </h1>
           <div className="text-base mb-[450px] ">{info.description}</div>
@@ -74,7 +74,7 @@ function AboutSection({ info }: any) {
                   end={25}
                   duration={2}
                   suffix="+"
-                  className="font-medium text-2xl mb-24"
+                  className="font-medium text-sm-2xl md:text-2xl mb-24"
                 />
               )}
             </ScrollTrigger>
@@ -89,7 +89,7 @@ function AboutSection({ info }: any) {
                   end={20}
                   duration={2}
                   suffix="+"
-                  className="font-medium text-2xl mb-24"
+                  className="font-medium text-sm-2xl md:text-2xl mb-24"
                 />
               )}
             </ScrollTrigger>
@@ -105,7 +105,7 @@ function AboutSection({ info }: any) {
                   duration={2}
                   separator=""
                   suffix="+"
-                  className="font-medium text-2xl mb-24"
+                  className="font-medium text-sm-2xl md:text-2xl mb-24"
                 />
               )}
             </ScrollTrigger>

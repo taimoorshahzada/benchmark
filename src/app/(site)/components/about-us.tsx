@@ -63,7 +63,7 @@ function AboutSection() {
                 end={25}
                 duration={2}
                 suffix="+"
-                className="font-medium text-2xl"
+                className="font-medium text-sm-2xl md:text-2xl"
               />
             )}
           </ScrollTrigger>
@@ -80,7 +80,7 @@ function AboutSection() {
                 end={20}
                 duration={2}
                 suffix="+"
-                className="font-medium text-2xl"
+                className="font-medium text-sm-2xl md:text-2xl"
               />
             )}
           </ScrollTrigger>
@@ -96,7 +96,7 @@ function AboutSection() {
                 duration={2}
                 separator=""
                 suffix="+"
-                className="font-medium text-2xl "
+                className="font-medium text-sm-2xl md:text-2xl"
               />
             )}
           </ScrollTrigger>
@@ -200,8 +200,8 @@ function AboutSection() {
           <p className="absolute top-5 left-1/2 -translate-x-1/2">
             Our Process
           </p>
-          <h1 className="font-medium text-xl  mb-medium">01</h1>
-          <h1 className="font-medium text-xl text-wrap">
+          <h1 className="font-medium text-sm-xl md:text-xl mb-medium">01</h1>
+          <h1 className="font-medium text-sm-xl md:text-xl text-wrap">
             Meeting/
             <br />
             Design

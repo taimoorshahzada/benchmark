@@ -7,21 +7,21 @@ export default async function SelectedProjects() {
   const selectedProjectsSections = await getProjects();
   return (
     <div className="mt-6">
-      <h1 className="font-medium text-3xl mb-large">
+      <h1 className="font-medium text-sm-3xl md:text-3xl my-24 md:mt-0 md:mb-large">
         Selected <br /> Projects
       </h1>
       <div className="col-span-12 selected-projects w-full">
         {selectedProjectsSections.props.selectedProjectsSections.map(
           (project: SelectedProject) => (
-            <div key={project._id} className="mx-5 mb-[200px]">
+            <div key={project._id} className="mx-5 mb-12 md:mb-[200px]">
               <div className="grid grid-cols-12 gap-x-5 text-xs-medium mx-auto w-full border-grey border-dashed border-t border-1">
                 <div
-                  className={`col-span-6 row-start-1 flex-col flex ${
+                  className={`col-span-12 md:col-span-6 md:row-start-1 flex-col flex ${
                     project.mainImageCol == "First"
-                      ? "col-start-1"
+                      ? "md:col-start-1"
                       : project.mainImageCol == "Second"
-                      ? "col-start-4"
-                      : "col-start-7"
+                      ? "md:col-start-4"
+                      : "md:col-start-7 row-start-2 md:row-start-1"
                   }`}
                 >
                   <div className="mb-9 mt-2">{project.mainImageTitle}</div>
@@ -52,10 +52,10 @@ export default async function SelectedProjects() {
                   )}
                 </div>
                 <div
-                  className={`col-span-3 row-start-1 flex-col flex ${
+                  className={`col-span-6 md:col-span-3  flex-col flex ${
                     project.mainImageCol == "First"
-                      ? "col-start-7"
-                      : "col-start-1"
+                      ? "md:col-start-7 sm:row-start-2 md:row-start-1"
+                      : "md:col-start-1 md:row-start-1"
                   }`}
                 >
                   <div className="mb-9 mt-2">{project.Image1Title}</div>
@@ -88,10 +88,10 @@ export default async function SelectedProjects() {
                   )}
                 </div>
                 <div
-                  className={`col-span-3 row-start-1 flex-col flex ${
+                  className={`col-span-6 md:col-span-3 flex-col flex ${
                     project.mainImageCol == "Third"
-                      ? "col-start-4"
-                      : "col-start-10"
+                      ? "md:col-start-4 md:row-start-1"
+                      : "md:col-start-10 sm:row-start-2 md:row-start-1"
                   }`}
                 >
                   <div className="mb-9 mt-2">{project.Image2Title}</div>

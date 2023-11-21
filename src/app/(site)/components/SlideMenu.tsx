@@ -30,7 +30,7 @@ export default function SlideMenu() {
       </button>
       <div className="bg-white bg-opacity-20 backdrop-blur-lg hidden md:block"></div>
       <div className="bg-black flex flex-col col-span-2 md:col-span-1">
-        <div className="text-white text-lg flex flex-col m-5 h-fit relative z-1 mt-24 md:mt-5">
+        <div className="text-white text-sm-lg md:text-lg flex flex-col m-5 h-fit relative z-1 mt-24 md:mt-5">
           <a
             href="/"
             className="hover:opacity-50 transition duration-250 w-fit"

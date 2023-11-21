@@ -36,16 +36,17 @@ export default function Home() {
                 ridiculus himenaeos.
               </p>
               <p className="font-medium text-xs-medium">
-                Moderat Medium 18/21 -1.2% - text-xs-medium<br />A curae viverra platea morbi
-                etiam vivamus amet malesuada. Tempor finibus volutpat imperdiet
-                tristique donec purus aenean ipsum mauris himenaeos. Sem eu
-                malesuada egestas elit faucibus lobortis integer eros urna
-                iaculis libero. Parturient auctor vivamus netus curae dolor
-                potenti volutpat sed etiam vel. Class vivamus mi eleifend semper
-                viverra a porttitor lorem suscipit torquent fusce. Sapien id
-                lobortis lorem aliquet sit lacus fusce. Facilisis habitant
-                taciti nulla consequat molestie facilisi morbi. Lacinia
-                fringilla imperdiet eros himenaeos nostra scelerisque.
+                Moderat Medium 18/21 -1.2% - text-xs-medium
+                <br />A curae viverra platea morbi etiam vivamus amet malesuada.
+                Tempor finibus volutpat imperdiet tristique donec purus aenean
+                ipsum mauris himenaeos. Sem eu malesuada egestas elit faucibus
+                lobortis integer eros urna iaculis libero. Parturient auctor
+                vivamus netus curae dolor potenti volutpat sed etiam vel. Class
+                vivamus mi eleifend semper viverra a porttitor lorem suscipit
+                torquent fusce. Sapien id lobortis lorem aliquet sit lacus
+                fusce. Facilisis habitant taciti nulla consequat molestie
+                facilisi morbi. Lacinia fringilla imperdiet eros himenaeos
+                nostra scelerisque.
               </p>
               <p className="font-medium text-sm">
                 Moderat Medium 22/25 -1.2% - text-sm
@@ -62,10 +63,18 @@ export default function Home() {
                 purus platea consectetuer turpis in convallis. Tincidunt euismod
                 nam potenti platea morbi orci iaculis dictum quis litora mattis.
               </p>
-              <p className="font-medium text-lg">Moderat Medium 40/45 -1.2% - text-lg</p>
-              <p className="font-medium text-xl">Moderat Medium 120/110 -3% - text-xl</p>
-              <p className="font-medium text-2xl">Medium 200/180 -4% - text-2xl</p>
-              <p className="font-medium text-3xl">Medium 270/240 -4% text-3xl</p>
+              <p className="font-medium text-sm-lg md:text-lg">
+                Moderat Medium 40/45 -1.2% - text-sm-lg text-lg
+              </p>
+              <p className="font-medium text-sm-xl md:text-xl">
+                Moderat Medium 120/110 -3% - text-sm-xl text-xl
+              </p>
+              <p className="font-medium text-sm-2xl md:text-2xl">
+                Medium 200/180 -4% - text-sm-2xl text-2xl
+              </p>
+              <p className="font-medium text-sm-3xl md:text-3xl">
+                Medium 270/240 -4% text-sm-3xl text-3xl
+              </p>
             </div>
           </m.article>
         </m.main>
