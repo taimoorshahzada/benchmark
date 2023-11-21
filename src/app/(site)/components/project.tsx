@@ -7,7 +7,7 @@ function Project() {
     <div className="w-full flex flex-col relative scroll-section px-5">
       <div className="">
         <Image
-          className="object-cover w-full h-[45vh] md:h-[90vh]"
+          className="object-cover w-full h-[90vh]"
           src={Wilson}
           alt="Wilson House"
         />

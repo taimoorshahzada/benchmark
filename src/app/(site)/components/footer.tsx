@@ -1,40 +1,41 @@
 "use client";
 
 import Link from "next/link";
-import Container from "./container";
 import React, { useEffect } from "react";
 import SocialIcons from "./social-icons";
 
 export default function Footer() {
   useEffect(() => {
+    let lastDeltaY = 0;
     let currentFooterTop = 100;
     let isFooterControlledScroll = false;
 
-    const handleScroll = (event: WheelEvent) => {
-      const content = document.querySelector(".main-content") as HTMLDivElement;
-      const footer = document.querySelector("#footer") as HTMLDivElement;
+    // Cache DOM elements
+    const content = document.querySelector(".main-content") as HTMLDivElement;
+    const footer = document.querySelector("#footer") as HTMLDivElement;
 
+    const handleScroll = (event: WheelEvent) => {
       const contentHeight = content.offsetHeight;
       const windowHeight = window.innerHeight;
       const scrollPosition = window.scrollY;
       const maxScroll = contentHeight - windowHeight;
 
-      let adjustment = event.deltaY / 10;
-
-      const updateFooter = () => {
-        currentFooterTop = Math.max(
-          0,
-          Math.min(100, currentFooterTop - adjustment)
-        );
-        footer.style.top = `${currentFooterTop}%`;
-        isFooterControlledScroll = currentFooterTop < 100;
-      };
+      const footerHeight = footer.offsetHeight;
+      const viewportHeight = window.innerHeight;
+      const scrollRatio = footerHeight / viewportHeight;
+      const scalingFactor = 0.15; // Adjust this value to slow down or speed up the scroll
+      const normalizedScrollDistance = lastDeltaY * scrollRatio * scalingFactor;
 
       if (
         scrollPosition >= maxScroll ||
-        (isFooterControlledScroll && event.deltaY < 0)
+        (isFooterControlledScroll && lastDeltaY < 0)
       ) {
-        updateFooter();
+        currentFooterTop = Math.max(
+          0,
+          Math.min(100, currentFooterTop - normalizedScrollDistance)
+        );
+        footer.style.top = `${currentFooterTop}%`;
+        isFooterControlledScroll = currentFooterTop < 100;
       }
 
       if (isFooterControlledScroll) {
@@ -44,7 +45,18 @@ export default function Footer() {
       }
     };
 
-    window.addEventListener("wheel", handleScroll);
+    const onWheel = (event: WheelEvent) => {
+      lastDeltaY = event.deltaY;
+      window.requestAnimationFrame(() => {
+        return handleScroll(event);
+      });
+    };
+
+    window.addEventListener("wheel", onWheel);
+
+    return () => {
+      window.removeEventListener("wheel", onWheel);
+    };
   }, []);
 
   return (
