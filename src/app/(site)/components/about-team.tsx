@@ -2,8 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 
 import Photo from "../assets/images/person.jpeg";
 import Image from "next/image";
+import { getStaff } from "../../../../sanity/sanity-utils";
 
-function AboutTeam({ info }: any) {
+async function AboutTeam({ info }: any) {
   const [isInView, setIsInView] = useState(false);
   const sectionRef = useRef(null);
 
@@ -26,14 +27,7 @@ function AboutTeam({ info }: any) {
     };
   }, []);
 
-  const teamMembers = [
-    { name: "Person's Name", title: "Director" },
-    { name: "Person's Name", title: "Director" },
-    { name: "Person's Name", title: "Director" },
-    { name: "Person's Name", title: "Director" },
-    { name: "Person's Name", title: "Director" },
-    { name: "Person's Name", title: "Director" },
-  ];
+  const team = await getStaff();
 
   return (
     <section className="col-span-12">
@@ -53,7 +47,7 @@ function AboutTeam({ info }: any) {
           </div>
 
           <div className="grid grid-cols-12 gap-x-5 gap-y-6">
-            {teamMembers.map((teamMember, index) => (
+            {team.map((teamMember: any, index: number) => (
               <div
                 className={`col-span-6 md:col-span-4 ${
                   index % 2 !== 0 ? "md:col-start-9" : "md:col-start-5"
@@ -62,15 +56,15 @@ function AboutTeam({ info }: any) {
               >
                 <div className="relative w-full pb-full">
                   <Image
-                    src={Photo}
+                    src={teamMember.image}
                     alt="Richard and Sam"
                     width={2000}
                     height={1000}
                     priority
                   />
                 </div>
-                <p className="mt-2">Persons Name</p>
-                <p className="">Director</p>
+                <p className="mt-2">{teamMember.name}</p>
+                <p className="">{teamMember.role}</p>
               </div>
             ))}
           </div>
