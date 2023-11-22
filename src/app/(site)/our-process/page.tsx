@@ -3,27 +3,24 @@ import Header from "@/app/(site)/components/header";
 import Footer from "@/app/(site)/components/footer";
 import React from "react";
 import {
-	getAllProcesses,
-	getAllUpcomingProjects,
-	getAllWalkthroughs,
+  getAllProcesses,
+  getAllUpcomingProjects,
+  getAllWalkthroughs,
 } from "../../../../sanity/sanity-utils";
 import ProcessesList from "@/app/(site)/components/processes_list";
 
 export default async function OurProcess() {
-	const processes = await getAllProcesses();
-	const walkthroughs = await getAllWalkthroughs();
+  const processes = await getAllProcesses();
+  const walkthroughs = await getAllWalkthroughs();
 
-	return (
-		<section>
-			<div
-				className="h-screen overflow-scroll relative scrollbar-hide w-full"
-				id="processes-container"
-			>
-				<ProcessesList
-					processes={processes.props.processes}
-					walkthroughs={walkthroughs}
-				/>
-			</div>
-		</section>
-	);
+  return (
+    <section>
+      <div id="processes-container">
+        <ProcessesList
+          processes={processes.props.processes}
+          walkthroughs={walkthroughs}
+        />
+      </div>
+    </section>
+  );
 }

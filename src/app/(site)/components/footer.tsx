@@ -23,7 +23,7 @@ export default function Footer() {
       const footerHeight = footer.offsetHeight;
       const viewportHeight = window.innerHeight;
       const scrollRatio = footerHeight / viewportHeight;
-      const scalingFactor = 0.15; // Adjust this value to slow down or speed up the scroll
+      const scalingFactor = 1; // Adjust this value to slow down or speed up the scroll
       const normalizedScrollDistance = lastDeltaY * scrollRatio * scalingFactor;
 
       if (

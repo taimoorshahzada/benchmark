@@ -23,7 +23,7 @@ function AboutSection({ info }: any) {
   return (
     <section className="col-span-12">
       <div className="grid grid-cols-2 min-h-screen relative">
-        <div className="bg-black sticky top-0 h-screen overflow-hidden">
+        <div className="bg-black md:sticky top-0 h-screen overflow-hidden col-span-2 md:col-span-1 hidden md:block">
           <Image
             src={Photo}
             alt="Richard and Sam"
@@ -32,23 +32,33 @@ function AboutSection({ info }: any) {
             priority
           />
         </div>
-        <div className="mx-5 mt-6">
-          <h1 className="font-medium text-sm-xl md:text-xl col-span-11 mb-medium ">
+        <div className="mx-5 mt-6 col-span-2 md:col-span-1">
+          <h1 className="font-medium text-sm-xl md:text-xl col-span-11 mb-medium col-span-2 md:col-span-1 mt-16 md:mt-0">
             About Us
           </h1>
-          <div className="text-base mb-[450px] ">{info.description}</div>
+          <div className="text-base mb-4 md:mb-[450px]">{info.description}</div>
+
+          <Image
+            src={Photo}
+            alt="Richard and Sam"
+            width={2000}
+            height={1000}
+            priority
+            className="block md:hidden mb-32"
+          />
+
           <div className="text-xs-medium mb-7 ">Over the Years</div>
           <div className="text-xs mb-[48px]  whitespace-pre-line">
             {info.over_the_years}
           </div>
-          <div className="text-xs flex justify-between mb-large ">
-            <div>Magazine</div>
-            <div>
+          <div className="text-xs flex justify-between mb-medium md:mb-large">
+            <div className="me-5 md:me-0">Magazine</div>
+            <div className="inline-block">
               Want to learn more about us? Check out our magazine
-              <a target="_blank" href="">
+              <a target="_blank" href="" className="inline-block ms-2">
                 {" "}
                 here{" "}
-                <span>
+                <span className="inline-block">
                   <svg
                     width="6"
                     height="12"
@@ -65,7 +75,7 @@ function AboutSection({ info }: any) {
               </a>
             </div>
           </div>
-          <div className="border-b border-dotted border-grey pt-3 pb-24 h-screen">
+          <div className="border-b border-dotted border-grey pt-3 pb-24 md:h-screen">
             <h4 className="pt-3 text-xs-medium">Years of Experience</h4>
             <ScrollTrigger onEnter={() => handleEnterViewport(0)}>
               {countersOn[0] && (
@@ -80,7 +90,7 @@ function AboutSection({ info }: any) {
             </ScrollTrigger>
           </div>
 
-          <div className="border-y border-dotted border-grey pt-3 pb-24 h-screen">
+          <div className="border-y border-dotted border-grey pt-3 pb-24 md:h-screen">
             <h4 className="pt-3 text-xs-medium">Master Builders Awards</h4>
             <ScrollTrigger onEnter={() => handleEnterViewport(1)}>
               {countersOn[1] && (
@@ -95,7 +105,7 @@ function AboutSection({ info }: any) {
             </ScrollTrigger>
           </div>
 
-          <div className="border-y border-dotted border-grey pt-3 pb-24 h-screen">
+          <div className="border-y border-dotted border-grey pt-3 pb-24 md:h-screen">
             <h4 className="pt-3 text-xs-medium">Houses Built</h4>
             <ScrollTrigger onEnter={() => handleEnterViewport(2)}>
               {countersOn[2] && (
@@ -111,7 +121,7 @@ function AboutSection({ info }: any) {
             </ScrollTrigger>
           </div>
 
-          <div className="h-screen">
+          <div className="md:h-screen mb-32 md:mb-0">
             <Accordion type="single" collapsible>
               <AccordionItem value="item-1">
                 <AccordionTrigger>Experts in Design & Build</AccordionTrigger>
