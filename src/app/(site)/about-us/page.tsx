@@ -22,10 +22,10 @@ export default async function About() {
 	const info = await getAboutPageInfo();
 
 	return (
-		<Layout>
+		<>
 			<NextSeo title="About" />
 			<AboutSection info={info.props.info} />
 			<AboutTeam info={info.props.info} />
-		</Layout>
+		</>
 	);
 }

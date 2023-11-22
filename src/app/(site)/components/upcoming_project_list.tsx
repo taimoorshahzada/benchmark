@@ -136,30 +136,30 @@ export default function UpcomingProjectsList({ projects }: any) {
 			{projects.map((upcomingProject: Project, index: number) => (
 				<div
 					key={index}
-					className="upcoming-project cursor-pointer border-grey border-dashed border-t border-1 mb-[60px] grid grid-cols-12 gap-x-5"
+					className="upcoming-project cursor-pointer border-grey border-dashed border-t border-1 mb-[60px] grid grid-cols-6 md:grid-cols-12 gap-x-5"
 				>
-					<div className="col-span-2 mt-[10px] mb-9">Suburb</div>
-					<div className="col-span-2 mt-[10px] col-start-3">
-						Test {upcomingProject.suburb}
+					<div className="col-span-3 md:col-span-2 mt-[10px] mb-9">Suburb</div>
+					<div className="col-span-3 md:col-span-10 mt-[10px] md:col-start-3">
+						{upcomingProject.suburb}
 					</div>
 					<Image
 						alt=""
 						src={upcomingProject.featured_image_1.imageUrl}
-						className="col-span-2 col-start-1 w-full"
+						className="order-2 md:order-1 my-3 md:my-0 md:row-start-2 col-span-3 md:col-span-2 col-start-4 md:col-start-1 w-full"
 						width={1000}
 						height={1000}
 					/>
 					<Image
 						alt=""
 						src={upcomingProject.featured_image_2.imageUrl}
-						className="col-span-2 col-start-3 w-full"
+						className="order-3 md:order-2 my-3 md:my-0 md:row-start-2 col-span-3 md:col-span-2 col-start-4 md:col-start-3  w-full"
 						width={1000}
 						height={1000}
 					/>
 					<Image
 						alt=""
 						src={upcomingProject.hero_image.imageUrl}
-						className="col-span-6 col-start-7"
+						className="col-span-6 md:col-start-7"
 						width={1000}
 						height={1000}
 					/>

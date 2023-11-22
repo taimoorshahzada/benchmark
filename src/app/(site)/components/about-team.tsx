@@ -38,10 +38,12 @@ async function AboutTeam({ info }: any) {
 				}`}
 			>
 				<div className="hidden md:block"></div>
-				<div className="p-6 py-32 col-span-2 md:col-span-1">
-					<div className="mb-24">
-						<div className="text-xs-medium mb-7 ">Our Team</div>
-						<div className="text-xs mb-[48px] whitespace-pre-line">
+				<div className="p-[10px] md:p-5 py-32 col-span-2 md:col-span-1">
+					<div className="mb-[80px] md:mb-24">
+						<div className="text-xxs font-medium md:text-xs-medium mb-3 md:mb-7 ">
+							Our Team
+						</div>
+						<div className="text-xxs md:text-xs mb-[48px] whitespace-pre-line">
 							{info.team_description}
 						</div>
 					</div>

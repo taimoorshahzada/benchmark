@@ -34,11 +34,13 @@ function AboutSection({ info }: any) {
 						priority
 					/>
 				</div>
-				<div className="mx-5 mt-6 col-span-2 md:col-span-1">
-					<h1 className="font-medium text-sm-xl md:text-xl col-span-11 mb-medium col-span-2 md:col-span-1 mt-16 md:mt-0">
+				<div className="mx-[10px] md:mx-5 mt-6 col-span-2 md:col-span-1">
+					<h1 className="font-medium text-sm-xl md:text-xl col-span-11 mb-medium  md:col-span-1 mt-16 md:mt-0">
 						About Us
 					</h1>
-					<div className="text-base mb-4 md:mb-[450px]">{info.description}</div>
+					<div className="text-xs-medium md:text-base mb-5 md:mb-[450px]">
+						{info.description}
+					</div>
 
 					<Image
 						src={Photo}
@@ -46,15 +48,17 @@ function AboutSection({ info }: any) {
 						width={2000}
 						height={1000}
 						priority
-						className="block md:hidden mb-32"
+						className="block md:hidden mb-20 md:mb-32"
 					/>
 
-					<div className="text-xs-medium mb-7 ">Over the Years</div>
-					<div className="text-xs mb-[48px]  whitespace-pre-line">
+					<div className="text-xxs font-medium md:text-xs-medium mb-3 md:mb-7 ">
+						Over the Years
+					</div>
+					<div className="text-xxs md:text-xs mb-[48px]  whitespace-pre-line">
 						{info.over_the_years}
 					</div>
-					<div className="text-xs flex justify-between mb-medium md:mb-large">
-						<div className="me-5 md:me-0">Magazine</div>
+					<div className="text-xxs md:text-xs flex justify-between mb-medium md:mb-large">
+						<div className="me-5 md:me-0 font-medium">Magazine</div>
 						<div className="inline-block">
 							Want to learn more about us? Check out our magazine
 							<a target="_blank" href="" className="inline-block ms-2">

@@ -28,33 +28,30 @@ export default function ShowhomeInfo({showhomes, id}: any) {
   const showhome: Showhome = showhomes.find((showhome: Showhome) => showhome._id === id);
 
   return (
-    <div className="col-span-12 flex  gap-x-5 mb-[200px]">
-      <div className="w-1/2 flex gap-x-5">
-        <div className="w-1/2 grid grid-cols-3 gap-x-5">
-          <div className="col-span-3 mb-5 text-xs-medium">
-            Open Hours
-          </div>
-          {showhome.showhome_times.map((occurrence: DateTimeOccurrence, index: number) => (
-            <div key={index} className="col-span-3 grid grid-cols-3 gap-x-5 text-xs">
-              <div className="col-span-1">
-                {occurrence.day_range}
-              </div>
-              <div className="col-span-2 col-start-2">
-                {occurrence.time_range}
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="w-1/2 flex flex-col text-xs-medium">
-          Address:
-          <div className="mt-5 text-xs">
-            {showhome.address}
-          </div>
-        </div>
-      </div>
-      <div className="w-1/2">
-
-      </div>
-    </div>
-  )
+		<div className="col-span-12 flex  gap-x-5 mb-[500px]">
+			<div className="w-1/2 flex gap-x-5">
+				<div className="w-1/2 grid grid-cols-3 gap-x-5">
+					<div className="col-span-3 mb-5 text-xs-medium">Open Hours</div>
+					{showhome.showhome_times.map(
+						(occurrence: DateTimeOccurrence, index: number) => (
+							<div
+								key={index}
+								className="col-span-3 grid grid-cols-3 gap-x-5 text-xs"
+							>
+								<div className="col-span-1">{occurrence.day_range}</div>
+								<div className="col-span-2 col-start-2">
+									{occurrence.time_range}
+								</div>
+							</div>
+						)
+					)}
+				</div>
+				<div className="w-1/2 flex flex-col text-xs-medium">
+					Address:
+					<div className="mt-5 text-xs">{showhome.address}</div>
+				</div>
+			</div>
+			<div className="w-1/2"></div>
+		</div>
+	);
 }
