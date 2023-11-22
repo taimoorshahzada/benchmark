@@ -33,7 +33,7 @@ export async function getProjects() {
 
 export async function getAllProjects() {
 	const projects = await client.fetch(
-		`*[_type == "project"]{..., landscape_hero{"imageUrl": asset->url}, portrait_hero{"imageUrl": asset->url}, images[]{'imageUrl': asset->url}}`
+		`*[_type == "project"]{..., landscape_hero{"imageUrl": asset->url}, portrait_hero{"imageUrl": asset->url}, images[]{'imageUrl': asset->url},slug{"slug":current}}`
 	);
 
 	return {
@@ -46,7 +46,7 @@ export async function getAllProjects() {
 
 export async function getAllUpcomingProjects() {
 	const upcomingProjects = await client.fetch(
-		`*[_type == "upcoming_project"]{..., hero_image{"imageUrl": asset->url}, featured_image_1{"imageUrl": asset->url}, featured_image_2{"imageUrl": asset->url}, images[]{'imageUrl': asset->url}}`
+		`*[_type == "upcoming_project"]{..., hero_image{"imageUrl": asset->url}, featured_image_1{"imageUrl": asset->url}, featured_image_2{"imageUrl": asset->url}, images[]{'imageUrl': asset->url}, slug{"slug":current}}`
 	);
 
 	return {
@@ -105,16 +105,14 @@ export async function getAboutPageInfo() {
 	};
 }
 
-// export async function getReviews() {
-// 	const [review] = await client.fetch`*[_type == "reviews"]`);
-
-// 	return {
-// 		props: {
-// 			review,
-// 		},
-// 		revalidate: 10,
-// 	};
-// }
+export async function getReviews() {
+	return client.fetch(
+		groq`*[_type == "reviews"] {
+			"review": reviews[0].review,
+			"reviewer": reviews0[].reviewer
+		  }`
+	);
+}
 
 export async function getStaff() {
 	return client.fetch(

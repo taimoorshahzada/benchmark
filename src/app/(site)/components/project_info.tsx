@@ -8,15 +8,16 @@ interface ProjectImage {
 }
 
 interface Project {
-  landscape_hero: ProjectImage;
-  portrait_hero: ProjectImage;
-  title: string;
-  description: string;
-  features: string[];
-  interest_points: string[];
-  images: ProjectImage[];
-  hero_display: string;
-  slug: string;
+	landscape_hero: ProjectImage;
+	portrait_hero: ProjectImage;
+	title: string;
+	description: string;
+	features: string[];
+	interest_points: string[];
+	images: ProjectImage[];
+	hero_display: string;
+	slug: string;
+	url: string;
 }
 
 export default function ProjectInfo({ projects, id }: any) {

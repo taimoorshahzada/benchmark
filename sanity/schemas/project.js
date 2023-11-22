@@ -12,7 +12,7 @@ export const project = {
 			name: "slug",
 			title: "Slug",
 			type: "slug",
-			options: { source: "name" },
+			options: { source: "title" },
 		},
 		{
 			name: "description",
@@ -54,6 +54,11 @@ export const project = {
 			title: "Display Images",
 			type: "array",
 			of: [{ type: "image" }],
+		},
+		{
+			name: "url",
+			title: "URL",
+			type: "url",
 		},
 	],
 };
