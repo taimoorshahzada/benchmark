@@ -11,25 +11,25 @@ function LatestProjects() {
 
   useEffect(() => {
     const pin = gsap.fromTo(
-      sectionRef.current,
-      {
-        translateX: 0,
-      },
-      {
-        translateX: "-300vw",
-        ease: "none",
-        duration: 1,
-        scrollTrigger: {
-          trigger: triggerRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: 1,
-          pin: true,
-          markers: true,
-        },
-      }
-    );
-    console.log("x");
+			sectionRef.current,
+			{
+				translateX: 0,
+			},
+			{
+				translateX: "-300vw",
+				ease: "none",
+				duration: 1,
+				scrollTrigger: {
+					trigger: triggerRef.current,
+					start: "top top",
+					end: "bottom top",
+					scrub: 2,
+					snap: [0, 0.333333, 0.666666, 1],
+					pin: true,
+					markers: false,
+				},
+			}
+		);
     return () => {
       pin.kill();
     };

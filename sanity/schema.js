@@ -9,6 +9,9 @@ import { walkthrough } from "./schemas/walkthrough";
 import { about_info } from "./schemas/about_info";
 import { staff_member } from "./schemas/staff_member";
 import { about_accordion } from "./schemas/about_accordion";
+import { review } from "./schemas/review";
+import { reviews } from "./schemas/reviews";
+
 export const schema = {
 	types: [
 		homepage,
@@ -22,5 +25,7 @@ export const schema = {
 		about_info,
 		staff_member,
 		about_accordion,
+		review,
+		reviews,
 	],
 };

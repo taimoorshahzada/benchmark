@@ -41,22 +41,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${moderat.variable} font-sans`}>
-      <body>
-        <Header />
-        <SlideMenu />
-        {/* <LenisProvider
+		<html lang="en" className={`${moderat.variable} font-sans`}>
+			<body>
+				<Header />
+				<SlideMenu />
+				{/* <LenisProvider
 					options={{
 						lerp: 0.1,
 						wheelMultiplier: 0.8,
 						smoothWheel: true,
 					}}
 				> */}
-        <div className="main-content">{children}</div>
-        {/* </LenisProvider> */}
-        {/*<LenisScroller /> */}
-        <Footer />
-      </body>
-    </html>
-  );
+				<div className="main-content">{children}</div>
+				{/* </LenisProvider> */}
+				{/*<LenisScroller /> */}
+				<Footer />
+			</body>
+		</html>
+	);
 }

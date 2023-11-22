@@ -16,6 +16,7 @@ import LatestProjects from "@/app/(site)/components/latestProjects";
 import SlideMenu from "@/app/(site)/components/SlideMenu";
 import AboutSection from "@/app/(site)/components/about-us";
 import Benchmark from "./assets/images/Benchmark.svg";
+import { getHomepage } from "../../../sanity/sanity-utils";
 
 export default function Home() {
   return (

@@ -4,11 +4,10 @@ import { createClient, groq } from "next-sanity";
 const client = createClient({
 	projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
 	dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-	apiVersion: "2023-11-10",
+	apiVersion: "2023-10-19",
 	useCdn: false,
 });
-export async function getData() {
-
+export async function getHomepage() {
 	return client.fetch(
 		groq`*[_type == "homepage"]{
         text,
@@ -32,7 +31,6 @@ export async function getProjects() {
 	};
 }
 
-
 export async function getAllProjects() {
 	const projects = await client.fetch(
 		`*[_type == "project"]{..., landscape_hero{"imageUrl": asset->url}, portrait_hero{"imageUrl": asset->url}, images[]{'imageUrl': asset->url}}`
@@ -45,7 +43,6 @@ export async function getAllProjects() {
 		revalidate: 10,
 	};
 }
-
 
 export async function getAllUpcomingProjects() {
 	const upcomingProjects = await client.fetch(
@@ -74,7 +71,6 @@ export async function getAllShowhomes() {
 }
 
 export async function getAllProcesses() {
-
 	const processes = await client.fetch(
 		`*[_type == "process"]{..., hero_image{"imageUrl": asset->url}} | order(order asc)`
 	);
@@ -88,10 +84,7 @@ export async function getAllProcesses() {
 }
 
 export async function getAllWalkthroughs() {
-
-	const walkthroughs = await client.fetch(
-		`*[_type == "walkthrough"]`
-	);
+	const walkthroughs = await client.fetch(`*[_type == "walkthrough"]`);
 
 	return {
 		props: {
@@ -102,10 +95,7 @@ export async function getAllWalkthroughs() {
 }
 
 export async function getAboutPageInfo() {
-
-	const [info] = await client.fetch(
-		`*[_type == "about_info"]`
-	);
+	const [info] = await client.fetch(`*[_type == "about_info"]`);
 
 	return {
 		props: {
@@ -115,3 +105,24 @@ export async function getAboutPageInfo() {
 	};
 }
 
+// export async function getReviews() {
+// 	const [review] = await client.fetch`*[_type == "reviews"]`);
+
+// 	return {
+// 		props: {
+// 			review,
+// 		},
+// 		revalidate: 10,
+// 	};
+// }
+
+export async function getStaff() {
+	return client.fetch(
+		groq`*[_type == "staff_member"]{
+			..., 
+			name, 
+			role, 
+			"image": image.asset->url
+		  }`
+	);
+}

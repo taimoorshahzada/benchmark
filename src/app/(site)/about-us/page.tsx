@@ -19,15 +19,13 @@ import AboutSection from "../components/about-page";
 import AboutTeam from "../components/about-team";
 
 export default async function About() {
-  const info = await getAboutPageInfo();
+	const info = await getAboutPageInfo();
 
-  return (
-    <Layout>
-      <NextSeo title="About" />
-
-      {/* <AboutInfo info={info.props.info} /> */}
-      <AboutSection info={info.props.info} />
-      <AboutTeam info={info.props.info} />
-    </Layout>
-  );
+	return (
+		<Layout>
+			<NextSeo title="About" />
+			<AboutSection info={info.props.info} />
+			<AboutTeam info={info.props.info} />
+		</Layout>
+	);
 }
