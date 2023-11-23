@@ -35,3 +35,51 @@ body {
   z-index: 10; 
   transition: top 0.3s;
 }
+
+/** @format */
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  overscroll-behavior: none;
+  min-height: 100vh;
+  /* overflow: hidden; */
+}
+.test {
+
+}
+.swipe-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: visible;
+}
+
+.swipe-section .panel {
+  position: absolute;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.vh-200 {
+  height: 500vh !important;
+}
+
+.red {
+  background-color: red;
+}
+.purple {
+  background-color: purple;
+}
+.blue {
+  background-color: blue;
+}
+.orange {
+  background-color: orange;
+}

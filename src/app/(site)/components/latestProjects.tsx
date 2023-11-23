@@ -36,24 +36,24 @@ function LatestProjects() {
   }, []);
 
   return (
-    <section
-      className="scroll-section-outer overflow-x-hidden col-span-12 pb-10 pt-6"
-      ref={triggerRef}
-    >
-      <p className="font-medium text-sm mb-5 col-span-12 pl-5">
-        Latest Projects
-      </p>
-      <div
-        ref={sectionRef}
-        className="scroll-section-inner w-[400vw] flex flex-row relative h-[90vh]"
-      >
-        <Project />
-        <Project />
-        <Project />
-        <Project />
-      </div>
-    </section>
-  );
+		<section
+			className="scroll-section-outer overflow-x-hidden col-span-12 pb-10 pt-6"
+			ref={triggerRef}
+		>
+			<p className="font-medium text-sm mb-5 col-span-12 pl-5">
+				Latest Projects
+			</p>
+			<div
+				ref={sectionRef}
+				className="swipe-section w-[400vw] flex flex-row relative h-[90vh]"
+			>
+				<Project />
+				<Project />
+				<Project />
+				<Project />
+			</div>
+		</section>
+	);
 }
 
 export default LatestProjects;

@@ -45,16 +45,9 @@ export default function RootLayout({
 			<body>
 				<Header />
 				<SlideMenu />
-				{/* <LenisProvider
-					options={{
-						lerp: 0.1,
-						wheelMultiplier: 0.8,
-						smoothWheel: true,
-					}}
-				> */}
+
 				<div className="main-content">{children}</div>
-				{/* </LenisProvider> */}
-				{/*<LenisScroller /> */}
+
 				<Footer />
 			</body>
 		</html>
