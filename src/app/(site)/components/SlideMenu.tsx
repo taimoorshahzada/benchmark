@@ -148,7 +148,7 @@ export default function SlideMenu() {
 						</a>
 					</div>
 					<div className="sm:flex sm:justify-end">
-						<div className="float-right md:max-w-[60%]">
+						<div className="float-right ">
 							12 Whitburn Ave, Milns Park,
 							<br /> Halswell, Christchurch, New Zealand
 						</div>
