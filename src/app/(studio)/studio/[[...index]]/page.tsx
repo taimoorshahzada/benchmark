@@ -13,9 +13,9 @@ import { NextStudio } from "next-sanity/studio";
 import config from "../../../../../sanity.config";
 
 export default function StudioPage() {
-	return (
-		<main>
-			<NextStudio config={config} />
-		</main>
-	);
+  return (
+    <main>
+      <NextStudio config={config} />
+    </main>
+  );
 }
