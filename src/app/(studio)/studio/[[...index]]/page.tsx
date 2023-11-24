@@ -1,4 +1,3 @@
-"use client";
 /**
  * This route is responsible for the built-in authoring environment using Sanity Studio.
  * All routes under your studio path is handled by this file using Next.js' catch-all routes:
@@ -8,9 +7,10 @@
  * https://github.com/sanity-io/next-sanity
  */
 
+"use client";
+
 import { NextStudio } from "next-sanity/studio";
 import config from "../../../../../sanity.config";
-import StudioHeader from "../../components/studio-header";
 
 export default function StudioPage() {
 	return (
