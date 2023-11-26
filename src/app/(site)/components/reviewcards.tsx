@@ -12,7 +12,7 @@ import {
 export default function ReviewCards() {
 	const reviews = getReviews();
 	return (
-		<div className="bg-white text-black p-5 rounded-lg h-auto w-[350px] flex flex-col justify-between space-y-10">
+		<div className="bg-white text-black mx-[10px] md:mx-0 p-5 rounded-lg h-auto md:w-[350px] flex flex-col justify-between space-y-10">
 			{/* <div className="flex justify-between items-center">
 				<p className="text-xs-medium">Russell Tullis</p>
 				<span className="flex">
