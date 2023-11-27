@@ -17,10 +17,13 @@ body {
   opacity:0
 }
 
-.selected-projects:has(.selected-projects-image-container:hover) .selected-projects-image-container:not(:hover) .selected-projects-image-blur {
-  opacity:1;
-  backdrop-filter: blur(100px);
+@media only screen and (min-width:767px) {
+  .selected-projects:has(.selected-projects-image-container:hover) .selected-projects-image-container:not(:hover) .selected-projects-image-blur {
+    opacity:1;
+    backdrop-filter: blur(100px);
+  }
 }
+
 
 .fade-in-section {
   transition: background-color 0.3s ease, color 0.3s ease;
