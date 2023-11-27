@@ -11,7 +11,6 @@ export default function Footer() {
     let isFooterControlledScroll = false;
 
     const handleScroll = (deltaY: number) => {
-      console.log(deltaY);
       const content = document.querySelector(".main-content") as HTMLDivElement;
       const footer = document.querySelector("#footer") as HTMLDivElement;
 
@@ -26,19 +25,22 @@ export default function Footer() {
       const scalingFactor = 1; // Adjust this value to slow down or speed up the scroll
       const normalizedScrollDistance = deltaY * scrollRatio * scalingFactor;
 
-      console.log(currentFooterTop);
+      console.log("deltaY", deltaY);
+      console.log("scrollPosition", scrollPosition);
+      console.log("maxScroll", maxScroll);
 
       if (
         scrollPosition >= maxScroll ||
-        (isFooterControlledScroll && deltaY < 0)
+        (isFooterControlledScroll && deltaY < 10)
       ) {
         currentFooterTop = Math.max(
           0,
           Math.min(100, currentFooterTop - normalizedScrollDistance)
         );
         footer.style.top = `${currentFooterTop}%`;
-        isFooterControlledScroll = currentFooterTop < 100;
       }
+
+      isFooterControlledScroll = currentFooterTop < 100;
 
       if (isFooterControlledScroll) {
         document.querySelector("body")?.classList.add("overflow-hidden");
