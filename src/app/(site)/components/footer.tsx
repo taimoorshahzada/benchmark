@@ -10,11 +10,11 @@ export default function Footer() {
     let currentFooterTop = 100;
     let isFooterControlledScroll = false;
 
-    // Cache DOM elements
-    const content = document.querySelector(".main-content") as HTMLDivElement;
-    const footer = document.querySelector("#footer") as HTMLDivElement;
+    const handleScroll = (deltaY: number) => {
+      console.log(deltaY);
+      const content = document.querySelector(".main-content") as HTMLDivElement;
+      const footer = document.querySelector("#footer") as HTMLDivElement;
 
-    const handleScroll = (event: WheelEvent) => {
       const contentHeight = content.offsetHeight;
       const windowHeight = window.innerHeight;
       const scrollPosition = window.scrollY;
@@ -24,11 +24,13 @@ export default function Footer() {
       const viewportHeight = window.innerHeight;
       const scrollRatio = footerHeight / viewportHeight;
       const scalingFactor = 1; // Adjust this value to slow down or speed up the scroll
-      const normalizedScrollDistance = lastDeltaY * scrollRatio * scalingFactor;
+      const normalizedScrollDistance = deltaY * scrollRatio * scalingFactor;
+
+      console.log(currentFooterTop);
 
       if (
         scrollPosition >= maxScroll ||
-        (isFooterControlledScroll && lastDeltaY < 0)
+        (isFooterControlledScroll && deltaY < 0)
       ) {
         currentFooterTop = Math.max(
           0,
@@ -45,17 +47,33 @@ export default function Footer() {
       }
     };
 
-    const onWheel = (event: WheelEvent) => {
+    const onWheel = (event: any) => {
       lastDeltaY = event.deltaY;
       window.requestAnimationFrame(() => {
-        return handleScroll(event);
+        handleScroll(lastDeltaY);
       });
     };
 
+    const onTouchMove = (event: any) => {
+      const touchDeltaY = event.touches[0].clientY - lastDeltaY;
+      lastDeltaY = event.touches[0].clientY;
+      window.requestAnimationFrame(() => {
+        handleScroll(-touchDeltaY);
+      });
+    };
+
+    const onTouchStart = (event: any) => {
+      lastDeltaY = event.touches[0].clientY;
+    };
+
     window.addEventListener("wheel", onWheel);
+    window.addEventListener("touchmove", onTouchMove);
+    window.addEventListener("touchstart", onTouchStart);
 
     return () => {
       window.removeEventListener("wheel", onWheel);
+      window.removeEventListener("touchmove", onTouchMove);
+      window.removeEventListener("touchstart", onTouchStart);
     };
   }, []);
 
