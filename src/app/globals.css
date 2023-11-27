@@ -37,6 +37,12 @@ body {
   transition: top 0.3s;
 }
 
+@media (max-width: 768px) {
+  .footer-container {
+    height: calc(100vh - 300px)
+  }
+}
+
 /** @format */
 * {
   margin: 0;
