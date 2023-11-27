@@ -135,7 +135,7 @@ export default function Home() {
 			</Container>
 
 			<div className="swipe-section flex flex-col justify-center md:block">
-				<div className="absolute top-[20%] md:relative font-medium text-sm mt-5 py-5 col-span-12 pl-[10px] md:pl-5">
+				<div className="absolute top-[20%] md:top-0 md:relative font-medium text-sm mt-5 py-5 col-span-12 pl-[10px] md:pl-5">
 					Latest Projects
 				</div>
 				<section className="panel bg-white">
