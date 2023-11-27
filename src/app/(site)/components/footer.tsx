@@ -25,12 +25,8 @@ export default function Footer() {
       const scalingFactor = 1; // Adjust this value to slow down or speed up the scroll
       const normalizedScrollDistance = deltaY * scrollRatio * scalingFactor;
 
-      console.log("deltaY", deltaY);
-      console.log("scrollPosition", scrollPosition);
-      console.log("maxScroll", maxScroll);
-
       if (
-        scrollPosition >= maxScroll ||
+        scrollPosition >= maxScroll - 10 ||
         (isFooterControlledScroll && deltaY < 10)
       ) {
         currentFooterTop = Math.max(
