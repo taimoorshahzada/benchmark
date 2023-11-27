@@ -241,7 +241,7 @@ function AboutSection() {
 						/>
 					</div>
 				</div>
-				<div className="bg-black md:row-start-5 md:col-start-2 h-screen w-[100vw] flex justify-center items-center border-l border-grey border-dotted">
+				<div className="bg-black md:row-start-5 md:col-start-2 h-screen w-[100vw] md:w-full flex justify-center items-center border-l border-grey border-dotted">
 					<ReviewCards />
 				</div>
 			</div>
