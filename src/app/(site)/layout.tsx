@@ -41,15 +41,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-		<html lang="en" className={`${moderat.variable} font-sans`}>
-			<body>
-				<Header />
-				<SlideMenu />
+    <html lang="en" className={`${moderat.variable} font-sans`}>
+      <body>
+        <Header />
+        <SlideMenu />
 
-				<div className="main-content overflow-x-hidden">{children}</div>
+        <div className="main-content">{children}</div>
 
-				<Footer />
-			</body>
-		</html>
-	);
+        <Footer />
+      </body>
+    </html>
+  );
 }

@@ -90,3 +90,7 @@ html {
 .orange {
   background-color: orange;
 }
+
+.pin-spacer {
+  overflow: hidden !important;
+}
