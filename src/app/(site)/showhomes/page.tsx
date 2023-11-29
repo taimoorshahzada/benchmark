@@ -51,7 +51,7 @@ export default async function Project({ params }: { params: { id: string } }) {
 							)}
 						</div>
 						<Image
-							className="w-full mt-4 col-span-6"
+							className="w-full mt-4 col-span-7"
 							src={
 								showhome.hero_display == "Landscape"
 									? showhome.landscape_hero.imageUrl
@@ -64,7 +64,7 @@ export default async function Project({ params }: { params: { id: string } }) {
 
 						<Link
 							href={`/showhome/${showhome._id}`}
-							className="mt-5 w-fit bg-[#F5F5F5] rounded-[5px] flex text-xxs p-3 cursor-pointer hover:opacity-50 col-span-6 mb-10 md:mb-0"
+							className="mt-5 w-fit bg-[#F5F5F5] rounded-[5px] flex text-xxs p-[10px] cursor-pointer hover:opacity-50 col-span-6 mb-10 md:mb-0"
 						>
 							Learn more
 							<div className="ml-[50px] flex items-center">

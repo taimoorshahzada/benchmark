@@ -68,7 +68,7 @@ function Contact() {
 								</button>
 							</div>
 						</div>
-						<div className="grid grid-cols-6 md:grid-cols-2 text-xxs md:text-xs-medium mb-[10px] md:mb-5">
+						<div className="grid grid-cols-6 md:grid-cols-2 text-xxs md:text-xs-medium mb-5">
 							<span className="col-span-4 col-start-3 md:col-start-1">
 								<p>
 									<span className="font-medium">

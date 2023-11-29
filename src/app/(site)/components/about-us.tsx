@@ -56,7 +56,7 @@ function AboutSection() {
 			</div>
 
 			<div className="grid grid-cols-2 min-h-screen relative">
-				<div className="pinned border-t md:border-b border-dotted border-grey pt-3 pb-32 md:pb-24 mx-[10px] md:mx-5 col-span-2 md:row-start-1 md:col-span-1 mt-12 md:mt-[300px] md:h-screen">
+				<div className="bg-white z-[1] pinned border-t md:border-b border-dotted border-grey pt-3 pb-32 md:pb-24 mx-[10px] md:mx-5 col-span-2 md:row-start-1 md:col-span-1 mt-12 md:mt-[300px] md:h-screen sticky top-0">
 					<h4 className="md:pt-3 text-xs-medium pb-8 md:pb-0">
 						Years of Experience
 					</h4>
@@ -73,7 +73,7 @@ function AboutSection() {
 					</ScrollTrigger>
 				</div>
 
-				<div className="border-t border-dotted border-grey pt-3 pb-32 md:pb-24 mx-[10px] md:mx-5 col-span-2 md:col-span-1 md:row-start-2 md:h-screen">
+				<div className="bg-white z-[2] sticky top-0 border-t border-dotted border-grey pt-3 pb-32 md:pb-24 mx-[10px] md:mx-5 col-span-2 md:col-span-1 md:row-start-2 md:h-screen">
 					<h4 className="md:pt-3 text-xs-medium pb-8 md:pb-0">
 						Master Builders Awards
 					</h4>
@@ -90,7 +90,8 @@ function AboutSection() {
 					</ScrollTrigger>
 				</div>
 
-				<div className="border-y border-dotted border-grey pt-3 pb-32 md:pb-24 mx-[10px] md:mx-5 col-span-2 md:col-span-1 md:row-start-3 md:h-screen">
+				<div
+				 className={`bg-white z-[3] sticky top-0 border-y border-dotted border-grey pt-3 pb-32 md:pb-24 mx-[10px] md:mx-5 col-span-2 md:col-span-1 md:row-start-3 md:h-screen`}>
 					<h4 className="md:pt-3 text-xs-medium pb-8 md:pb-0">Houses Built</h4>
 					<ScrollTrigger onEnter={() => handleEnterViewport(2)}>
 						{countersOn[2] && (
@@ -106,11 +107,11 @@ function AboutSection() {
 					</ScrollTrigger>
 				</div>
 
-				<div className="mx-[10px] md:mx-5 col-span-2 md:col-span-1 mb-[60px] md:mb-[300px] md:row-start-4 ">
+				<div className="bg-white sticky top-0 mx-[10px] z-[4] md:mx-5 col-span-2 md:col-span-1 mb-[60px] md:mb-[300px] md:row-start-4 ">
 					<AboutAccordions />
 					<Link
 						href="/about-us"
-						className="mt-[60px] w-fit bg-[#F5F5F5] rounded-[5px]  flex text-xs p-3 cursor-pointer hover:opacity-50 col-span-6 mb-6"
+						className="mt-[60px] w-fit bg-[#F5F5F5] rounded-[5px] text-xxs flex p-[10px] cursor-pointer hover:opacity-50 col-span-6 mb-6"
 					>
 						Learn more
 						<div className="ml-[50px] flex items-center">
@@ -132,7 +133,7 @@ function AboutSection() {
 
 				<div
 					ref={sectionRef}
-					className={`h-screen flex flex-col justify-end  pl-3 pb-10 relative col-span-2 md:col-span-1 md:row-start-5 fade-in-section ${
+					className={`h-screen flex flex-col justify-end z-[5] pl-3 pb-10 relative col-span-2 md:col-span-1 md:row-start-5 fade-in-section ${
 						isInView ? "bg-black text-white" : ""
 					}`}
 				>
@@ -147,7 +148,7 @@ function AboutSection() {
 					</h1>
 					<Link
 						href="/about-us"
-						className="mt-[60px] w-fit bg-[#F5F5F5] rounded-[5px] flex text-xs p-3 cursor-pointer hover:opacity-50 col-span-6 text-black"
+						className="mt-[60px] w-fit bg-[#F5F5F5] rounded-[5px] flex text-xxs p-[10px] cursor-pointer hover:opacity-50 col-span-6 text-black"
 					>
 						Learn more
 						<div className="ml-[50px] flex items-center">
@@ -167,7 +168,7 @@ function AboutSection() {
 					</Link>
 				</div>
 
-				<div className="bg-black col-span-2 row-start-1 md:col-start-2 md:row-span-4 relative order-1">
+				<div className="bg-black  col-span-2 row-start-1 md:col-start-2 md:row-span-4 relative order-1">
 					<div className="bg-black md:sticky top-0">
 						<Image
 							className="aspect-[3/2] object-cover"
@@ -178,7 +179,7 @@ function AboutSection() {
 						/>
 					</div>
 				</div>
-				<div className="bg-black md:row-start-5 md:col-start-2 h-screen w-[100vw] md:w-full flex justify-center items-center border-l border-grey border-dotted">
+				<div className="bg-black z-[5] md:row-start-5 md:col-start-2 h-screen w-[100vw] md:w-full flex justify-center items-center border-l border-grey border-dotted">
 					<ReviewCards />
 				</div>
 			</div>

@@ -41,15 +41,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${moderat.variable} font-sans`}>
-      <body>
-        <Header />
-        <SlideMenu />
+		<html lang="en" className={`${moderat.variable} font-sans`}>
+			<body>
+				<div
+					id="overlay"
+					className="fixed top-0 left-0 bg-white bg-opacity-20 backdrop-blur-lg h-screen w-full z-[10] transition duration-500 hidden opacity-0"
+				></div>
+				<Header />
+				<SlideMenu />
 
-        <div className="main-content">{children}</div>
+				<div className="main-content">{children}</div>
 
-        <Footer />
-      </body>
-    </html>
-  );
+				<Footer />
+			</body>
+		</html>
+	);
 }

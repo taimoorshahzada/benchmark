@@ -5,8 +5,10 @@ import React, { useEffect } from "react";
 export default function SlideMenu() {
   const closeMenu = () => {
     const menu = document.getElementById("menu");
+	
     if (menu) {
       menu.style.transform = "translateX(100%)";
+	
     }
   };
 
@@ -19,18 +21,18 @@ export default function SlideMenu() {
 
   return (
 		<section
-			className="w-full h-screen fixed top-0 left-0 grid grid-cols-2 z-20 transform translate-x-full transition duration-300"
+			className="w-full h-screen fixed top-0 left-0 grid grid-cols-2 z-20 transform translate-x-full transition duration-500"
 			id="menu"
 		>
 			<button
-				className="flex fixed top-2 right-[10px] md:right-5 text-xxs bg-white bg-opacity-20 backdrop-blur-3xl p-[10px] rounded-[5px] z-10 text-white transition duration-300 hover:bg-opacity-50"
+				className="flex fixed top-2 right-[10px] md:right-5 text-xxs bg-white bg-opacity-20 backdrop-blur-lg  p-[10px] rounded-[5px] z-10 text-white transition duration-300 hover:bg-opacity-50"
 				id={"closeMenuButton"}
 			>
 				Close <div className="ml-12 rotate-45">+</div>
 			</button>
-			<div className="bg-white bg-opacity-20 backdrop-blur-lg hidden md:block"></div>
+			<div className="bg-transparent hidden md:block"></div>
 			<div className="bg-black flex flex-col col-span-2 md:col-span-1">
-				<div className="text-white text-base md:text-lg flex flex-col m-[10px] md:first-letter:m-5 h-fit relative z-1 mt-24 md:mt-5">
+				<div className="menulink text-white text-base md:text-lg flex flex-col m-[10px]  h-fit relative z-1 mt-24 md:m-5 ">
 					<a
 						href="/"
 						className="hover:opacity-50 transition duration-250 w-fit"

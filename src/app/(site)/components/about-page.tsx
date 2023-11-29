@@ -35,12 +35,14 @@ function AboutSection({ info }: any) {
 						priority
 					/>
 				</div>
-				<div className="mx-[10px] md:mx-5 mt-6 col-span-2 md:col-span-1">
-					<h1 className="font-medium text-sm-xl md:text-xl col-span-11 mb-medium  md:col-span-1 mt-16 md:mt-0">
-						About Us
-					</h1>
-					<div className="text-xs-medium md:text-base mb-5 md:mb-[450px]">
-						{info.description}
+				<div className=" mx-[10px] md:mx-5 mt-6 col-span-2 md:col-span-1">
+					<div className="bg-white md:sticky top-6 h-screen">
+						<h1 className="font-medium text-sm-xl md:text-xl col-span-11 mb-medium  md:col-span-1 mt-16 md:mt-0">
+							About Us
+						</h1>
+						<div className="text-xs-medium md:text-base mb-5 md:mb-[450px]">
+							{info.description}
+						</div>
 					</div>
 
 					<Image
@@ -52,37 +54,40 @@ function AboutSection({ info }: any) {
 						className="block md:hidden mb-20 md:mb-32"
 					/>
 
-					<div className="text-xxs font-medium md:text-xs-medium mb-3 md:mb-7 ">
-						Over the Years
-					</div>
-					<div className="text-xxs md:text-xs mb-[48px]  whitespace-pre-line">
-						{info.over_the_years}
-					</div>
-					<div className="text-xxs md:text-xs flex justify-between mb-medium md:mb-large">
-						<div className="me-5 md:me-0 font-medium">Magazine</div>
-						<div className="inline-block">
-							Want to learn more about us? Check out our magazine
-							<a target="_blank" href="" className="inline-block ms-2">
-								{" "}
-								here{" "}
-								<span className="inline-block">
-									<svg
-										width="6"
-										height="12"
-										viewBox="0 0 6 12"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M5.65685 5.65685L0 0L0.00012207 11.3138L5.65685 5.65685Z"
-											fill="#999999"
-										/>
-									</svg>
-								</span>
-							</a>
+					<div className="bg-white z-[2] sticky top-0 h-screen ">
+						<div className="text-xxs font-medium md:text-xs-medium my-3 md:my-7 pt-6 ">
+							Over the Years
+						</div>
+						<div className="text-xxs md:text-xs mb-[48px]  whitespace-pre-line">
+							{info.over_the_years}
+						</div>
+						<div className="text-xxs md:text-xs flex justify-between mb-medium md:mb-large">
+							<div className="me-5 md:me-0 font-medium">Magazine</div>
+							<div className="inline-block">
+								Want to learn more about us? Check out our magazine
+								<a target="_blank" href="" className="inline-block ms-2">
+									{" "}
+									here{" "}
+									<span className="inline-block">
+										<svg
+											width="6"
+											height="12"
+											viewBox="0 0 6 12"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M5.65685 5.65685L0 0L0.00012207 11.3138L5.65685 5.65685Z"
+												fill="#999999"
+											/>
+										</svg>
+									</span>
+								</a>
+							</div>
 						</div>
 					</div>
-					<div className="border-b border-dotted border-grey pt-3 pb-24 md:h-screen">
+
+					<div className="bg-white sticky top-0 z-[3] border-t border-dotted border-grey pt-3 pb-24 md:h-screen">
 						<h4 className="pt-3 text-xs-medium">Years of Experience</h4>
 						<ScrollTrigger onEnter={() => handleEnterViewport(0)}>
 							{countersOn[0] && (
@@ -97,7 +102,7 @@ function AboutSection({ info }: any) {
 						</ScrollTrigger>
 					</div>
 
-					<div className="border-y border-dotted border-grey pt-3 pb-24 md:h-screen">
+					<div className="bg-white sticky top-0 z-[4] border-t border-dotted border-grey pt-3 pb-24 md:h-screen">
 						<h4 className="pt-3 text-xs-medium">Master Builders Awards</h4>
 						<ScrollTrigger onEnter={() => handleEnterViewport(1)}>
 							{countersOn[1] && (
@@ -112,7 +117,7 @@ function AboutSection({ info }: any) {
 						</ScrollTrigger>
 					</div>
 
-					<div className="border-y border-dotted border-grey pt-3 pb-24 md:h-screen">
+					<div className="bg-white sticky top-0 z-[5] border-t border-dotted border-grey pt-3 pb-24 md:h-screen">
 						<h4 className="pt-3 text-xs-medium">Houses Built</h4>
 						<ScrollTrigger onEnter={() => handleEnterViewport(2)}>
 							{countersOn[2] && (
@@ -128,7 +133,7 @@ function AboutSection({ info }: any) {
 						</ScrollTrigger>
 					</div>
 
-					<div className="md:h-screen mb-32 md:mb-0">
+					<div className="bg-white sticky top-0 z-[6] md:h-screen mb-32 md:mb-0">
 						<AboutAccordions />
 					</div>
 				</div>

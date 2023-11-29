@@ -26,7 +26,7 @@ export default function Header() {
 					<nav className="ml-auto flex space-x-3 w-full text-sm md:text-base md:w-auto">
 						<button
 							id={"openMenuButton"}
-							className="fixed top-[10px] right-[10px] md:right-5 text-xxs bg-[#999999] bg-opacity-10 p-3 rounded-[5px] z-10"
+							className="fixed top-[10px] right-[10px] md:right-5 text-xxs bg-[#999999] bg-opacity-10 p-3 rounded-[5px] z-10 backdrop-blur-lg"
 						>
 							Menu <span className="ml-12">+</span>
 						</button>

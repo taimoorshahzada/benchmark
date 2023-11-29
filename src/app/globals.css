@@ -81,19 +81,6 @@ html {
   height: 500vh !important;
 }
 
-.red {
-  background-color: red;
-}
-.purple {
-  background-color: purple;
-}
-.blue {
-  background-color: blue;
-}
-.orange {
-  background-color: orange;
-}
-
-.pin-spacer {
-  overflow: hidden !important;
+.menulink {
+  line-height: 1 !important;
 }
