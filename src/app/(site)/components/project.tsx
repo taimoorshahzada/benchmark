@@ -33,13 +33,13 @@ function Project() {
 
 				<span className="col-start-1 md:col-start-10 col-span-12 md:col-span-3 mt-5 md:mt-0 md:ml-auto flex items-center md:justify-center">
 					<div className="flex gap-x-[10px] gap-y-[10px] flex-wrap mb-5">
-						<div className="bg-[#F5F5F5] rounded-[5px] p-[10px] text-xxs">
+						<div className="bg-[#F5F5F5] rounded-[5px] p-[6px] text-xxs">
 							220m2
 						</div>
-						<div className="bg-[#F5F5F5] rounded-[5px] p-[10px] text-xxs">
+						<div className="bg-[#F5F5F5] rounded-[5px] p-[6px] text-xxs">
 							3 Bedrooms
 						</div>
-						<div className="bg-[#F5F5F5] rounded-[5px] p-[10px] text-xxs">
+						<div className="bg-[#F5F5F5] rounded-[5px] p-[6px] text-xxs">
 							2 Bathrooms
 						</div>
 					</div>

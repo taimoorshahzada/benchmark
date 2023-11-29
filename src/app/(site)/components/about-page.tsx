@@ -11,6 +11,7 @@ import {
 	AccordionTrigger,
 } from "../components/ui/accordion";
 import { useRef, useState } from "react";
+import AboutAccordions from "./about-accordions";
 
 function AboutSection({ info }: any) {
 	const [countersOn, setCountersOn] = useState([false, false, false]);
@@ -128,71 +129,7 @@ function AboutSection({ info }: any) {
 					</div>
 
 					<div className="md:h-screen mb-32 md:mb-0">
-						<Accordion type="single" collapsible>
-							<AccordionItem value="item-1">
-								<AccordionTrigger>Experts in Design & Build</AccordionTrigger>
-								<AccordionContent>
-									Lorem ipsum dolor sit amet finibus. Nec mus nisl mi diam
-									vivamus si. Nisi egestas per orci vel id adipiscing dictum
-									tempus dolor sollicitudin dui.
-								</AccordionContent>
-							</AccordionItem>
-						</Accordion>
-
-						<Accordion type="single" collapsible>
-							<AccordionItem value="item-1">
-								<AccordionTrigger>Experience & Diverse Team</AccordionTrigger>
-								<AccordionContent>
-									Lorem ipsum dolor sit amet finibus. Nec mus nisl mi diam
-									vivamus si. Nisi egestas per orci vel id adipiscing dictum
-									tempus dolor sollicitudin dui.
-								</AccordionContent>
-							</AccordionItem>
-						</Accordion>
-
-						<Accordion type="single" collapsible>
-							<AccordionItem value="item-1">
-								<AccordionTrigger>Comprehensive process</AccordionTrigger>
-								<AccordionContent>
-									Lorem ipsum dolor sit amet finibus. Nec mus nisl mi diam
-									vivamus si. Nisi egestas per orci vel id adipiscing dictum
-									tempus dolor sollicitudin dui.
-								</AccordionContent>
-							</AccordionItem>
-						</Accordion>
-
-						<Accordion type="single" collapsible>
-							<AccordionItem value="item-1">
-								<AccordionTrigger>Showhomes</AccordionTrigger>
-								<AccordionContent>
-									Lorem ipsum dolor sit amet finibus. Nec mus nisl mi diam
-									vivamus si. Nisi egestas per orci vel id adipiscing dictum
-									tempus dolor sollicitudin dui.
-								</AccordionContent>
-							</AccordionItem>
-						</Accordion>
-
-						<Accordion type="single" collapsible>
-							<AccordionItem value="item-1">
-								<AccordionTrigger>Virtual Reality</AccordionTrigger>
-								<AccordionContent>
-									Lorem ipsum dolor sit amet finibus. Nec mus nisl mi diam
-									vivamus si. Nisi egestas per orci vel id adipiscing dictum
-									tempus dolor sollicitudin dui.
-								</AccordionContent>
-							</AccordionItem>
-						</Accordion>
-
-						<Accordion type="single" collapsible>
-							<AccordionItem value="item-1">
-								<AccordionTrigger>Registered Master Builder</AccordionTrigger>
-								<AccordionContent>
-									Lorem ipsum dolor sit amet finibus. Nec mus nisl mi diam
-									vivamus si. Nisi egestas per orci vel id adipiscing dictum
-									tempus dolor sollicitudin dui.
-								</AccordionContent>
-							</AccordionItem>
-						</Accordion>
+						<AboutAccordions />
 					</div>
 				</div>
 			</div>
