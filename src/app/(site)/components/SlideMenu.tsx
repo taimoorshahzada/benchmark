@@ -4,28 +4,32 @@ import React, { useEffect } from "react";
 
 export default function SlideMenu() {
   const closeMenu = () => {
-    const menu = document.getElementById("menu");
-	
-    if (menu) {
-      menu.style.transform = "translateX(100%)";
-	
-    }
-  };
+		const menu = document.getElementById("menu");
+		const glass = document.getElementById("glass");
+		if (menu) {
+			menu.classList.remove("open");
+			glass.classList.toggle("opacity-0");
 
-  useEffect(() => {
-    const button = document.getElementById("closeMenuButton");
-    if (button) {
-      button.addEventListener("click", closeMenu);
-    }
-  }, []);
+			setTimeout(() => {
+				glass.classList.toggle("invisible");
+			}, 500);
+		}
+	};
 
-  return (
+	useEffect(() => {
+		const button = document.getElementById("closeMenuButton");
+		if (button) {
+			button.addEventListener("click", closeMenu);
+		}
+	}, []);
+
+	return (
 		<section
-			className="w-full h-screen fixed top-0 left-0 grid grid-cols-2 z-20 transform translate-x-full transition duration-500"
+			className="w-full h-screen fixed top-0 left-0 grid grid-cols-2 z-20 transform translate-x-full transition ease-in-out duration-500"
 			id="menu"
 		>
 			<button
-				className="flex fixed top-2 right-[10px] md:right-5 text-xxs bg-white bg-opacity-20 backdrop-blur-lg  p-[10px] rounded-[5px] z-10 text-white transition duration-300 hover:bg-opacity-50"
+				className="flex fixed top-2 right-[10px] md:right-5 text-xxs bg-white bg-opacity-20 backdrop-blur-lg  p-[10px] rounded-[5px] z-10 text-white transition duration-500 hover:bg-opacity-50"
 				id={"closeMenuButton"}
 			>
 				Close <div className="ml-12 rotate-45">+</div>

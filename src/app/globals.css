@@ -84,3 +84,11 @@ html {
 .menulink {
   line-height: 1 !important;
 }
+
+#glass.show {
+  opacity: 100;
+}
+
+#menu.open {
+  transform: translateX(0)
+}

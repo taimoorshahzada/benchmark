@@ -13,7 +13,7 @@ export default function Footer() {
 		const handleScroll = (deltaY: number) => {
 			const content = document.querySelector(".main-content") as HTMLDivElement;
 			const footer = document.querySelector("#footer") as HTMLDivElement;
-
+			const glass = document.getElementById("glass");
 			const contentHeight = content.offsetHeight;
 			const windowHeight = window.innerHeight;
 			const scrollPosition = window.scrollY;
@@ -44,6 +44,8 @@ export default function Footer() {
 				document.querySelector("body")?.classList.remove("overflow-hidden");
 			}
 		};
+
+		
 
 		const onWheel = (event: any) => {
 			lastDeltaY = event.deltaY;
