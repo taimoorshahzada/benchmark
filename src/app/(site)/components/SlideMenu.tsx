@@ -8,10 +8,10 @@ export default function SlideMenu() {
 		const glass = document.getElementById("glass");
 		if (menu) {
 			menu.classList.remove("open");
-			glass.classList.toggle("opacity-0");
+			glass?.classList.toggle("opacity-0");
 
 			setTimeout(() => {
-				glass.classList.toggle("invisible");
+				glass?.classList.toggle("invisible");
 			}, 500);
 		}
 	};

@@ -10,8 +10,8 @@ export default function Header() {
 	const glass = document.getElementById("glass");
 	if (menu) {
 		menu.classList.add("open");
-		glass.classList.toggle("opacity-0")
-		glass.classList.toggle("invisible");
+		glass?.classList.toggle("opacity-0")
+		glass?.classList.toggle("invisible");
 	}
   };
 
