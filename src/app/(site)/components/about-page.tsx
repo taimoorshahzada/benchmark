@@ -35,8 +35,8 @@ function AboutSection({ info }: any) {
 						priority
 					/>
 				</div>
-				<div className=" mx-[10px] md:mx-5 mt-6 col-span-2 md:col-span-1">
-					<div className="bg-white md:sticky top-6 h-screen">
+				<div className=" mt-6 col-span-2 md:col-span-1">
+					<div className="bg-white md:sticky top-6 md:h-screen mx-[10px] md:mx-5">
 						<h1 className="font-medium text-sm-xl md:text-xl col-span-11 mb-medium  md:col-span-1 mt-16 md:mt-0">
 							About Us
 						</h1>
@@ -54,7 +54,7 @@ function AboutSection({ info }: any) {
 						className="block md:hidden mb-20 md:mb-32"
 					/>
 
-					<div className="bg-white z-[2] sticky top-0 h-screen ">
+					<div className="bg-white z-[2] sticky top-0 h-screen mx-[10px] md:mx-5 ">
 						<div className="text-xxs font-medium md:text-xs-medium my-3 md:my-7 pt-6 ">
 							Over the Years
 						</div>
@@ -87,7 +87,7 @@ function AboutSection({ info }: any) {
 						</div>
 					</div>
 
-					<div className="bg-white sticky top-0 z-[3] border-t border-dotted border-grey pt-3 pb-24 md:h-screen">
+					<div className="bg-white sticky top-0 z-[3] border-t border-dotted border-grey pt-3 pb-24 h-screen mx-[10px] md:mx-5">
 						<h4 className="pt-3 text-xs-medium">Years of Experience</h4>
 						<ScrollTrigger onEnter={() => handleEnterViewport(0)}>
 							{countersOn[0] && (
@@ -102,7 +102,7 @@ function AboutSection({ info }: any) {
 						</ScrollTrigger>
 					</div>
 
-					<div className="bg-white sticky top-0 z-[4] border-t border-dotted border-grey pt-3 pb-24 md:h-screen">
+					<div className="bg-white sticky top-0 z-[4] border-t border-dotted border-grey pt-3 pb-24 h-screen mx-[10px] md:mx-5">
 						<h4 className="pt-3 text-xs-medium">Master Builders Awards</h4>
 						<ScrollTrigger onEnter={() => handleEnterViewport(1)}>
 							{countersOn[1] && (
@@ -117,7 +117,7 @@ function AboutSection({ info }: any) {
 						</ScrollTrigger>
 					</div>
 
-					<div className="bg-white sticky top-0 z-[5] border-t border-dotted border-grey pt-3 pb-24 md:h-screen">
+					<div className="bg-white sticky top-0 z-[5] border-t border-dotted border-grey pt-3 pb-24 h-screen mx-[10px] md:mx-5">
 						<h4 className="pt-3 text-xs-medium">Houses Built</h4>
 						<ScrollTrigger onEnter={() => handleEnterViewport(2)}>
 							{countersOn[2] && (
@@ -133,7 +133,7 @@ function AboutSection({ info }: any) {
 						</ScrollTrigger>
 					</div>
 
-					<div className="bg-white sticky top-0 z-[6] md:h-screen mb-32 md:mb-0">
+					<div className="bg-white sticky top-0 z-[6] md:h-screen mb-32 md:mb-0 mx-[10px] md:mx-5">
 						<AboutAccordions />
 					</div>
 				</div>

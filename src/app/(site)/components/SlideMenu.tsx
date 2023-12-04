@@ -1,9 +1,10 @@
 "use client";
 
+import { X } from "lucide-react";
 import React, { useEffect } from "react";
 
 export default function SlideMenu() {
-  const closeMenu = () => {
+	const closeMenu = () => {
 		const menu = document.getElementById("menu");
 		const glass = document.getElementById("glass");
 		const content = document.querySelector(".main-content") as HTMLDivElement;
@@ -31,10 +32,13 @@ export default function SlideMenu() {
 			id="menu"
 		>
 			<button
-				className="flex fixed top-2 right-[10px] md:right-5 text-xxs bg-white bg-opacity-20 backdrop-blur-lg  p-[10px] rounded-[5px] z-10 text-white transition duration-500 hover:bg-opacity-50"
+				className="flex items-center fixed top-2 right-[10px] md:right-5 text-xxs bg-white bg-opacity-20 backdrop-blur-lg  p-[10px] rounded-[5px] z-10 text-white transition duration-500 hover:bg-opacity-50"
 				id={"closeMenuButton"}
 			>
-				Close <div className="ml-12 rotate-45">+</div>
+				Close{" "}
+				<div className="ml-12">
+					<X size={15} />
+				</div>
 			</button>
 			<div className="bg-transparent hidden md:block invisible"></div>
 			<div className="bg-black flex flex-col col-span-2 md:col-span-1">

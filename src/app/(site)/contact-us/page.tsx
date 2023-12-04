@@ -12,16 +12,16 @@ function Contact() {
 		<section className="md:h-screen">
 			<div>
 				<div className="grid md:grid-cols-2">
-					<div className="flex flex-col justify-between px-[10px] md:px-5 mt-3 h-screen">
+					<div className="flex flex-col justify-between p-[10px] md:p-5 h-screen">
 						<div className="flex justify-between items-start">
 							<h1 className="mt-[68px] md:mt-0 text-sm-xl md:text-xl">
 								Contact
 							</h1>
-							<div className="absolute top-[10px] left-[10px] md:relative md:flex space-x-5 md:mt-5">
+							<div className="md:relative md:flex space-x-5 ">
 								<SocialIcons />
 							</div>
 						</div>
-						<div className="grid grid-cols-2 gap-[10px] text-xxs pr-5">
+						<div className="grid grid-cols-2 gap-[10px] md:gap-[15px] text-xxs pr-5">
 							<input
 								className="bg-[#F5F5F5] outline-none scrollbar-hide resize-none rounded-[5px] p-3"
 								placeholder="First Name"
@@ -68,7 +68,7 @@ function Contact() {
 								</button>
 							</div>
 						</div>
-						<div className="grid grid-cols-6 md:grid-cols-2 text-xxs md:text-xs-medium mb-5">
+						<div className="grid grid-cols-6 md:grid-cols-2 text-xxs md:text-xs-medium">
 							<span className="col-span-4 col-start-3 md:col-start-1">
 								<p>
 									<span className="font-medium">
@@ -81,7 +81,7 @@ function Contact() {
 								</p>
 							</span>
 
-							<span className="col-span-6 md:col-span-1 md:col-start-1">
+							<span className="mb-4 md:mb-0 col-span-6 md:col-span-1 md:col-start-1">
 								<Link
 									href="tel:033438260"
 									className="hover:opacity-50 transition duration-250 w-fit"

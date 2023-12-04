@@ -19,48 +19,59 @@ export default function UpcomingProjectsList({ projects }: any) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const openLightbox = (index: number) => {
-    setProject(projects[index]);
-    const footer = document.getElementById("footer");
-    const header = document.getElementById("header");
-    const lightbox = document.getElementById("project-lightbox");
-    if (footer) {
-      footer.style.display = "none";
-    }
-    if (lightbox) {
-      lightbox.style.display = "flex";
-    }
-    if (header) {
-      header.style.display = "none";
-    }
-  };
+		setProject(projects[index]);
+		const footer = document.getElementById("footer");
+		const header = document.getElementById("header");
+		const lightbox = document.getElementById("project-lightbox");
+		const image = document.getElementById("image");
+		if (footer) {
+			footer.style.display = "none";
+		}
+		if (lightbox) {
+			lightbox.classList.remove("invisible");
+			lightbox.classList.remove("opacity-0");
 
-  const closeLightbox = () => {
-    setCurrentIndex(0);
-    const footer = document.getElementById("footer");
-    const header = document.getElementById("header");
-    const lightbox = document.getElementById("project-lightbox");
-    if (footer) {
-      footer.style.display = "block";
-    }
-    if (lightbox) {
-      lightbox.style.display = "none";
-    }
-    if (header) {
-      header.style.display = "block";
-    }
-  };
+			setTimeout(() => {
+				image?.classList.remove("opacity-0");
+			}, 250);
+		}
+		if (header) {
+			header.style.display = "none";
+		}
+	};
 
-  useEffect(() => {
-    document.querySelectorAll(".upcoming-project").forEach((project, index) => {
-      project.addEventListener("click", () => openLightbox(index));
-    });
-  }, []);
+	const closeLightbox = () => {
+		setCurrentIndex(0);
+		const footer = document.getElementById("footer");
+		const header = document.getElementById("header");
+		const lightbox = document.getElementById("project-lightbox");
+		const image = document.getElementById("image");
+		if (footer) {
+			footer.style.display = "block";
+		}
+		if (lightbox) {
+			lightbox.classList.add("opacity-0");
+			setTimeout(() => {
+				lightbox.classList.add("invisible");
+				image?.classList.add("opacity-0");
+			}, 250);
+		}
+		if (header) {
+			header.style.display = "block";
+		}
+	};
 
-  return (
+	useEffect(() => {
+		document.querySelectorAll(".upcoming-project").forEach((project, index) => {
+			project.addEventListener("click", () => openLightbox(index));
+		});
+	}, []);
+
+	return (
 		<div className="col-span-12">
 			{project ? (
 				<div
-					className="fixed top-0 left-0 w-full h-full bg-white bg-opacity-20 z-20 backdrop-blur-lg hidden"
+					className="fixed top-0 left-0 w-full h-full bg-white bg-opacity-20 z-20 backdrop-blur-lg opacity-0 invisible flex transition duration-300"
 					id="project-lightbox"
 				>
 					<div className="flex fixed top-5 left-5 gap-x-1">
@@ -102,8 +113,9 @@ export default function UpcomingProjectsList({ projects }: any) {
 						</svg>
 					</div>
 					<Image
+						id="image"
 						alt=""
-						className="fixed inset-2/4 transform -translate-y-1/2 object-contain -translate-x-1/2 max-h-[80%]"
+						className="fixed inset-2/4 transform -translate-y-1/2 object-contain -translate-x-1/2 max-h-[80%] opacity-0 transition duration-500"
 						src={project.images[currentIndex].imageUrl}
 						width={1000}
 						height={1000}
