@@ -6,12 +6,14 @@ import { useState, useEffect } from "react";
 
 export default function Header() {
   const openMenu = () => {
-    const menu = document.getElementById("menu");
+	const content = document.querySelector(".main-content") as HTMLDivElement;
+	const menu = document.getElementById("menu");
 	const glass = document.getElementById("glass");
 	if (menu) {
 		menu.classList.add("open");
-		glass?.classList.toggle("opacity-0")
-		glass?.classList.toggle("invisible");
+		glass?.classList.remove("opacity-0");
+		glass?.classList.remove("invisible");
+		content.classList.add("fixed");
 	}
   };
 

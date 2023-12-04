@@ -48,7 +48,7 @@ function AboutSection() {
 	}, []);
 
 	return (
-		<section className="col-span-12">
+		<section className={`col-span-12 fade-in-section `}>
 			<div className="font-medium text-sm mb-[10px] md:mb-0 md:h-[300px] relative">
 				<p className="md:absolute bottom-0 px-[10px] md:px-5  md:py-5">
 					About Us
@@ -91,7 +91,10 @@ function AboutSection() {
 				</div>
 
 				<div
-				 className={`bg-white z-[3] sticky top-0 border-y border-dotted border-grey pt-3 pb-32 md:pb-24 mx-[10px] md:mx-5 col-span-2 md:col-span-1 md:row-start-3 md:h-screen`}>
+					className={`z-[3] sticky top-0 border-y border-r border-dotted border-grey pt-3 pb-32 md:pb-24 px-[10px] md:px-5 col-span-2 md:col-span-1 md:row-start-3 md:h-screen fade-in-section  ${
+						isInView ? "bg-black text-white" : "bg-white text-black"
+					}`}
+				>
 					<h4 className="md:pt-3 text-xs-medium pb-8 md:pb-0">Houses Built</h4>
 					<ScrollTrigger onEnter={() => handleEnterViewport(2)}>
 						{countersOn[2] && (
@@ -107,11 +110,15 @@ function AboutSection() {
 					</ScrollTrigger>
 				</div>
 
-				<div className="bg-white sticky top-0 mx-[10px] z-[4] md:mx-5 col-span-2 md:col-span-1 mb-[60px] md:mb-[300px] md:row-start-4 ">
+				<div
+					className={`sticky top-0 px-[10px] z-[4] md:px-5 col-span-2 md:col-span-1 pb-[60px] md:pb-[300px] md:row-start-4 fade-in-section  border-r border-grey border-dotted ${
+						isInView ? "bg-black text-white" : "bg-white text-black"
+					}`}
+				>
 					<AboutAccordions />
 					<Link
 						href="/about-us"
-						className="mt-[60px] w-fit bg-[#F5F5F5] rounded-[5px] text-xxs flex p-[10px] cursor-pointer hover:opacity-50 col-span-6 mb-6"
+						className="mt-[60px] w-fit bg-[#F5F5F5] text-black rounded-[5px] text-xxs flex p-[10px] cursor-pointer hover:opacity-50 col-span-6 mb-6"
 					>
 						Learn more
 						<div className="ml-[50px] flex items-center">
@@ -133,8 +140,8 @@ function AboutSection() {
 
 				<div
 					ref={sectionRef}
-					className={`h-screen flex flex-col justify-end z-[5] pl-3 pb-10 relative col-span-2 md:col-span-1 md:row-start-5 fade-in-section ${
-						isInView ? "bg-black text-white" : ""
+					className={`h-screen flex flex-col justify-end z-[5] pl-3 pb-10 relative col-span-2 md:col-span-1 md:row-start-5 fade-in-section  border-r border-grey border-dotted ${
+						isInView ? "bg-black text-white" : "bg-white text-black"
 					}`}
 				>
 					<p className="absolute top-5 left-1/2 -translate-x-1/2">
@@ -179,7 +186,7 @@ function AboutSection() {
 						/>
 					</div>
 				</div>
-				<div className="bg-black z-[5] md:row-start-5 md:col-start-2 h-screen w-[100vw] md:w-full flex justify-center items-center border-l border-grey border-dotted">
+				<div className="bg-black z-[5] md:row-start-5 md:col-start-2 h-screen w-[100vw] md:w-full flex justify-center items-center ">
 					<ReviewCards />
 				</div>
 			</div>

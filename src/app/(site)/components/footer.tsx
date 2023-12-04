@@ -40,8 +40,15 @@ export default function Footer() {
 
 			if (isFooterControlledScroll) {
 				document.querySelector("body")?.classList.add("overflow-hidden");
+				glass?.classList.remove("opacity-0");
+				glass?.classList.remove("invisible");
 			} else {
 				document.querySelector("body")?.classList.remove("overflow-hidden");
+				glass?.classList.add("opacity-0");
+
+				setTimeout(() => {
+					glass?.classList.add("invisible");
+				}, 500);
 			}
 		};
 

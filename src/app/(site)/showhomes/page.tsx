@@ -20,17 +20,17 @@ export default async function Project({ params }: { params: { id: string } }) {
 
   return (
 		<>
-			<div className="grid grid-cols-6 md:grid-cols-12 gap-x-5 text-xs px-[10px] md:px-5 w-full mt-[10px] pb-[200px]">
+			<div className="grid grid-cols-6 md:grid-cols-12 gap-x-5 text-xxstext-xs px-[10px] md:px-5 w-full mt-[10px] pb-[200px]">
 				<h1 className="col-span-12 break-words font-medium text-sm-3xl md:text-3xl my-24 md:mt-0 md:mb-large">
 					Show&shy;homes
 				</h1>
-				<div className="border-[#999999] col-span-6 md:col-span-12 border-dashed border-t border-1 w-full"></div>
+				<div className="border-[#999999] col-span-12 border-dashed border-t border-1 w-full"></div>
 				{showhomes.props.showhomes.map((showhome: Showhome, index: number) => (
 					<div
 						key={index}
 						className={`${
 							index % 2 == 0 ? "col-start-1" : "md:col-start-7"
-						} col-span-6 grid grid-cols-6 gap-x-5 mt-[10px]`}
+						} col-span-12 md:col-span-6 grid grid-cols-6 gap-x-5 mt-[10px]`}
 					>
 						<div className="col-span-6 md:col-span-2 font-medium mb-4 md:mb-0">
 							{showhome.title}

@@ -6,12 +6,14 @@ export default function SlideMenu() {
   const closeMenu = () => {
 		const menu = document.getElementById("menu");
 		const glass = document.getElementById("glass");
+		const content = document.querySelector(".main-content") as HTMLDivElement;
 		if (menu) {
 			menu.classList.remove("open");
-			glass?.classList.toggle("opacity-0");
+			glass?.classList.add("opacity-0");
+			content.classList.remove("fixed");
 
 			setTimeout(() => {
-				glass?.classList.toggle("invisible");
+				glass?.classList.add("invisible");
 			}, 500);
 		}
 	};
@@ -34,7 +36,7 @@ export default function SlideMenu() {
 			>
 				Close <div className="ml-12 rotate-45">+</div>
 			</button>
-			<div className="bg-transparent hidden md:block"></div>
+			<div className="bg-transparent hidden md:block invisible"></div>
 			<div className="bg-black flex flex-col col-span-2 md:col-span-1">
 				<div className="menulink text-white text-base md:text-lg flex flex-col m-[10px]  h-fit relative z-1 mt-24 md:m-5 ">
 					<a

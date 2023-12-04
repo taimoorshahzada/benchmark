@@ -45,16 +45,17 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
       });
 
       if (highestVisibleIndex !== -1) {
-        if (titleIndex && processes[highestVisibleIndex]) {
-          titleIndex.innerText =
-            highestVisibleIndex < 9
-              ? `0${highestVisibleIndex + 1}`
-              : `${highestVisibleIndex + 1}`;
-        }
-        if (title && processes[highestVisibleIndex]) {
-          title.innerText = processes[highestVisibleIndex].title;
-        }
-      }
+				if (titleIndex && processes[highestVisibleIndex]) {
+					titleIndex.innerText =
+						highestVisibleIndex < 9
+							? `0${highestVisibleIndex + 1}`
+							: `${highestVisibleIndex + 1}`;
+				}
+
+				if (title && processes[highestVisibleIndex]) {
+					title.innerText = processes[highestVisibleIndex].title;
+				}
+			}
     };
 
     if (processContainer) {
@@ -74,7 +75,7 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
 				<div className="fixed md:sticky top-0 h-[115px] md:h-screen bg-black w-full">
 					<div className="h-full flex flex-col justify-end pl-3 pb-5 md:pb-10">
 						<h1
-							className="font-medium text-white text-sm md:text-xl md:mb-medium"
+							className="font-medium text-white text-sm md:text-xl md:mb-medium absolute top-[40%]"
 							id="process-title-index"
 						>
 							01
