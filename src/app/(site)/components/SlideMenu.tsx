@@ -28,7 +28,7 @@ export default function SlideMenu() {
 
 	return (
 		<section
-			className="w-full min-h-[100svh] fixed top-0 left-0 grid grid-cols-2 z-20 transform translate-x-full transition ease-in-out duration-500"
+			className="w-full h-screen fixed top-0 left-0 grid grid-cols-2 z-20 transform translate-x-full transition ease-in-out duration-500"
 			id="menu"
 		>
 			<button
