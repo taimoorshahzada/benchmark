@@ -20,7 +20,9 @@ export async function getHomepage() {
 
 export async function getProjects() {
 	const selectedProjectsSections = await client.fetch(
-		`*[_type == "selected-projects"]{..., mainImage{'imageUrl': asset->url}, image1{'imageUrl': asset->url}, image2{'imageUrl': asset->url}}`
+		`*[_type == "selected-projects"]{..., mainImage{'imageUrl': asset->url}, image1{'imageUrl': asset->url}, image2{'imageUrl': asset->url}, slug{
+			slug{current}
+		  }}`
 	);
 
 	return {
@@ -43,6 +45,8 @@ export async function getAllProjects() {
 		revalidate: 10,
 	};
 }
+
+
 
 export async function getAllUpcomingProjects() {
 	const upcomingProjects = await client.fetch(

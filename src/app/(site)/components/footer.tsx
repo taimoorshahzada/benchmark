@@ -85,7 +85,7 @@ export default function Footer() {
 	}, []);
 
 	return (
-		<footer className="bg-transparent h-screen" id="footer">
+		<footer className="bg-transparent min-h-[100svh]" id="footer">
 			<div className="absolute bottom-0 grid grid-cols-12 gap-x-5 text-xs-medium mx-auto w-full bg-white md:p-5 footer-container">
 				<div className="col-start-10 md:col-start-1 row-start-1 md:col-span-2">
 					<svg

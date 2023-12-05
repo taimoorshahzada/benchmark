@@ -4,8 +4,9 @@ import Link from "next/link";
 import { getProjects } from "../../../../sanity/sanity-utils";
 
 export default async function SelectedProjects() {
-  const selectedProjectsSections = await getProjects();
-  return (
+	const selectedProjectsSections = await getProjects();
+
+	return (
 		<div className="mt-6">
 			<h1 className="mx-[10px] font-medium text-sm-3xl md:text-3xl my-24 md:mt-0 md:mb-large">
 				Selected <br /> Projects
@@ -28,6 +29,7 @@ export default async function SelectedProjects() {
 									}`}
 								>
 									<div className="mb-9 mt-2">{project.mainImageTitle}</div>
+
 									{project.mainProject ? (
 										<Link
 											href={`project/${project.mainProject._ref}`}
