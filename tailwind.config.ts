@@ -113,6 +113,14 @@ module.exports = {
 					fontWeight: "500",
 				},
 			],
+			"sm-xxs": [
+				"0.75rem",
+				{
+					lineHeight: "0.875rem",
+					letterSpacing: "-0.14px",
+					fontWeight: "400",
+				},
+			],
 		},
 		extend: {
 			keyframes: {

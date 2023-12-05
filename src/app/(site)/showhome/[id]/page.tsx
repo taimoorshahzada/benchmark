@@ -11,12 +11,12 @@ export default async function Showhome({ params }: { params: { id: string } }) {
   const showhomes = await getAllShowhomes();
 
   return (
-    <Layout>
-      <div className="grid grid-cols-12 gap-x-5 text-xs px-5 w-full mt-[10px]">
-        <ProjectInfo projects={showhomes.props.showhomes} id={params.id} />
-        <ShowhomeInfo showhomes={showhomes.props.showhomes} id={params.id} />
-        <ProjectImages projects={showhomes.props.showhomes} id={params.id} />
-      </div>
-    </Layout>
-  );
+		<Layout>
+			<div className="grid grid-cols-12 gap-x-5 text-xs px-[10px] md:px-5 w-full mt-[10px]">
+				<ProjectInfo projects={showhomes.props.showhomes} id={params.id} />
+				<ShowhomeInfo showhomes={showhomes.props.showhomes} id={params.id} />
+				<ProjectImages projects={showhomes.props.showhomes} id={params.id} />
+			</div>
+		</Layout>
+	);
 }
