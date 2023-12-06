@@ -25,6 +25,7 @@ export default function Home() {
 						alt="Benchmark Homes"
 						width={3000}
 						height={1000}
+						priority
 					/>
 				</h1>
 

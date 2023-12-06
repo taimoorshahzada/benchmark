@@ -2,17 +2,18 @@ import { useRef, useEffect } from "react";
 import Project from "./project";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
-import Observer from "gsap/Observer";
+
+import Wilson from "../assets/images/Projects-Wilson-1500x1000-High-Res-1.jpg";
+import Mortimer from "../assets/images/Projects-Mortimer-1500-x-1000-High-Res-6.jpg";
+import Marshall from "../assets/images/Projects-Marshall-21500-x-1000-High-Res.jpg";
 
 function LatestProjects() {
 	const sectionRef = useRef(null);
 	const triggerRef = useRef(null);
+	const project2 = document.querySelector(".project-2");
 
 	gsap.registerPlugin(ScrollTrigger);
-	gsap.registerPlugin(Observer);
 
-
-	
 	useEffect(() => {
 		const pin = gsap.fromTo(
 			sectionRef.current,
@@ -23,17 +24,55 @@ function LatestProjects() {
 				translateX: "-300vw",
 				ease: "none",
 				duration: 1,
+
 				scrollTrigger: {
 					trigger: triggerRef.current,
 					start: "top top",
 					end: "2000 top",
 					scrub: 0.6,
 					pin: true,
+					onUpdate: (self) => {
+						console.log("translateX:", self.progress * 300);
+
+						let currentTranslation = self.progress * 300;
+
+						const project2 = document.querySelector(".project-2");
+						const project3 = document.querySelector(".project-3");
+						const project4 = document.querySelector(".project-4");
+
+						if (currentTranslation >= 80) {
+							if (project2) {
+								project2.classList.remove("opacity-0");
+							}
+						} else {
+							if (project2) {
+								project2.classList.add("opacity-0");
+							}
+						}
+
+						if (currentTranslation >= 180) {
+							if (project3) {
+								project3.classList.remove("opacity-0");
+							}
+						} else {
+							if (project3) {
+								project3.classList.add("opacity-0");
+							}
+						}
+
+						if (currentTranslation >= 280) {
+							if (project4) {
+								project4.classList.remove("opacity-0");
+							}
+						} else {
+							if (project4) {
+								project4.classList.add("opacity-0");
+							}
+						}
+					},
 				},
 			}
 		);
-
-		// Define the panel to observe
 
 		return () => {
 			pin.kill();
@@ -51,13 +90,15 @@ function LatestProjects() {
 					ref={sectionRef}
 					className="scroll-section-inner w-[400vw] flex flex-row relative md:h-[85vh]"
 				>
-					<Project />
-					<Project />
-					<Project />
-					<Project />
+					<Project image={Wilson} />
+					<Project image={Mortimer} />
+					<Project image={Marshall} />
+					<Project image={Wilson} />
 				</div>
-				<div className="px-[10px] md:px-5  grid grid-cols-12 mt-[10px] items-start w-full">
-					<p className="font-medium">Wilson</p>
+				<div className="bg-white absolute px-[10px] md:px-5  grid grid-cols-12 mt-[10px] md:mt-5 items-start w-full transition duration-500 z-[1]">
+					<p id="project-title" className="font-medium">
+						Wilson
+					</p>
 					<span className="col-start-3 col-span-4 flex items-center space-x-5 text-[#999999] ">
 						<p>View Home</p>
 						<svg
@@ -76,13 +117,154 @@ function LatestProjects() {
 
 					<span className="col-start-1 md:col-start-10 col-span-12 md:col-span-3 mt-5 md:mt-0 md:ml-auto flex items-center md:justify-center">
 						<div className="flex gap-x-[10px] gap-y-[10px] flex-wrap mb-5">
-							<div className="bg-[#F5F5F5] rounded-[5px] p-[6px] text-xxs">
+							<div
+								id="area"
+								className="bg-[#F5F5F5] rounded-[5px] p-[6px] text-xxs"
+							>
 								220m2
 							</div>
-							<div className="bg-[#F5F5F5] rounded-[5px] p-[6px] text-xxs">
+							<div
+								id="bedrooms"
+								className="bg-[#F5F5F5] rounded-[5px] p-[6px] text-xxs"
+							>
 								3 Bedrooms
 							</div>
-							<div className="bg-[#F5F5F5] rounded-[5px] p-[6px] text-xxs">
+							<div
+								id="bathrooms"
+								className="bg-[#F5F5F5] rounded-[5px] p-[6px] text-xxs"
+							>
+								2 Bathrooms
+							</div>
+						</div>
+					</span>
+				</div>
+
+				<div className="project-2 opacity-0 bg-white absolute px-[10px] md:px-5  grid grid-cols-12 mt-[10px] md:mt-5 items-start w-full transition duration-500 z-[2]">
+					<p id="project-title" className="font-medium">
+						Mortimer
+					</p>
+					<span className="col-start-3 col-span-4 flex items-center space-x-5 text-[#999999] ">
+						<p>View Home</p>
+						<svg
+							width="7"
+							height="12"
+							viewBox="0 0 7 12"
+							fill="#999999"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M6.3131 5.65685L0.65625 0L0.656372 11.3138L6.3131 5.65685Z"
+								fill="#999999"
+							/>
+						</svg>
+					</span>
+
+					<span className="col-start-1 md:col-start-10 col-span-12 md:col-span-3 mt-5 md:mt-0 md:ml-auto flex items-center md:justify-center">
+						<div className="flex gap-x-[10px] gap-y-[10px] flex-wrap mb-5">
+							<div
+								id="area"
+								className="bg-[#F5F5F5] rounded-[5px] p-[6px] text-xxs"
+							>
+								223m2
+							</div>
+							<div
+								id="bedrooms"
+								className="bg-[#F5F5F5] rounded-[5px] p-[6px] text-xxs"
+							>
+								4 Bedrooms
+							</div>
+							<div
+								id="bathrooms"
+								className="bg-[#F5F5F5] rounded-[5px] p-[6px] text-xxs"
+							>
+								2 Bathrooms
+							</div>
+						</div>
+					</span>
+				</div>
+
+				<div className="project-3 opacity-0 bg-white absolute px-[10px] md:px-5  grid grid-cols-12 mt-[10px] md:mt-5 items-start w-full transition duration-500 z-[3]">
+					<p id="project-title" className="font-medium">
+						Marshall
+					</p>
+					<span className="col-start-3 col-span-4 flex items-center space-x-5 text-[#999999] ">
+						<p>View Home</p>
+						<svg
+							width="7"
+							height="12"
+							viewBox="0 0 7 12"
+							fill="#999999"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M6.3131 5.65685L0.65625 0L0.656372 11.3138L6.3131 5.65685Z"
+								fill="#999999"
+							/>
+						</svg>
+					</span>
+
+					<span className="col-start-1 md:col-start-10 col-span-12 md:col-span-3 mt-5 md:mt-0 md:ml-auto flex items-center md:justify-center">
+						<div className="flex gap-x-[10px] gap-y-[10px] flex-wrap mb-5">
+							<div
+								id="area"
+								className="bg-[#F5F5F5] rounded-[5px] p-[6px] text-xxs"
+							>
+								220m2
+							</div>
+							<div
+								id="bedrooms"
+								className="bg-[#F5F5F5] rounded-[5px] p-[6px] text-xxs"
+							>
+								4 Bedrooms
+							</div>
+							<div
+								id="bathrooms"
+								className="bg-[#F5F5F5] rounded-[5px] p-[6px] text-xxs"
+							>
+								2 Bathrooms
+							</div>
+						</div>
+					</span>
+				</div>
+
+				<div className="project-4 opacity-0 bg-white absolute px-[10px] md:px-5  grid grid-cols-12 mt-[10px] md:mt-5 items-start w-full z-[4] transition duration-500">
+					<p id="project-title" className="font-medium">
+						Wilson
+					</p>
+					<span className="col-start-3 col-span-4 flex items-center space-x-5 text-[#999999] ">
+						<p>View Home</p>
+						<svg
+							width="7"
+							height="12"
+							viewBox="0 0 7 12"
+							fill="#999999"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M6.3131 5.65685L0.65625 0L0.656372 11.3138L6.3131 5.65685Z"
+								fill="#999999"
+							/>
+						</svg>
+					</span>
+
+					<span className="col-start-1 md:col-start-10 col-span-12 md:col-span-3 mt-5 md:mt-0 md:ml-auto flex items-center md:justify-center">
+						<div className="flex gap-x-[10px] gap-y-[10px] flex-wrap mb-5">
+							<div
+								id="area"
+								className="bg-[#F5F5F5] rounded-[5px] p-[6px] text-xxs"
+							>
+								220m2
+							</div>
+							<div
+								id="bedrooms"
+								className="bg-[#F5F5F5] rounded-[5px] p-[6px] text-xxs"
+							>
+								3 Bedrooms
+							</div>
+							<div
+								id="bathrooms"
+								className="bg-[#F5F5F5] rounded-[5px] p-[6px] text-xxs"
+							>
 								2 Bathrooms
 							</div>
 						</div>

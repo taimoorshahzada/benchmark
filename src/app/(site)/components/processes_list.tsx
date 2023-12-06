@@ -6,6 +6,9 @@ import Image from "next/image";
 export default function ProcessesList({ processes, walkthroughs }: any) {
   const [isInView, setIsInView] = useState(false);
   const sectionRef = useRef(null);
+  
+
+ 
 
   useEffect(() => {
     const observer = new IntersectionObserver(
