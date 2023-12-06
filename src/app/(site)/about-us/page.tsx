@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Layout from "../components/layout";
 import Header from "../components/header";
@@ -16,16 +16,14 @@ import Photo from "@/app/(site)/assets/images/Home-Benchmark-Homes-1000-x-1000-H
 import AboutInfo from "@/app/(site)/components/about_info";
 import { getAboutPageInfo } from "../../../../sanity/sanity-utils";
 import AboutSection from "../components/about-page";
-import AboutTeam from "../components/about-team";
 
 export default async function About() {
-	const info = await getAboutPageInfo();
+  const info = await getAboutPageInfo();
 
-	return (
-		<>
-			<NextSeo title="About" />
-			<AboutSection info={info.props.info} />
-			<AboutTeam info={info.props.info} />
-		</>
-	);
+  return (
+    <>
+      <NextSeo title="About" />
+      <AboutSection info={info.props.info} />
+    </>
+  );
 }
