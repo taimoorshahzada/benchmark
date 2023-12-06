@@ -50,7 +50,7 @@ function AboutSection() {
   return (
 		<section className={`col-span-12 fade-in-section `}>
 			<div className="font-medium text-sm mb-[10px] md:mb-0 md:h-[300px] relative">
-				<p className="md:absolute bottom-0 px-[10px] md:px-5  md:py-5">
+				<p className="md:absolute bottom-[-45px] px-[10px] md:px-5  md:py-5">
 					About Us
 				</p>
 			</div>
