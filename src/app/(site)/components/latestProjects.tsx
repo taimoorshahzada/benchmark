@@ -10,7 +10,6 @@ import Marshall from "../assets/images/Projects-Marshall-21500-x-1000-High-Res.j
 function LatestProjects() {
 	const sectionRef = useRef(null);
 	const triggerRef = useRef(null);
-	const project2 = document.querySelector(".project-2");
 
 	gsap.registerPlugin(ScrollTrigger);
 
@@ -32,8 +31,6 @@ function LatestProjects() {
 					scrub: 0.6,
 					pin: true,
 					onUpdate: (self) => {
-						console.log("translateX:", self.progress * 300);
-
 						let currentTranslation = self.progress * 300;
 
 						const project2 = document.querySelector(".project-2");
