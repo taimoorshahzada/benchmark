@@ -1,10 +1,6 @@
-import SlideMenu from "@/app/(site)/components/SlideMenu";
-import Header from "@/app/(site)/components/header";
-import Footer from "@/app/(site)/components/footer";
 import React from "react";
 import {
   getAllProcesses,
-  getAllUpcomingProjects,
   getAllWalkthroughs,
 } from "../../../../sanity/sanity-utils";
 import ProcessesList from "@/app/(site)/components/processes_list";

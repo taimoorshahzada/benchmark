@@ -45,7 +45,9 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
       });
 
       if (highestVisibleIndex !== -1) {
-        if (titleIndex && processes[highestVisibleIndex]) {
+        if (highestVisibleIndex === processElements.length - 1) {
+          titleIndex.innerText = "+";
+        } else {
           titleIndex.innerText =
             highestVisibleIndex < 9
               ? `0${highestVisibleIndex + 1}`
@@ -70,12 +72,17 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
   }, [processes]);
 
   return (
-    <div className="md:flex relative ">
-      <div className="md:w-1/2 bg-black relative pb-[200px]">
-        <div className="fixed md:sticky top-0 h-[115px] md:h-screen bg-black w-full">
-          <div className="h-full flex flex-col justify-end pl-3 pb-5 md:pb-10">
+    <div className="md:flex relative">
+      <div className="md:hidden custom-full-height pt-[150px] bg-black text-white">
+        <h1 className="font-medium text-sm-xl md:text-xl mb-[90px] px-[10px] md:px-5 mt-0 md:mt-6">
+          Our <br /> Process
+        </h1>
+      </div>
+      <div className="sticky md:relative top-0 md:w-1/2 bg-black relative">
+        <div className="md:sticky top-0 h-[115px] md:h-screen bg-black w-full">
+          <div className="h-full flex flex-row md:flex-col items-end md:items-start md:justify-end pl-3 pb-5 md:pb-10">
             <h1
-              className="font-medium text-white text-sm md:text-xl md:mb-medium absolute top-[40%]"
+              className="font-medium text-white text-sm md:text-xl md:mb-medium md:absolute md:top-[40%] me-5 md:me-0"
               id="process-title-index"
             >
               01

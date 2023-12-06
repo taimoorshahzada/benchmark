@@ -141,7 +141,11 @@ function AboutSection({ info }: any) {
             </ScrollTrigger>
           </div>
 
-          <div className="bg-white sticky top-0 z-[5] border-t border-dotted border-grey pt-3 pb-24 h-screen mx-[10px] md:mx-5">
+          <div
+            className={`sticky top-0 z-[5] border-t border-dotted border-grey pt-3 pb-24 h-screen px-[10px] md:px-5 fade-in-section ${
+              isInView ? "bg-black text-white" : "bg-white"
+            }`}
+          >
             <h4 className="pt-3 text-xs-medium">Houses Built</h4>
             <ScrollTrigger onEnter={() => handleEnterViewport(2)}>
               {countersOn[2] && (
@@ -158,7 +162,7 @@ function AboutSection({ info }: any) {
           </div>
 
           <div
-            className={`sticky top-0 z-[6] md:h-screen mb-32 md:mb-0 px-[10px] md:px-5 fade-in-section ${
+            className={`sticky top-0 z-[6] md:h-screen pb-32 md:mb-0 px-[10px] md:px-5 fade-in-section ${
               isInView ? "bg-black text-white" : "bg-white"
             }`}
           >
