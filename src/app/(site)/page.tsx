@@ -12,6 +12,7 @@ import Project from "./components/project";
 import AboutSection from "./components/about-us";
 import LatestProjects from "./components/latestProjects";
 
+
 gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
 	return (

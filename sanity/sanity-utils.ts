@@ -13,8 +13,26 @@ export async function getHomepage() {
         text,
         description,
         mainImage,
-        alt
+        alt,
+		
     }`
+	);
+}
+
+export async function getTest() {
+	return client.fetch(
+		groq`*[type == "selected-projects"]{
+			mainImageTitle,
+			"mainProject": project->slug,
+			"mainImage": image.asset->url,
+			Image1Title,
+			"firstProject": project->slug,
+			"image1": image.asset->url,
+			Image2Title,
+			"secondProject": project->slug,
+			"image2": image.asset->url
+		}
+		`
 	);
 }
 
