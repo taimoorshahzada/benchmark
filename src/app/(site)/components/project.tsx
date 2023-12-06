@@ -5,8 +5,13 @@ import { getProjects } from "../../../../sanity/sanity-utils";
 
 function Project() {
 
+
+	
   return (
-		<div className=" w-full flex flex-col relative px-[10px] md:px-5 col-span-12">
+		<div
+			id="projectImages"
+			className=" w-full flex flex-col relative px-[10px] md:px-5 col-span-12"
+		>
 			<div className="">
 				<Image
 					className="scroll-section object-cover w-full md:h-[85vh]"

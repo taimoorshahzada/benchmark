@@ -78,3 +78,9 @@ html {
 .custom-full-height {
   height: calc(100vh - 115px);
 }
+
+.vimeo {
+  max-width: unset;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}

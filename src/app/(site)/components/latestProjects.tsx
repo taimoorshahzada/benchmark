@@ -2,7 +2,7 @@ import { useRef, useEffect } from "react";
 import Project from "./project";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
-import Observer from "gsap-trial/dist/Observer";
+import Observer from "gsap/Observer";
 
 function LatestProjects() {
 	const sectionRef = useRef(null);
@@ -11,6 +11,8 @@ function LatestProjects() {
 	gsap.registerPlugin(ScrollTrigger);
 	gsap.registerPlugin(Observer);
 
+
+	
 	useEffect(() => {
 		const pin = gsap.fromTo(
 			sectionRef.current,
@@ -31,15 +33,7 @@ function LatestProjects() {
 			}
 		);
 
-		const panel = document.querySelector(".panel");
-
-		const translate = gsap.to(panel, {
-			x: "-100%",
-			duration: 1,
-			ease: "power2.inOut",
-		});
-
-	
+		// Define the panel to observe
 
 		return () => {
 			pin.kill();
@@ -53,6 +47,7 @@ function LatestProjects() {
 					Latest Projects
 				</p>
 				<div
+					id="scroller"
 					ref={sectionRef}
 					className="scroll-section-inner w-[400vw] flex flex-row relative md:h-[85vh]"
 				>

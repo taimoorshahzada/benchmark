@@ -17,7 +17,7 @@ function Contact() {
 							<h1 className="mt-[68px] md:mt-0 text-sm-xl md:text-xl">
 								Contact
 							</h1>
-							<div className="md:relative md:flex space-x-5 ">
+							<div className="absolute top-3 left-3 md:relative md:flex space-x-5 ">
 								<SocialIcons />
 							</div>
 						</div>
