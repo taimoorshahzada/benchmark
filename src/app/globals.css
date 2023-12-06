@@ -60,29 +60,8 @@ html {
   min-height: 100vh;
   /* overflow: hidden; */
 }
-.test {
 
-}
-.swipe-section {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow: visible;
-}
 
-.swipe-section .panel {
-  position: absolute;
-  width: 100vw;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.vh-200 {
-  height: 500vh !important;
-}
 
 .menulink {
   line-height: 1 !important;
