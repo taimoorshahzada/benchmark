@@ -6,24 +6,25 @@ import { useState, useEffect } from "react";
 import { Plus } from "lucide-react";
 
 export default function Header() {
-  const openMenu = () => {
-    const content = document.querySelector(".main-content") as HTMLDivElement;
-    const menu = document.getElementById("menu");
-    const glass = document.getElementById("glass");
-    if (menu) {
-      menu.classList.add("open");
-      glass?.classList.remove("opacity-0");
-      glass?.classList.remove("invisible");
-      content.classList.add("fixed");
-    }
-  };
+	
 
   useEffect(() => {
-    const button = document.getElementById("openMenuButton");
-    if (button) {
-      button.addEventListener("click", openMenu);
-    }
-  }, []);
+		const openMenu = () => {
+			const menu = document.getElementById("menu");
+			const glass = document.getElementById("glass");
+			const body = document.body;
+			if (menu && glass) {
+				menu.classList.add("open");
+				glass.style.opacity = "100";
+				glass.style.visibility = "visible";
+				body.classList.add("overflow-y-hidden");
+			}
+		};
+		const button = document.getElementById("openMenuButton");
+		if (button) {
+			button.addEventListener("click", openMenu);
+		}
+	}, []);
 
   return (
     <header className="" id="header">

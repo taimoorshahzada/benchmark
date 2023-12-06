@@ -7,16 +7,19 @@ export default function SlideMenu() {
 	const closeMenu = () => {
 		const menu = document.getElementById("menu");
 		const glass = document.getElementById("glass");
-		const content = document.querySelector(".main-content") as HTMLDivElement;
-		if (menu) {
+		const body = document.body;
+		if (menu && glass) {
 			menu.classList.remove("open");
-			glass?.classList.add("opacity-0");
-			content.classList.remove("fixed");
+			glass.style.opacity = "0";
+
+			body.classList.remove("overflow-y-hidden");
 
 			setTimeout(() => {
-				glass?.classList.add("invisible");
+				glass.style.visibility = "hidden";
 			}, 500);
 		}
+
+		console.log("Function ran");
 	};
 
 	useEffect(() => {
@@ -40,7 +43,7 @@ export default function SlideMenu() {
 					<X size={15} />
 				</div>
 			</button>
-			<div className="bg-transparent hidden md:block invisible"></div>
+			<div className="bg-transparent hidden md:block z-[3]"></div>
 			<div className="bg-black flex flex-col col-span-2 md:col-span-1">
 				<div className="menulink text-white text-base md:text-lg flex flex-col m-[10px]  h-fit relative z-1 mt-24 md:m-5 ">
 					<a
