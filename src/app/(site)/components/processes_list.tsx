@@ -6,9 +6,6 @@ import Image from "next/image";
 export default function ProcessesList({ processes, walkthroughs }: any) {
   const [isInView, setIsInView] = useState(false);
   const sectionRef = useRef(null);
-  
-
- 
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -36,7 +33,7 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
 
     const checkScrollPos = () => {
       const title = document.getElementById("process-title");
-      const titleIndex = document.getElementById("process-title-index");
+      const titleIndex = document.getElementById("process-title-index") as any;
       const processElements = document.querySelectorAll(".process");
 
       let highestVisibleIndex = -1;
@@ -47,14 +44,35 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
         }
       });
 
-	  if (!titleIndex) {
+      if (!titleIndex) {
         return;
       }
 
       if (highestVisibleIndex !== -1) {
         if (highestVisibleIndex === processElements.length - 1) {
           titleIndex.innerText = "+";
-	@@ -72,106 +76,106 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
+        } else {
+          titleIndex.innerText =
+            highestVisibleIndex < 9
+              ? `0${highestVisibleIndex + 1}`
+              : `${highestVisibleIndex + 1}`;
+        }
+
+        if (title && processes[highestVisibleIndex]) {
+          title.innerText = processes[highestVisibleIndex].title;
+        }
+      }
+    };
+
+    if (processContainer) {
+      window.addEventListener("wheel", checkScrollPos);
+    }
+
+    return () => {
+      if (processContainer) {
+        window.removeEventListener("wheel", checkScrollPos);
+      }
+    };
   }, [processes]);
 
   return (
