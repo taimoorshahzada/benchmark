@@ -47,35 +47,14 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
         }
       });
 
-      if (!titleIndex) {
+	  if (!titleIndex) {
         return;
       }
 
       if (highestVisibleIndex !== -1) {
         if (highestVisibleIndex === processElements.length - 1) {
-          titleIndex?.innerText = "+";
-        } else {
-          titleIndex?.innerText =
-						highestVisibleIndex < 9
-							? `0${highestVisibleIndex + 1}`
-							: `${highestVisibleIndex + 1}`;
-        }
-
-        if (title && processes[highestVisibleIndex]) {
-          title.innerText = processes[highestVisibleIndex].title;
-        }
-      }
-    };
-
-    if (processContainer) {
-      window.addEventListener("wheel", checkScrollPos);
-    }
-
-    return () => {
-      if (processContainer) {
-        window.removeEventListener("wheel", checkScrollPos);
-      }
-    };
+          titleIndex.innerText = "+";
+	@@ -72,106 +76,106 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
   }, [processes]);
 
   return (
