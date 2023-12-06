@@ -50,12 +50,12 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
 
       if (highestVisibleIndex !== -1) {
         if (highestVisibleIndex === processElements.length - 1) {
-          titleIndex.innerText = "+";
+          titleIndex?.innerText = "+";
         } else {
-          titleIndex.innerText =
-            highestVisibleIndex < 9
-              ? `0${highestVisibleIndex + 1}`
-              : `${highestVisibleIndex + 1}`;
+          titleIndex?.innerText =
+						highestVisibleIndex < 9
+							? `0${highestVisibleIndex + 1}`
+							: `${highestVisibleIndex + 1}`;
         }
 
         if (title && processes[highestVisibleIndex]) {
