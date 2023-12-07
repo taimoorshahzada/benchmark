@@ -5,86 +5,9 @@ import React, { useEffect } from "react";
 import SocialIcons from "./social-icons";
 
 export default function Footer() {
-  useEffect(() => {
-    let lastDeltaY = 0;
-    let currentFooterTop = 100;
-    let isFooterControlledScroll = false;
-
-    const handleScroll = (deltaY: number) => {
-      const content = document.querySelector(".main-content") as HTMLDivElement;
-      const footer = document.querySelector("#footer") as HTMLDivElement;
-      const glass = document.getElementById("glass");
-      const contentHeight = content.offsetHeight;
-      const windowHeight = window.innerHeight;
-      const scrollPosition = window.scrollY;
-      const maxScroll = contentHeight - windowHeight;
-
-      const footerHeight = footer.offsetHeight;
-      const viewportHeight = window.innerHeight;
-      const scrollRatio = footerHeight / viewportHeight;
-      const scalingFactor = 0.1; // Adjust this value to slow down or speed up the scroll
-      const normalizedScrollDistance = deltaY * scrollRatio * scalingFactor;
-
-      if (
-        scrollPosition >= maxScroll - 10 ||
-        (isFooterControlledScroll && deltaY < 10)
-      ) {
-        currentFooterTop = Math.max(
-          0,
-          Math.min(100, currentFooterTop - normalizedScrollDistance)
-        );
-        footer.style.top = `${currentFooterTop}%`;
-      }
-
-      isFooterControlledScroll = currentFooterTop < 100;
-
-      if (isFooterControlledScroll) {
-        document.querySelector("body")?.classList.add("overflow-hidden");
-        glass?.classList.remove("opacity-0");
-        glass?.classList.remove("invisible");
-      } else {
-        document.querySelector("body")?.classList.remove("overflow-hidden");
-        glass?.classList.add("opacity-0");
-
-        setTimeout(() => {
-          glass?.classList.add("invisible");
-        }, 500);
-      }
-    };
-
-    const onWheel = (event: any) => {
-      lastDeltaY = event.deltaY;
-      window.requestAnimationFrame(() => {
-        handleScroll(lastDeltaY);
-      });
-    };
-
-    const onTouchMove = (event: any) => {
-      const touchDeltaY = event.touches[0].clientY - lastDeltaY;
-      lastDeltaY = event.touches[0].clientY;
-      window.requestAnimationFrame(() => {
-        handleScroll(-touchDeltaY);
-      });
-    };
-
-    const onTouchStart = (event: any) => {
-      lastDeltaY = event.touches[0].clientY;
-    };
-
-    window.addEventListener("wheel", onWheel);
-    window.addEventListener("touchmove", onTouchMove);
-    window.addEventListener("touchstart", onTouchStart);
-
-    return () => {
-      window.removeEventListener("wheel", onWheel);
-      window.removeEventListener("touchmove", onTouchMove);
-      window.removeEventListener("touchstart", onTouchStart);
-    };
-  }, []);
-
-  return (
+	return (
 		<footer className="bg-transparent h-screen" id="footer">
-			<div className="absolute bottom-0 grid grid-cols-12 gap-x-5 text-xs-medium mx-auto w-full bg-white md:p-5 footer-container">
+			<div className="absolute bottom-0 grid grid-cols-12 gap-x-5 text-xs-medium mx-auto w-full bg-white md:p-5 footer-container ">
 				<div className="col-start-10 md:col-start-1 row-start-1 md:col-span-2">
 					<svg
 						className="mt-[10px] md:mt-0"
@@ -167,7 +90,7 @@ export default function Footer() {
 					<SocialIcons />
 				</div>
 
-				<div className="row-start-4 col-span-12 grid grid-cols-12 items-end">
+				<div className="row-start-4 col-span-12 grid grid-cols-12 gap-x-5 items-end">
 					<div className="pl-[10px] md:pl-0 col-span-12 md:col-span-3 flex flex-col text-xxs md:text-xs-medium">
 						<span>
 							<Link
@@ -189,9 +112,9 @@ export default function Footer() {
 						12 Whitburn Ave, Milns Park,
 						<br /> Halswell, Christchurch, New Zealand
 					</div>
-					<div className="pl-[10px] md:pl-0 py-[10px] md:py-0 mt-auto md:mt-0 bg-black md:bg-white text-[#999999]  md:text-black col-span-12 md:col-start-10 md:col-span-3 text-[12px] leading-[14px] md:leading-normal md:text-xxs font-medium">
+					<div className="pl-[10px]  py-[10px] md:py-0 mt-auto md:mt-0 bg-black md:bg-white text-[#999999]  md:text-black col-span-12 md:col-start-10 md:col-span-3 text-[12px] leading-[14px] md:leading-normal md:text-xxs font-medium">
 						Copyright © 2023 Benchmark Homes | All Rights Reserved.{" "}
-						<br className="md:hidden" />
+						<br className="hidden lg:block" />
 						View <span className="underline">Privacy Policy</span> &{" "}
 						<span className="underline">Email Disclaimer.</span>
 					</div>

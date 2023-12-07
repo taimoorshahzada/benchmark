@@ -23,11 +23,11 @@ interface Project {
 export default function ProjectInfo({ projects, id }: any) {
   const project: Project = projects.find((project: any) => project._id === id);
   return (
-		<div className="col-span-12 grid grid-cols-12 gap-x-5">
-			<div className="md:col-start-5 col-span-12 md:col-span-2 mt-[10px] font-medium text-xxs md:text-xs mb-5 md:mb-0">
+		<div className="col-span-12 grid grid-cols-12 gap-x-5 bg-white">
+			<div className=" col-span-12 md:col-span-2 mt-[10px] font-medium text-xxs md:text-xs mb-5 md:mb-0">
 				Points of interest:
 			</div>
-			<div className="md:col-start-7 col-span-12 md:col-span-4 mb-[50px] md:mb-[150px] grid grid-cols-6 gap-[10px] md:block">
+			<div className=" col-span-12 md:col-span-4 mb-[50px] md:mb-[150px] grid grid-cols-6 gap-[10px] md:block">
 				<div className="md:flex gap-x-[10px] gap-y-[10px] flex-wrap mb-5 col-span-2">
 					{project.features.map((feature: string, index: number) => (
 						<div

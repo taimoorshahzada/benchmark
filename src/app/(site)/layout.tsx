@@ -43,7 +43,7 @@ export default function RootLayout({
 }) {
   return (
 		<html lang="en" className={`${moderat.variable} font-sans`}>
-			<body>
+			<body className="pb-[100vh] md:pb-[675px] bg-white">
 				<div
 					id="glass"
 					className="fixed top-0 left-0 bg-white bg-opacity-20 backdrop-blur-lg h-screen w-full z-[10] transition duration-300 invisible opacity-0"
@@ -51,7 +51,9 @@ export default function RootLayout({
 				<Header />
 				<SlideMenu />
 
-				<div className="main-content">{children}</div>
+				<div className="bg-white main-content z-[2] relative shadow-lg mb-5">
+					{children}
+				</div>
 				<Footer />
 			</body>
 		</html>

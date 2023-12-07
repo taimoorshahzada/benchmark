@@ -6,6 +6,7 @@ import gsap from "gsap";
 import Wilson from "../assets/images/Projects-Wilson-1500x1000-High-Res-1.jpg";
 import Mortimer from "../assets/images/Projects-Mortimer-1500-x-1000-High-Res-6.jpg";
 import Marshall from "../assets/images/Projects-Marshall-21500-x-1000-High-Res.jpg";
+import Link from "next/link";
 
 function LatestProjects() {
 	const sectionRef = useRef(null);
@@ -77,7 +78,7 @@ function LatestProjects() {
 	}, []);
 
 	return (
-		<section className="scroll-section-outer overflow-x-hidden col-span-12 pb-10 pt-6">
+		<section className="scroll-section-outer overflow-x-hidden col-span-12 pb-10 pt-6 bg-white">
 			<div ref={triggerRef} className="pt-5">
 				<p className="font-medium text-sm mb-5 col-span-12 pl-[10px] md:pl-5">
 					Latest Projects
@@ -87,16 +88,19 @@ function LatestProjects() {
 					ref={sectionRef}
 					className="scroll-section-inner w-[400vw] flex flex-row relative md:h-[85vh]"
 				>
-					<Project image={Wilson} />
-					<Project image={Mortimer} />
-					<Project image={Marshall} />
-					<Project image={Wilson} />
+					<Project image={Wilson} url={"/project/c32880e8-aa57-4b41-950f-6da501e23ff4"} />
+					<Project image={Mortimer} url={"/project/02e67060-76ee-4276-8723-96c9870ca453"} />
+					<Project image={Marshall} url={"/project/02e67060-76ee-4276-8723-96c9870ca453"} />
+					<Project image={Wilson} url={"/project/c32880e8-aa57-4b41-950f-6da501e23ff4"} />
 				</div>
 				<div className="bg-white absolute px-[10px] md:px-5  grid grid-cols-12 mt-[10px] md:mt-5 items-start w-full transition duration-500 z-[1]">
 					<p id="project-title" className="font-medium">
 						Wilson
 					</p>
-					<span className="col-start-3 col-span-4 flex items-center space-x-5 text-[#999999] ">
+					<Link
+						href="/project/c32880e8-aa57-4b41-950f-6da501e23ff4"
+						className="col-start-3 col-span-4 flex items-center space-x-5 text-[#999999] "
+					>
 						<p>View Home</p>
 						<svg
 							width="7"
@@ -110,7 +114,7 @@ function LatestProjects() {
 								fill="#999999"
 							/>
 						</svg>
-					</span>
+					</Link>
 
 					<span className="col-start-1 md:col-start-10 col-span-12 md:col-span-3 mt-5 md:mt-0 md:ml-auto flex items-center md:justify-center">
 						<div className="flex gap-x-[10px] gap-y-[10px] flex-wrap mb-5">
@@ -140,7 +144,10 @@ function LatestProjects() {
 					<p id="project-title" className="font-medium">
 						Mortimer
 					</p>
-					<span className="col-start-3 col-span-4 flex items-center space-x-5 text-[#999999] ">
+					<Link
+						href="/project/c32880e8-aa57-4b41-950f-6da501e23ff4"
+						className="col-start-3 col-span-4 flex items-center space-x-5 text-[#999999] "
+					>
 						<p>View Home</p>
 						<svg
 							width="7"
@@ -154,7 +161,7 @@ function LatestProjects() {
 								fill="#999999"
 							/>
 						</svg>
-					</span>
+					</Link>
 
 					<span className="col-start-1 md:col-start-10 col-span-12 md:col-span-3 mt-5 md:mt-0 md:ml-auto flex items-center md:justify-center">
 						<div className="flex gap-x-[10px] gap-y-[10px] flex-wrap mb-5">
@@ -184,7 +191,10 @@ function LatestProjects() {
 					<p id="project-title" className="font-medium">
 						Marshall
 					</p>
-					<span className="col-start-3 col-span-4 flex items-center space-x-5 text-[#999999] ">
+					<Link
+						href="/project/c32880e8-aa57-4b41-950f-6da501e23ff4"
+						className="col-start-3 col-span-4 flex items-center space-x-5 text-[#999999] "
+					>
 						<p>View Home</p>
 						<svg
 							width="7"
@@ -198,7 +208,7 @@ function LatestProjects() {
 								fill="#999999"
 							/>
 						</svg>
-					</span>
+					</Link>
 
 					<span className="col-start-1 md:col-start-10 col-span-12 md:col-span-3 mt-5 md:mt-0 md:ml-auto flex items-center md:justify-center">
 						<div className="flex gap-x-[10px] gap-y-[10px] flex-wrap mb-5">
@@ -228,7 +238,10 @@ function LatestProjects() {
 					<p id="project-title" className="font-medium">
 						Wilson
 					</p>
-					<span className="col-start-3 col-span-4 flex items-center space-x-5 text-[#999999] ">
+					<Link
+						href="/project/c32880e8-aa57-4b41-950f-6da501e23ff4"
+						className="col-start-3 col-span-4 flex items-center space-x-5 text-[#999999] hover:opacity-50 duration"
+					>
 						<p>View Home</p>
 						<svg
 							width="7"
@@ -242,8 +255,7 @@ function LatestProjects() {
 								fill="#999999"
 							/>
 						</svg>
-					</span>
-
+					</Link>
 					<span className="col-start-1 md:col-start-10 col-span-12 md:col-span-3 mt-5 md:mt-0 md:ml-auto flex items-center md:justify-center">
 						<div className="flex gap-x-[10px] gap-y-[10px] flex-wrap mb-5">
 							<div

@@ -14,15 +14,15 @@ body {
 .selected-projects-image-blur {
   background: rgba(255, 255, 255, 0.20);
   backdrop-filter: blur(100px);
-  transition: all 0.25s ease-in-out;
-  transition-delay: 300ms;
-  opacity:0
+  transition: all 0.25s ease-in;
+  opacity:0;
+ 
 }
 
 @media only screen and (min-width:767px) {
   .selected-projects:has(.selected-projects-image-container:hover) .selected-projects-image-container:not(:hover) .selected-projects-image-blur {
     opacity:1;
-   
+   transition-delay: 300ms;
   }
 }
 
@@ -35,12 +35,10 @@ body {
 
 #footer {
   position: fixed;
-  top: 100%;
+  bottom: 0;
   left: 0;
   right: 0;
-  
-  z-index: 10; 
-  transition: top 0.3s;
+  z-index: 1; 
 }
 
 @media (max-width: 768px) {

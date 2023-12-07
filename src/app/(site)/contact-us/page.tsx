@@ -17,11 +17,11 @@ function Contact() {
 							<h1 className="mt-[68px] md:mt-0 text-sm-xl md:text-xl">
 								Contact
 							</h1>
-							<div className="absolute top-3 left-3 md:relative md:flex space-x-5 ">
+							<div className="absolute top-5 right-0 md:relative md:flex space-x-5 ">
 								<SocialIcons />
 							</div>
 						</div>
-						<div className="grid grid-cols-2 gap-[10px] md:gap-[15px] text-xxs pr-5">
+						<div className="grid grid-cols-2 gap-[10px] md:gap-[15px] text-xxs ">
 							<input
 								className="bg-[#F5F5F5] outline-none scrollbar-hide resize-none rounded-[5px] p-3"
 								placeholder="First Name"
@@ -75,7 +75,7 @@ function Contact() {
 										Office/Milns Park Showhome
 									</span>
 									<br />
-									Mon–Fri: 9am-5pm
+									Mon–Fri: 9am–5pm
 									<br />
 									<br />
 								</p>

@@ -121,7 +121,7 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
 							className={`${
 								index === processes.length - 1
 									? `mt-[50px] pt-[400px] px-[10px] md:px-5 fade-in-section ${
-											isInView ? "bg-black text-white" : ""
+											isInView ? "bg-black text-white" : "bg-white text-black"
 									  }`
 									: "mt-large border-grey border-dashed border-t border-1"
 							} flex flex-col`}
@@ -146,7 +146,7 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
 						</div>
 					</div>
 				))}
-				<div className="pt-large grid md:grid-cols-2 gap-x-[2px] text-xs—medium pb-[180px] bg-black text-white px-5 md:px-0">
+				<div className="pt-large grid md:grid-cols-2 gap-x-[2px] text-xs—medium bg-black text-white px-5 md:px-0">
 					<div className="mb-5 md:px-5 font-medium">Virtual Walkthroughs</div>
 					{walkthroughs.props.walkthroughs.map(
 						(walkthrough: any, index: number) => (
@@ -177,9 +177,9 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
 						""
 					)}
 				</div>
-				<div></div>
-				<div></div>
 			</div>
+			<div></div>
+			<div></div>
 		</div>
 	);
 }
