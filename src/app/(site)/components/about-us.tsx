@@ -50,9 +50,9 @@ function AboutSection() {
   return (
     <section className={`col-span-12 fade-in-section mt-[300px] `}>
       <div className="grid grid-cols-2 min-h-screen relative">
-        <div className={`row-span-4`}>
+        <div className={`row-span-4 col-span-2 md:col-span-1`}>
           <div
-            className={`bg-white z-[1] pb-32 md:pb-24 mx-[10px] md:mx-5 col-span-2  md:col-span-1 sticky top-0 `}
+            className={`hidden md:block bg-white z-[1] pb-32 md:pb-24 mx-[10px] md:mx-5 col-span-2  md:col-span-1 sticky top-0 `}
           >
             <p className="text-black text-xs-medium h-[50vh]  md:py-5">
               About Us
@@ -181,7 +181,10 @@ function AboutSection() {
           </Link>
         </div>
 
-        <div className="bg-black  col-span-2 row-start-1 md:col-start-2 row-span-5 relative order-1 ">
+        <div className="md:bg-black  col-span-2 row-start-1 md:col-start-2 row-span-5 relative order-1 ">
+          <p className="block md:hidden text-black text-xs-medium  md:py-5">
+            About Us
+          </p>
           <div className="bg-black md:sticky top-0">
             <Image
               className="aspect-[3/2] object-cover"
