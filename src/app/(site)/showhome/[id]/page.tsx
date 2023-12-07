@@ -12,7 +12,7 @@ export default async function Showhome({ params }: { params: { id: string } }) {
 
   return (
 		<Layout>
-			<div className="grid grid-cols-12 gap-x-5 text-xs px-[10px] md:px-5 w-full mt-[10px]">
+			<div className="grid grid-cols-12 gap-x-5 text-xs px-[10px] md:px-5 w-full mt-[10px] bg-white">
 				<ProjectInfo projects={showhomes.props.showhomes} id={params.id} />
 				<ShowhomeInfo showhomes={showhomes.props.showhomes} id={params.id} />
 				<ProjectImages projects={showhomes.props.showhomes} id={params.id} />

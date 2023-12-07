@@ -18,15 +18,17 @@ export default function Home() {
 	return (
 		<>
 			<Container>
-				<h1 className="font-medium text-sm-3xl md:text-3xl col-span-12 md:col-span-11 m-translate-x-[10px] md:-translate-x-5 mb-large mt-24 md:mt-3">
-					<Image
+				<h1 className="font-medium text-sm-2xl lg:text-3xl col-span-12 md:col-span-11 m-translate-x-[10px] md:-translate-x-5 mb-large mt-24 lg:mt-3">
+					{/* <Image
 						className="md:pl-5"
 						src={Benchmark}
 						alt="Benchmark Homes"
 						width={3000}
 						height={1000}
 						priority
-					/>
+					/> */}
+					Benchmark <br />
+					Homes
 				</h1>
 
 				<p className="col-span-6 md:col-span-2  font-medium text-sm mb-3 md:mb-0">

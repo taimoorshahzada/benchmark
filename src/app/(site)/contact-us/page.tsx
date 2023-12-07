@@ -9,7 +9,7 @@ import Image from "next/image";
 
 function Contact() {
   return (
-		<section className="md:h-screen">
+		<section className="md:h-screen bg-white">
 			<div>
 				<div className="grid md:grid-cols-2">
 					<div className="flex flex-col justify-between p-[10px] md:p-5 h-screen">
