@@ -116,31 +116,31 @@ export default function Footer() {
 						Selected Projects
 					</Link>
 					<Link
-						href=""
+						href="/showhomes"
 						className="hover:opacity-50 transition duration-250 w-fit"
 					>
 						Showhomes
 					</Link>
 					<Link
-						href=""
+						href="/upcoming-projects"
 						className="hover:opacity-50 transition duration-250 w-fit"
 					>
 						Upcoming Projects
 					</Link>
 					<Link
-						href=""
+						href="/our-process"
 						className="hover:opacity-50 transition duration-250 w-fit"
 					>
 						Our Process
 					</Link>
 					<Link
-						href=""
+						href="/about-us"
 						className="hover:opacity-50 transition duration-250 w-fit"
 					>
 						About Us
 					</Link>
 					<Link
-						href=""
+						href="/contact-us"
 						className="hover:opacity-50 transition duration-250 w-fit"
 					>
 						Contact Us
