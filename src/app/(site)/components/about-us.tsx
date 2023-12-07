@@ -54,7 +54,7 @@ function AboutSection() {
 					<div
 						className={`bg-white z-[1] pb-32 md:pb-24 mx-[10px] md:mx-5 col-span-2  md:col-span-1 sticky top-0 `}
 					>
-						<p className="text-black text-xs-medium md:absolute  md:py-5">
+						<p className="text-black text-xs-medium h-[50vh]  md:py-5">
 							About Us
 						</p>
 					</div>
@@ -120,7 +120,7 @@ function AboutSection() {
 					</div>
 					<div className="h-screen"></div>
 				</div>
-				<div
+				{/* <div
 					ref={sectionRef}
 					className={`bg-white text-black flex flex-col justify-end relative px-[10px] z-[5] md:px-5 col-span-2 md:col-span-1 pb-[60px] md:pb-[300px] md:row-start-5 row-span-1 border-r border-grey border-dotted`}
 				>
@@ -145,7 +145,7 @@ function AboutSection() {
 							</svg>
 						</div>
 					</Link>
-				</div>
+				</div> */}
 
 				<div
 					className={`bg-black text-white h-screen flex flex-col justify-end z-[5] pl-3 pb-10 col-span-2 md:col-span-1 md:row-start-6 border-r border-grey border-dotted sticky top-0 row-span-6 `}

@@ -3,7 +3,7 @@ import React from "react";
 function ContactForm() {
 	return (
 		<>
-			<p className="text-xl w-full col-span-2 mb-48">Get In Touch</p>
+			
 			<input
 				className="bg-[#F5F5F5] outline-none scrollbar-hide resize-none rounded-[5px] p-3"
 				placeholder="First Name"

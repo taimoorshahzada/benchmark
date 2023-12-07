@@ -82,9 +82,9 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
 					Our <br /> Process
 				</h1>
 			</div>
-			<div className="sticky md:relative top-0 md:w-1/2 bg-black relative">
+			<div className="sticky md:relative top-0 md:w-1/2 bg-black">
 				<div className="md:sticky top-0 h-[115px] md:h-screen bg-black w-full">
-					<div className="h-full flex flex-row md:flex-col items-end md:items-start md:justify-end pl-3 pb-5 md:pb-10">
+					<div className="z-[20] h-full flex flex-row md:flex-col items-end md:items-start md:justify-end pl-3 pb-5 md:pb-10">
 						<h1
 							className="font-medium text-white text-sm md:text-xl md:mb-medium md:absolute md:top-[40%] me-5 md:me-0"
 							id="process-title-index"
@@ -92,7 +92,7 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
 							01
 						</h1>
 						<h1
-							className="font-medium text-white text-sm md:text-xl text-wrap"
+							className="md:w-1/2 font-medium text-white text-sm md:text-xl text-wrap"
 							id="process-title"
 						>
 							{processes ? processes[0].title : ""}
@@ -123,7 +123,7 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
 									? `mt-[50px] pt-[400px] px-[10px] md:px-5 fade-in-section ${
 											isInView ? "bg-black text-white" : "bg-white text-black"
 									  }`
-									: "mt-large border-grey border-dashed border-t border-1"
+									: "md:mt-large border-grey border-dashed border-t border-1"
 							} flex flex-col`}
 						>
 							{index == processes.length - 1 ? (
@@ -140,7 +140,7 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
 								width={1000}
 								height={1000}
 							/>
-							<div className="text-xs whitespace-pre-line">
+							<div className="text-xs whitespace-pre-line mb-[10px] md:mb-5">
 								{process.description}
 							</div>
 						</div>
@@ -160,7 +160,7 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
 							>
 								<div className="mt-[10px] font-medium">{walkthrough.title}</div>
 								<div className="mb-4">{walkthrough.location}</div>
-								<div className="relative">
+								<div className="relative z-10">
 									<iframe
 										className="vimeo w-full h-auto"
 										src={walkthrough.url}

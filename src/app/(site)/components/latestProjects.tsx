@@ -29,7 +29,7 @@ function LatestProjects() {
 					trigger: triggerRef.current,
 					start: "top top",
 					end: "2000 top",
-					scrub: 0.6,
+					scrub: 0.1,
 					pin: true,
 					onUpdate: (self) => {
 						let currentTranslation = self.progress * 300;
@@ -86,12 +86,24 @@ function LatestProjects() {
 				<div
 					id="scroller"
 					ref={sectionRef}
-					className="scroll-section-inner w-[400vw] flex flex-row relative md:h-[85vh]"
+					className="scroll-section-inner w-[400vw] flex flex-row relative md:h-[85vh] bg-white"
 				>
-					<Project image={Wilson} url={"/project/c32880e8-aa57-4b41-950f-6da501e23ff4"} />
-					<Project image={Mortimer} url={"/project/02e67060-76ee-4276-8723-96c9870ca453"} />
-					<Project image={Marshall} url={"/project/02e67060-76ee-4276-8723-96c9870ca453"} />
-					<Project image={Wilson} url={"/project/c32880e8-aa57-4b41-950f-6da501e23ff4"} />
+					<Project
+						image={Wilson}
+						url={"/project/c32880e8-aa57-4b41-950f-6da501e23ff4"}
+					/>
+					<Project
+						image={Mortimer}
+						url={"/project/02e67060-76ee-4276-8723-96c9870ca453"}
+					/>
+					<Project
+						image={Marshall}
+						url={"/project/02e67060-76ee-4276-8723-96c9870ca453"}
+					/>
+					<Project
+						image={Wilson}
+						url={"/project/c32880e8-aa57-4b41-950f-6da501e23ff4"}
+					/>
 				</div>
 				<div className="bg-white absolute px-[10px] md:px-5  grid grid-cols-12 mt-[10px] md:mt-5 items-start w-full transition duration-500 z-[1]">
 					<p id="project-title" className="font-medium">

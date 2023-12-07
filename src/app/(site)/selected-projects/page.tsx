@@ -7,7 +7,7 @@ export default async function SelectedProjects() {
 	const selectedProjectsSections = await getProjects();
 
 	return (
-		<div className="mt-6 bg-white pb-5">
+		<div className="pt-6 bg-white pb-5 grid">
 			<h1 className="mx-[10px] font-medium text-sm-3xl md:text-3xl my-24 md:mt-0 md:mb-large">
 				Selected <br /> Projects
 			</h1>
@@ -36,11 +36,11 @@ export default async function SelectedProjects() {
 											className="selected-projects-image-container relative"
 										>
 											<Image
-												className="selected-projects-image"
+												className="selected-projects-image w-full object-cover"
 												src={project.mainImage.imageUrl}
 												alt={project.mainImageTitle}
-												width={1500}
-												height={1500}
+												width={1000}
+												height={1000}
 											/>
 											<div className="selected-projects-image-blur absolute w-full h-full top-0 left-0"></div>
 										</Link>
