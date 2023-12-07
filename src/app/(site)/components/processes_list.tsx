@@ -8,74 +8,76 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!isInView && entry.isIntersecting) {
-          setIsInView(true);
-        }
-      },
-      { threshold: 0 }
-    );
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (!isInView && entry.isIntersecting) {
+					setIsInView(true);
+				} else {
+					setIsInView(false);
+				}
+			},
+			{ threshold: 0 }
+		);
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+		if (sectionRef.current) {
+			observer.observe(sectionRef.current);
+		}
 
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
+		return () => {
+			if (sectionRef.current) {
+				observer.unobserve(sectionRef.current);
+			}
+		};
+	}, []);
 
-  useEffect(() => {
-    const processContainer = document.getElementById("processes-container");
+	useEffect(() => {
+		const processContainer = document.getElementById("processes-container");
 
-    const checkScrollPos = () => {
-      const title = document.getElementById("process-title");
-      const titleIndex = document.getElementById("process-title-index") as any;
-      const processElements = document.querySelectorAll(".process");
+		const checkScrollPos = () => {
+			const title = document.getElementById("process-title");
+			const titleIndex = document.getElementById("process-title-index") as any;
+			const processElements = document.querySelectorAll(".process");
 
-      let highestVisibleIndex = -1;
-      processElements.forEach((process, index) => {
-        const processRect = process.getBoundingClientRect();
-        if (processRect.bottom > 0 && processRect.top < window.innerHeight) {
-          highestVisibleIndex = index;
-        }
-      });
+			let highestVisibleIndex = -1;
+			processElements.forEach((process, index) => {
+				const processRect = process.getBoundingClientRect();
+				if (processRect.bottom > 0 && processRect.top < window.innerHeight) {
+					highestVisibleIndex = index;
+				}
+			});
 
-      if (!titleIndex) {
-        return;
-      }
+			if (!titleIndex) {
+				return;
+			}
 
-      if (highestVisibleIndex !== -1) {
-        if (highestVisibleIndex === processElements.length - 1) {
-          titleIndex.innerText = "+";
-        } else {
-          titleIndex.innerText =
-            highestVisibleIndex < 9
-              ? `0${highestVisibleIndex + 1}`
-              : `${highestVisibleIndex + 1}`;
-        }
+			if (highestVisibleIndex !== -1) {
+				if (highestVisibleIndex === processElements.length - 1) {
+					titleIndex.innerText = "+";
+				} else {
+					titleIndex.innerText =
+						highestVisibleIndex < 9
+							? `0${highestVisibleIndex + 1}`
+							: `${highestVisibleIndex + 1}`;
+				}
 
-        if (title && processes[highestVisibleIndex]) {
-          title.innerText = processes[highestVisibleIndex].title;
-        }
-      }
-    };
+				if (title && processes[highestVisibleIndex]) {
+					title.innerText = processes[highestVisibleIndex].title;
+				}
+			}
+		};
 
-    if (processContainer) {
-      window.addEventListener("wheel", checkScrollPos);
-    }
+		if (processContainer) {
+			window.addEventListener("wheel", checkScrollPos);
+		}
 
-    return () => {
-      if (processContainer) {
-        window.removeEventListener("wheel", checkScrollPos);
-      }
-    };
-  }, [processes]);
+		return () => {
+			if (processContainer) {
+				window.removeEventListener("wheel", checkScrollPos);
+			}
+		};
+	}, [processes]);
 
-  return (
+	return (
 		<div className="md:flex relative">
 			<div className="md:hidden custom-full-height pt-[150px] bg-black text-white">
 				<h1 className="font-medium text-sm-xl md:text-xl mb-[90px] px-[10px] md:px-5 mt-0 md:mt-6">
@@ -101,7 +103,7 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
 				</div>
 			</div>
 			<div
-				className={` md:w-1/2 ${
+				className={` md:w-1/2 fade-in-section ${
 					isInView ? "bg-black text-white" : "bg-white text-black"
 				}`}
 			>
@@ -111,7 +113,7 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
 				{processes.map((process: any, index: number) => (
 					<div
 						key={index}
-						className={`w-full process fade-in-section ${
+						className={`w-full process  ${
 							index == processes.length - 1 ? "" : "px-[10px] md:px-5"
 						}`}
 					>
@@ -124,7 +126,7 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
 											isInView ? "bg-black text-white" : "bg-white text-black"
 									  }`
 									: "md:mt-large border-grey border-dashed border-t border-1"
-							} flex flex-col`}
+							} flex flex-col `}
 						>
 							{index == processes.length - 1 ? (
 								""
