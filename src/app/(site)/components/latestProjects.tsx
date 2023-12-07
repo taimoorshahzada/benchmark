@@ -30,12 +30,12 @@ function LatestProjects() {
 					start: "top top",
 					end: "2000 top",
 					scrub: 0.1,
-					snap: {
-						snapTo: 0.333333,
-						duration: 0.4,
-						delay: 0.1,
-						ease: "power3.inOut",
-					},
+					// snap: {
+					// 	snapTo: 0.333333,
+					// 	duration: 1,
+					// 	delay: 0.1,
+					// 	ease: "power3.inOut",
+					// },
 					pin: true,
 					onUpdate: (self) => {
 						let currentTranslation = self.progress * 300;
