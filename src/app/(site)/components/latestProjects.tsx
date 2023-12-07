@@ -85,7 +85,7 @@ function LatestProjects() {
 	}, []);
 
 	return (
-		<section className="scroll-section-outer overflow-x-hidden col-span-12 pb-10 pt-6 bg-white">
+		<section className="scroll-section-outer overflow-hidden col-span-12 pb-10 pt-6 bg-white">
 			<div ref={triggerRef} className="pt-5">
 				<p className="font-medium text-sm mb-5 col-span-12 pl-[10px] md:pl-5">
 					Latest Projects
