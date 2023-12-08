@@ -26,7 +26,7 @@ function AboutSection({ info }: any) {
         console.log(entry.isIntersecting);
         setIsInView(entry.isIntersecting);
       },
-      { threshold: 0.15 }
+      { threshold: 0 }
     );
 
     if (sectionRef.current) {
@@ -111,7 +111,7 @@ function AboutSection({ info }: any) {
             </div>
           </div>
 
-          <div className="bg-white sticky top-0 z-[3] border-t border-dotted border-grey pt-3 pb-24 h-screen mx-[10px] md:mx-5">
+          <div className="bg-white sticky top-[7vh] z-[3] border-t border-dotted border-grey pt-3 pb-24 md:h-screen mx-[10px] md:mx-5">
             <h4 className="pt-3 text-xs-medium">Years of Experience</h4>
             <ScrollTrigger onEnter={() => handleEnterViewport(0)}>
               {countersOn[0] && (
@@ -126,7 +126,7 @@ function AboutSection({ info }: any) {
             </ScrollTrigger>
           </div>
 
-          <div className="bg-white sticky top-0 z-[4] border-t border-dotted border-grey pt-3 pb-24 h-screen mx-[10px] md:mx-5">
+          <div className="bg-white sticky top-[33vh] z-[4] border-t border-dotted border-grey pt-3 pb-24 md:h-screen mx-[10px] md:mx-5">
             <h4 className="pt-3 text-xs-medium">Master Builders Awards</h4>
             <ScrollTrigger onEnter={() => handleEnterViewport(1)}>
               {countersOn[1] && (
@@ -142,7 +142,7 @@ function AboutSection({ info }: any) {
           </div>
 
           <div
-            className={`sticky top-0 z-[5] border-t border-dotted border-grey pt-3 pb-24 h-screen px-[10px] md:px-5 fade-in-section ${
+            className={`sticky top-[60vh] z-[5] border-t border-dotted border-grey pt-3 pb-24 md:h-screen px-[10px] md:px-5 fade-in-section ${
               isInView ? "bg-black text-white" : "bg-white"
             }`}
           >
@@ -171,7 +171,7 @@ function AboutSection({ info }: any) {
 
           <div
             ref={sectionRef}
-            className={`sticky top-0 z-[7] md:h-min-screen fade-in-section ${
+            className={`sticky top-0 z-[7] md:h-min-screen fade-in-section pt-[50px] ${
               isInView ? "bg-black text-white" : "bg-white"
             }`}
           >
