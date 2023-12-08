@@ -165,7 +165,7 @@ function LatestProjects() {
 					</p>
 					<Link
 						href="/project/c32880e8-aa57-4b41-950f-6da501e23ff4"
-						className="col-start-3 col-span-4 flex items-center space-x-5 text-[#999999] "
+						className="col-start-3 col-span-4 flex items-center space-x-5 text-[#999999] pl-[10px] md:pl-0"
 					>
 						<p>View Home</p>
 						<svg
@@ -212,7 +212,7 @@ function LatestProjects() {
 					</p>
 					<Link
 						href="/project/c32880e8-aa57-4b41-950f-6da501e23ff4"
-						className="col-start-3 col-span-4 flex items-center space-x-5 text-[#999999] "
+						className="col-start-3 col-span-4 flex items-center space-x-5 text-[#999999] pl-[10px] md:pl-0"
 					>
 						<p>View Home</p>
 						<svg
@@ -259,7 +259,7 @@ function LatestProjects() {
 					</p>
 					<Link
 						href="/project/c32880e8-aa57-4b41-950f-6da501e23ff4"
-						className="col-start-3 col-span-4 flex items-center space-x-5 text-[#999999] hover:opacity-50 duration"
+						className="col-start-3 col-span-4 flex items-center space-x-5 text-[#999999] hover:opacity-50 duration pl-[10px] md:pl-0"
 					>
 						<p>View Home</p>
 						<svg

@@ -111,7 +111,7 @@ function AboutSection({ info }: any) {
 						</div>
 					</div>
 
-					<div className="bg-white sticky top-[7vh] z-[3] border-t border-dotted border-grey pt-3 pb-24 md:h-screen mx-[10px] md:mx-5">
+					<div className="bg-white sticky top-0 md:top-[7vh] z-[3] border-t border-dotted border-grey pt-3 pb-24 md:h-screen mx-[10px] md:mx-5">
 						<h4 className="pt-3 text-xs-medium">Years of Experience</h4>
 						<ScrollTrigger onEnter={() => handleEnterViewport(0)}>
 							{countersOn[0] && (
@@ -162,8 +162,8 @@ function AboutSection({ info }: any) {
 					</div>
 
 					<div
-						className={`sticky top-0 z-[6] md:h-screen pb-32 md:mb-0 px-[10px] md:px-5 fade-in-section ${
-							isInView ? "bg-black text-white" : "bg-white"
+						className={`sticky top-0 z-[6] md:h-screen pb-32 md:mb-0 px-[10px] md:px-5 fade-in-section bg-white ${
+							isInView ? "md:bg-black md:text-white" : "bg-white"
 						}`}
 					>
 						<AboutAccordions />

@@ -54,7 +54,7 @@ function AboutSection() {
 					<div
 						className={`hidden md:block bg-white z-[1] pb-32 md:pb-24 mx-[10px] md:mx-5 col-span-2  md:col-span-1 sticky top-0 `}
 					>
-						<p className="text-black text-xs-medium h-[50vh]  md:py-5">
+						<p className="text-black text-xs-medium h-[50vh] md:py-5 ">
 							About Us
 						</p>
 					</div>
@@ -148,7 +148,7 @@ function AboutSection() {
 				</div>
 
 				<div
-					className={`bg-black text-white h-screen flex flex-col justify-end z-[5] pl-3 pb-10 col-span-2 md:col-span-1 md:row-start-6 border-r border-grey border-dotted sticky top-0 row-span-6 `}
+					className={`bg-black text-white h-screen flex flex-col justify-end z-[5] pl-3 pb-10 col-span-2 md:col-span-1 md:row-start-6 border-r border-grey border-dotted md:sticky top-0 row-span-6 `}
 				>
 					<p className="absolute top-5 left-1/2 -translate-x-1/2">
 						Our Process
@@ -182,7 +182,7 @@ function AboutSection() {
 				</div>
 
 				<div className="md:bg-black  col-span-2 row-start-1 md:col-start-2 row-span-5 relative order-1 ">
-					<p className="block md:hidden text-black text-xs-medium  md:py-5">
+					<p className="block md:hidden text-black text-xs-medium  md:py-5 p-[10px]">
 						About Us
 					</p>
 					<div className="bg-black md:sticky top-0">

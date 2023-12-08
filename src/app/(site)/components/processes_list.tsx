@@ -86,7 +86,7 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
 			</div>
 			<div className="sticky md:relative top-0 md:w-1/2 bg-black">
 				<div className="md:sticky top-0 h-[115px] md:h-screen bg-black w-full">
-					<div className="z-[20] h-full flex flex-row md:flex-col items-end md:items-start md:justify-end pl-3 pb-5 md:pb-10">
+					<div className="relative z-[20] h-full flex flex-row md:flex-col items-end md:items-start md:justify-end pl-3 pb-5 md:pb-10">
 						<h1
 							className="font-medium text-white text-sm md:text-xl md:mb-medium md:absolute md:top-[40%] me-5 md:me-0"
 							id="process-title-index"
