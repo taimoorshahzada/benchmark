@@ -90,7 +90,8 @@ export default function SlideMenu() {
 					</a>
 					<div className="absolute bottom-0 right-0 flex gap-x-1">
 						<a
-							href=""
+							target="_blank"
+							href="https://www.instagram.com/benchmarkhomesnz/"
 							className="hover:opacity-50 transition duration-250 w-fit"
 						>
 							<svg
@@ -122,7 +123,8 @@ export default function SlideMenu() {
 							</svg>
 						</a>
 						<a
-							href=""
+							target="_blank"
+							href="https://www.facebook.com/BenchmarkHomesNZ/"
 							className="hover:opacity-50 transition duration-250 w-fit"
 						>
 							<svg

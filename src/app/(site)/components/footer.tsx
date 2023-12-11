@@ -6,7 +6,7 @@ import SocialIcons from "./social-icons";
 
 export default function Footer() {
 	return (
-		<footer className="bg-transparent h-screen" id="footer">
+		<footer className="bg-transparent min-h-[100svh]" id="footer">
 			<div className="absolute bottom-0 grid grid-cols-12 gap-x-5 text-xs-medium mx-auto w-full bg-white md:p-5 footer-container ">
 				<div className="col-start-10 md:col-start-1 row-start-1 md:col-span-2">
 					<svg
@@ -69,8 +69,12 @@ export default function Footer() {
 						Contact Us
 					</Link>
 				</div>
-				<div className="ml-[10px] md:ml-0 col-span-2 row-start-3 w-fit bg-[#F5F5F5] rounded-[5px]  text-xxs p-[10px] mb-[80px] cursor-pointer hover:opacity-50 flex items-center h-[50px]">
-					<a href="https://buildertrend.net/">Login</a>
+				<a
+					target="_blank"
+					href="https://buildertrend.net/"
+					className="ml-[10px] md:ml-0 col-span-2 row-start-3 w-fit bg-[#F5F5F5] rounded-[5px]  text-xxs p-[10px] mb-[80px] cursor-pointer hover:opacity-50 flex items-center h-[50px]"
+				>
+					<span>Login</span>
 					<div className="ml-[50px] flex items-center">
 						<svg
 							width="7"
@@ -85,7 +89,7 @@ export default function Footer() {
 							/>
 						</svg>
 					</div>
-				</div>
+				</a>
 				<div className="col-start-10 flex gap-x-1">
 					<SocialIcons />
 				</div>

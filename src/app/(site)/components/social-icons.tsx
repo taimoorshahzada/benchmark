@@ -5,7 +5,8 @@ function SocialIcons() {
 	return (
 		<div className="flex">
 			<Link
-				href=""
+				target="_blank"
+				href="https://www.instagram.com/benchmarkhomesnz/"
 				className="hover:opacity-50 transition duration-250 w-fit mr-2"
 			>
 				<svg
@@ -36,7 +37,11 @@ function SocialIcons() {
 					</defs>
 				</svg>
 			</Link>
-			<Link href="" className="hover:opacity-50 transition duration-250 w-fit">
+			<Link
+				target="_blank"
+				href="https://www.facebook.com/BenchmarkHomesNZ/"
+				className="hover:opacity-50 transition duration-250 w-fit"
+			>
 				<svg
 					width="20"
 					height="20"
