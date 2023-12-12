@@ -46,12 +46,12 @@ export default function RootLayout({
 			<body className="pb-[100vh] md:pb-[675px] bg-white">
 				<div
 					id="glass"
-					className="fixed top-0 left-0 bg-white bg-opacity-20 backdrop-blur-lg h-screen w-full z-[10] transition duration-300 invisible opacity-0"
+					className="fixed top-0 left-0 bg-white bg-opacity-20 backdrop-blur-2xl h-screen w-full z-[10] transition duration-300 invisible opacity-0"
 				></div>
 				<Header />
 				<SlideMenu />
 
-				<div className="bg-white main-content z-[2] relative shadow-lg mb-5">
+				<div className="bg-white main-content z-[2] relative shadow-md mb-5">
 					{children}
 				</div>
 				<Footer />

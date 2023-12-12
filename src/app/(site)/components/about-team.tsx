@@ -20,7 +20,7 @@ function AboutTeam({ info }: any) {
   }, []);
 
   return (
-    <div className="p-[10px] md:p-5 py-32">
+    <div className="p-[10px] md:p-5 py-32 md:pb-[228px]">
       <div className="mb-[80px] md:mb-24">
         <div className="text-xxs font-medium md:text-xs-medium mb-3 md:mb-7 ">
           Our Team

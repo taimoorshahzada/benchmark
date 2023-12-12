@@ -66,13 +66,13 @@ export default function Footer() {
 						href="/contact-us"
 						className="hover:opacity-50 transition duration-250 w-fit"
 					>
-						Contact Us
+						Contact
 					</Link>
 				</div>
 				<a
 					target="_blank"
 					href="https://buildertrend.net/"
-					className="ml-[10px] md:ml-0 col-span-2 row-start-3 w-fit bg-[#F5F5F5] rounded-[5px]  text-xxs p-[10px] mb-[80px] cursor-pointer hover:opacity-50 flex items-center h-[50px]"
+					className="pl-[10px] md:ml-0 col-span-2 row-start-3 w-fit bg-[#F5F5F5] rounded-[5px]  text-xxs p-3 mb-[80px] cursor-pointer hover:opacity-50 flex items-center"
 				>
 					<span>Login</span>
 					<div className="ml-[50px] flex items-center">

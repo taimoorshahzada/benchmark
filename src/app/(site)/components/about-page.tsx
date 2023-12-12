@@ -60,25 +60,13 @@ function AboutSection({ info }: any) {
 					/>
 				</div>
 				<div className=" mt-6 col-span-2 md:col-span-1">
-					<div className="bg-white md:sticky top-6 md:h-screen mx-[10px] md:mx-5">
+					<div className="bg-white  md:min-h-screen mx-[10px] md:mx-5">
 						<h1 className="font-medium text-sm-xl md:text-xl col-span-11 mb-medium  md:col-span-1 mt-16 md:mt-0">
 							About Us
 						</h1>
-						<div className="text-xs-medium md:text-base mb-5 md:mb-[450px]">
+						<div className="text-xs-medium md:text-base mb-5 md:mb-[33vh]">
 							{info.description}
 						</div>
-					</div>
-
-					<Image
-						src={Photo}
-						alt="Richard and Sam"
-						width={2000}
-						height={1000}
-						priority
-						className="block md:hidden mb-20 md:mb-32"
-					/>
-
-					<div className="bg-white z-[2] sticky top-0 h-screen mx-[10px] md:mx-5 ">
 						<div className="text-xxs font-medium md:text-xs-medium my-3 md:my-7 pt-6 ">
 							Over the Years
 						</div>
@@ -111,7 +99,16 @@ function AboutSection({ info }: any) {
 						</div>
 					</div>
 
-					<div className="bg-white sticky top-0 md:top-[7vh] z-[3] border-t border-dotted border-grey pt-3 pb-24 md:h-screen mx-[10px] md:mx-5">
+					<Image
+						src={Photo}
+						alt="Richard and Sam"
+						width={2000}
+						height={1000}
+						priority
+						className="block md:hidden mb-20 md:mb-32"
+					/>
+
+					<div className="bg-white sticky top-0 md:top-[0] z-[3] border-t border-dotted border-grey pt-3 pb-24 md:h-screen mx-[10px] md:mx-5">
 						<h4 className="pt-3 text-xs-medium">Years of Experience</h4>
 						<ScrollTrigger onEnter={() => handleEnterViewport(0)}>
 							{countersOn[0] && (
@@ -126,7 +123,7 @@ function AboutSection({ info }: any) {
 						</ScrollTrigger>
 					</div>
 
-					<div className="bg-white sticky top-[33vh] z-[4] border-t border-dotted border-grey pt-3 pb-24 md:h-screen mx-[10px] md:mx-5">
+					<div className="bg-white sticky top-[33vh] z-[4] border-t border-dotted border-grey pt-3 pb-24 md:min-h-screen mx-[10px] md:mx-5">
 						<h4 className="pt-3 text-xs-medium">Master Builders Awards</h4>
 						<ScrollTrigger onEnter={() => handleEnterViewport(1)}>
 							{countersOn[1] && (
@@ -142,9 +139,7 @@ function AboutSection({ info }: any) {
 					</div>
 
 					<div
-						className={`sticky top-[60vh] z-[5] border-t border-dotted border-grey pt-3 pb-24 md:h-screen px-[10px] md:px-5 fade-in-section ${
-							isInView ? "bg-black text-white" : "bg-white"
-						}`}
+						className={`relative z-[5] border-t border-dotted border-grey pt-3 pb-24  mx-[10px] md:mx-5 fade-in-section bg-white`}
 					>
 						<h4 className="pt-3 text-xs-medium">Houses Built</h4>
 						<ScrollTrigger onEnter={() => handleEnterViewport(2)}>
@@ -159,14 +154,11 @@ function AboutSection({ info }: any) {
 								/>
 							)}
 						</ScrollTrigger>
-					</div>
-
-					<div
-						className={`sticky top-0 z-[6] md:h-screen pb-32 md:mb-0 px-[10px] md:px-5 fade-in-section bg-white ${
-							isInView ? "md:bg-black md:text-white" : "bg-white"
-						}`}
-					>
-						<AboutAccordions />
+						<div
+							className={`sticky top-0  py-32 md:mb-0 px-[10px] md:px-5 fade-in-section bg-white `}
+						>
+							<AboutAccordions />
+						</div>
 					</div>
 
 					<div

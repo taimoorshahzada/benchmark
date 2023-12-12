@@ -28,7 +28,12 @@ export default async function SelectedProjects() {
 											: "md:col-start-7 row-start-2 md:row-start-1"
 									}`}
 								>
-									<div className="mb-9 mt-2">{project.mainImageTitle}</div>
+									<Link
+										href={`project/${project.mainProject._ref}`}
+										className="mb-9 mt-2"
+									>
+										{project.mainImageTitle}
+									</Link>
 
 									{project.mainProject ? (
 										<Link
@@ -65,7 +70,12 @@ export default async function SelectedProjects() {
 											: "md:col-start-1 md:row-start-1"
 									}`}
 								>
-									<div className="mb-9 mt-2">{project.Image1Title}</div>
+									<Link
+										href={`project/${project.firstProject._ref}`}
+										className="mb-9 mt-2"
+									>
+										{project.Image1Title}
+									</Link>
 									{project.firstProject ? (
 										<Link
 											href={`project/${project.firstProject._ref}`}
@@ -101,7 +111,12 @@ export default async function SelectedProjects() {
 											: "md:col-start-10 sm:row-start-2 md:row-start-1"
 									}`}
 								>
-									<div className="mb-9 mt-2">{project.Image2Title}</div>
+									<Link
+										href={`project/${project.secondProject._ref}`}
+										className="mb-9 mt-2"
+									>
+										{project.Image2Title}
+									</Link>
 									{project.secondProject ? (
 										<Link
 											href={`project/${project.secondProject._ref}`}

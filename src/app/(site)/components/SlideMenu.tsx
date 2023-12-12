@@ -86,7 +86,7 @@ export default function SlideMenu() {
 						href="/contact-us"
 						className="hover:opacity-50 transition duration-250 w-fit"
 					>
-						Contact Us
+						Contact
 					</a>
 					<div className="absolute bottom-0 right-0 flex gap-x-1">
 						<a

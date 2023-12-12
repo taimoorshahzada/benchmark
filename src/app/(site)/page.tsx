@@ -18,7 +18,7 @@ export default function Home() {
 	return (
 		<>
 			<Container>
-				<h1 className="font-medium text-sm-3xl lg:text-2xl xl:text-3xl col-span-12 md:col-span-11 m-translate-x-[10px] md:-translate-x-5 mb-large mt-24 md:mt-3">
+				<h1 className="font-medium text-sm-3xl lg:text-2xl xl:text-3xl col-span-12 md:col-span-11 m-translate-x-[10px] md:-translate-x-5 mb-large mt-24 md:mt-3 -translate-y-3 ">
 					{/* <Image
 						className="md:pl-5"
 						src={Benchmark}
