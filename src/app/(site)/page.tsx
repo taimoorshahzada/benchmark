@@ -11,7 +11,7 @@ import Container from "./components/container";
 import Project from "./components/project";
 import AboutSection from "./components/about-us";
 import LatestProjects from "./components/latestProjects";
-import Horizontal from "./components/horizontal-scroll";
+
 import AboutPinned from "./components/about-pinned";
 
 export default function Home() {
