@@ -101,7 +101,7 @@ html {
 .swipe-section .panel {
   position: absolute;
   width: 100vw;
-  height: 100vh;
+  height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,6 +111,7 @@ html {
   color: white;
   box-sizing: border-box;
   padding: 10px;
+  object-fit: cover;
 }
 
 .vh-200 {

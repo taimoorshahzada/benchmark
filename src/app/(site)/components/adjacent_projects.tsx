@@ -19,6 +19,7 @@ interface Project {
 	images: ProjectImage[];
 	hero_display: string;
 	_id: string;
+	
 }
 
 export default function AdjacentProjects({ projects, id }: any) {
