@@ -3,55 +3,62 @@
 import Image from "next/image";
 import Photo from "../assets/images/35ac116a8b1e821cb1bf3bd1e004e6a4-cover-large.jpg";
 import CountUp from "react-countup";
-import ScrollTrigger from "react-scroll-trigger";
+import CountScrollTrigger from "react-scroll-trigger";
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
+	Accordion,
+	AccordionContent,
+	AccordionItem,
+	AccordionTrigger,
 } from "../components/ui/accordion";
 import { useEffect, useRef, useState } from "react";
 import AboutAccordions from "./about-accordions";
 import AboutTeam from "./about-team";
 
+
 function AboutSection({ info }: any) {
-  const [countersOn, setCountersOn] = useState([false, false, false]);
+	const [countersOn, setCountersOn] = useState([false, false, false]);
 
-  const [isInView, setIsInView] = useState(false);
-  const sectionRef = useRef(null);
+	const [isInView, setIsInView] = useState(false);
+	const sectionRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        console.log(entry.isIntersecting);
-        setIsInView(entry.isIntersecting);
-      },
-      { threshold: 0 }
-    );
+	
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				console.log(entry.isIntersecting);
+				setIsInView(entry.isIntersecting);
+			},
+			{ threshold: 0 }
+		);
 
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
+		if (sectionRef.current) {
+			observer.observe(sectionRef.current);
+		}
 
-  const handleEnterViewport = (index: number) => {
-    setCountersOn((prev) => {
-      const newState = [...prev];
-      newState[index] = true;
-      return newState;
-    });
-  };
-  return (
+		return () => {
+			if (sectionRef.current) {
+				observer.unobserve(sectionRef.current);
+			}
+		};
+	}, []);
+
+	const handleEnterViewport = (index: number) => {
+		setCountersOn((prev) => {
+			const newState = [...prev];
+			newState[index] = true;
+			return newState;
+		});
+	};
+
+	
+
+	return (
 		<section className={`col-span-12`}>
 			<div className="grid grid-cols-2 min-h-screen relative">
 				<div className="bg-black md:sticky top-0 h-screen overflow-hidden col-span-2 md:col-span-1 hidden md:block">
 					<Image
+						className="object-cover"
 						src={Photo}
 						alt="Richard and Sam"
 						width={2000}
@@ -64,7 +71,7 @@ function AboutSection({ info }: any) {
 						<h1 className="font-medium text-sm-xl md:text-xl col-span-11 mb-medium  md:col-span-1 mt-16 md:mt-0">
 							About Us
 						</h1>
-						<div className="text-xs-medium md:text-base mb-5 md:mb-[33vh]">
+						<div className="text-xs-medium md:text-base mb-5 md:mb-[50vh]">
 							{info.description}
 						</div>
 						<div className="text-xxs font-medium md:text-xs-medium my-3 md:my-7 pt-6 ">
@@ -108,9 +115,9 @@ function AboutSection({ info }: any) {
 						className="block md:hidden mb-20 md:mb-32"
 					/>
 
-					<div className="bg-white sticky top-0 md:top-[0] z-[3] border-t border-dotted border-grey pt-3 pb-24 md:h-screen mx-[10px] md:mx-5">
+					<div className="years bg-white sticky top-0 md:top-[0] z-[3] border-t border-dotted border-grey pt-3 pb-24 md:h-screen mx-[10px] md:mx-5">
 						<h4 className="pt-3 text-xs-medium">Years of Experience</h4>
-						<ScrollTrigger onEnter={() => handleEnterViewport(0)}>
+						<CountScrollTrigger onEnter={() => handleEnterViewport(0)}>
 							{countersOn[0] && (
 								<CountUp
 									start={0}
@@ -120,12 +127,12 @@ function AboutSection({ info }: any) {
 									className="font-medium text-sm-2xl md:text-2xl mb-24"
 								/>
 							)}
-						</ScrollTrigger>
+						</CountScrollTrigger>
 					</div>
 
 					<div className="bg-white sticky top-[33vh] z-[4] border-t border-dotted border-grey pt-3 pb-24 md:min-h-screen mx-[10px] md:mx-5">
 						<h4 className="pt-3 text-xs-medium">Master Builders Awards</h4>
-						<ScrollTrigger onEnter={() => handleEnterViewport(1)}>
+						<CountScrollTrigger onEnter={() => handleEnterViewport(1)}>
 							{countersOn[1] && (
 								<CountUp
 									start={0}
@@ -135,14 +142,14 @@ function AboutSection({ info }: any) {
 									className="font-medium text-sm-2xl md:text-2xl mb-24"
 								/>
 							)}
-						</ScrollTrigger>
+						</CountScrollTrigger>
 					</div>
 
 					<div
 						className={`relative z-[5] border-t border-dotted border-grey pt-3 pb-24  mx-[10px] md:mx-5 fade-in-section bg-white`}
 					>
 						<h4 className="pt-3 text-xs-medium">Houses Built</h4>
-						<ScrollTrigger onEnter={() => handleEnterViewport(2)}>
+						<CountScrollTrigger onEnter={() => handleEnterViewport(2)}>
 							{countersOn[2] && (
 								<CountUp
 									start={0}
@@ -153,7 +160,7 @@ function AboutSection({ info }: any) {
 									className="font-medium text-sm-2xl md:text-2xl mb-24"
 								/>
 							)}
-						</ScrollTrigger>
+						</CountScrollTrigger>
 						<div
 							className={`sticky top-0  py-32 md:mb-0 px-[10px] md:px-5 fade-in-section bg-white `}
 						>

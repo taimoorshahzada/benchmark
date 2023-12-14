@@ -78,7 +78,7 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
 	}, [processes]);
 
 	return (
-		<div className="md:flex relative">
+		<div className="md:flex relative ">
 			<div className="md:hidden custom-full-height pt-[150px] bg-black text-white">
 				<h1 className="font-medium text-sm-xl md:text-xl mb-[90px] px-[10px] md:px-5 mt-0 md:mt-6">
 					Our <br /> Process
@@ -86,7 +86,7 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
 			</div>
 			<div className="sticky md:relative top-0 md:w-1/2 bg-black">
 				<div className="md:sticky top-0 h-[115px] md:h-screen bg-black w-full">
-					<div className="relative z-[20] h-full flex flex-row md:flex-col items-end md:items-start md:justify-end pl-3 pb-5 md:pb-10">
+					<div className="relative z-[20] h-full flex flex-row md:flex-col items-end md:items-start md:justify-end pl-3 pb-5 md:pb-[100px]">
 						<h1
 							className="font-medium text-white text-sm md:text-xl md:mb-medium md:absolute md:top-[40%] me-5 md:me-0"
 							id="process-title-index"
@@ -148,7 +148,7 @@ export default function ProcessesList({ processes, walkthroughs }: any) {
 						</div>
 					</div>
 				))}
-				<div className="pt-large grid md:grid-cols-2 gap-x-[2px] text-xs—medium bg-black text-white px-5 md:px-0">
+				<div className="pt-large grid md:grid-cols-2 gap-x-[2px] text-xs—medium bg-black text-white px-5 md:px-0 md:pb-[44px]">
 					<div className="mb-5 md:px-5 font-medium">Virtual Walkthroughs</div>
 					{walkthroughs.props.walkthroughs.map(
 						(walkthrough: any, index: number) => (

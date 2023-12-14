@@ -55,7 +55,7 @@ export default function AdjacentProjects({ projects, id }: any) {
 
 					<Link
 						href={`/project/${prevProject._id}`}
-						className="w-fit bg-[#F5F5F5] rounded-[5px] flex text-xs p-3 cursor-pointer hover:opacity-50"
+						className="w-fit bg-[#F5F5F5] rounded-[5px] flex text-xxs p-[10px] cursor-pointer hover:opacity-50"
 					>
 						View Project
 						<div className="ml-[50px] flex items-center">
@@ -96,8 +96,8 @@ export default function AdjacentProjects({ projects, id }: any) {
 					/>
 
 					<Link
-						href={`/project/${prevProject._id}`}
-						className="w-fit bg-[#F5F5F5] rounded-[5px] flex text-xs p-3 cursor-pointer hover:opacity-50"
+						href={`/project/${nextProject._id}`}
+						className="w-fit bg-[#F5F5F5] rounded-[5px] flex text-xxs p-[10px] cursor-pointer hover:opacity-50"
 					>
 						View Project
 						<div className="ml-[50px] flex items-center">

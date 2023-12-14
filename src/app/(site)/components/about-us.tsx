@@ -1,12 +1,12 @@
 import Image from "next/image";
-import Photo from "../assets/images/Home-Benchmark-Homes-1000-x-1000-High-Res-560x400.jpg";
+import Photo from "../assets/images/35ac116a8b1e821cb1bf3bd1e004e6a4-cover-large.jpg";
 import CountUp from "react-countup";
 
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
+	Accordion,
+	AccordionContent,
+	AccordionItem,
+	AccordionTrigger,
 } from "../components/ui/accordion";
 import { useEffect, useRef, useState } from "react";
 import ScrollTrigger from "react-scroll-trigger";
@@ -15,39 +15,39 @@ import ReviewCards from "./reviewcards";
 import AboutAccordions from "./about-accordions";
 
 function AboutSection() {
-  const [countersOn, setCountersOn] = useState([false, false, false]);
+	const [countersOn, setCountersOn] = useState([false, false, false]);
 
-  const handleEnterViewport = (index: any) => {
-    setCountersOn((prev) => {
-      const newState = [...prev];
-      newState[index] = true;
-      return newState;
-    });
-  };
+	const handleEnterViewport = (index: any) => {
+		setCountersOn((prev) => {
+			const newState = [...prev];
+			newState[index] = true;
+			return newState;
+		});
+	};
 
-  const [isInView, setIsInView] = useState(false);
-  const sectionRef = useRef(null);
+	const [isInView, setIsInView] = useState(false);
+	const sectionRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsInView(entry.isIntersecting);
-      },
-      { threshold: 0.15 }
-    );
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				setIsInView(entry.isIntersecting);
+			},
+			{ threshold: 0.15 }
+		);
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+		if (sectionRef.current) {
+			observer.observe(sectionRef.current);
+		}
 
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
+		return () => {
+			if (sectionRef.current) {
+				observer.unobserve(sectionRef.current);
+			}
+		};
+	}, []);
 
-  return (
+	return (
 		<section className={`col-span-12 fade-in-section mt-[300px] `}>
 			<div className="grid grid-cols-2 min-h-screen relative">
 				<div className={`row-span-4 col-span-2 md:col-span-1`}>
@@ -150,9 +150,7 @@ function AboutSection() {
 				<div
 					className={`bg-black text-white h-screen flex flex-col justify-end z-[5] pl-3 pb-10 col-span-2 md:col-span-1 md:row-start-6 border-r border-grey border-dotted md:sticky top-0 row-span-6 `}
 				>
-					<p className="absolute top-5 left-1/2 -translate-x-1/2">
-						Our Process
-					</p>
+					<p className="absolute top-5 left-5">Our Process</p>
 					<h1 className="font-medium text-sm-xl md:text-xl mb-medium">01</h1>
 					<h1 className="font-medium text-sm-xl md:text-xl text-wrap">
 						Meeting/
@@ -187,7 +185,7 @@ function AboutSection() {
 					</p>
 					<div className="bg-black md:sticky top-0">
 						<Image
-							className="aspect-[3/2] object-cover"
+							className=" object-cover"
 							src={Photo}
 							alt="Richard and Sam"
 							width={2000}
@@ -195,7 +193,8 @@ function AboutSection() {
 						/>
 					</div>
 				</div>
-				<div className="bg-black z-[6] md:row-start-6 md:col-start-2 h-screen w-[100vw] md:w-full flex justify-center items-center sticky top-0 row-span-6 ">
+				<div className="bg-black relative z-[6] md:row-start-6 md:col-start-2 h-screen w-[100vw] md:w-full flex justify-center items-center top-0 row-span-6 ">
+					<p className="absolute left-5 top-5 text-white">Reviews</p>
 					<ReviewCards />
 				</div>
 			</div>

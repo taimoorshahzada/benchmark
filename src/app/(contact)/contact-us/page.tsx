@@ -4,11 +4,11 @@ import Header from "@/app/(site)/components/header";
 import SocialIcons from "@/app/(site)/components/social-icons";
 import Link from "next/link";
 import React from "react";
-import ContactImage from "../assets/images/Projects-Marshall-81500-x-1000-High-Res.jpg";
+import ContactImage from "../../(site)/assets/images/Projects-Marshall-81500-x-1000-High-Res.jpg";
 import Image from "next/image";
 
 function Contact() {
-  return (
+	return (
 		<section className="md:h-screen bg-white">
 			<div>
 				<div className="grid md:grid-cols-2">

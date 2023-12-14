@@ -82,3 +82,50 @@ html {
   aspect-ratio: 16/9;
   object-fit: cover;
 }
+
+.test {
+  height: 200vh;
+  background: olive;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  padding: 5rem;
+}
+.swipe-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: visible;
+}
+
+.swipe-section .panel {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-align: center;
+  color: white;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.vh-200 {
+  height: 500vh !important;
+}
+
+.red {
+  background-color: red;
+}
+.purple {
+  background-color: purple;
+}
+.blue {
+  background-color: blue;
+}
+.orange {
+  background-color: orange;
+}

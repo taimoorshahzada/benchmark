@@ -27,14 +27,12 @@ export default function UpcomingProjectsList({ projects }: any) {
 		if (footer) {
 			footer.style.display = "none";
 		}
-		if (lightbox) {
-			lightbox.classList.remove("invisible");
-			lightbox.classList.remove("opacity-0");
+		lightbox?.classList.remove("invisible");
+		lightbox?.classList.remove("opacity-0");
+		setTimeout(() => {
+			image?.classList.remove("opacity-0");
+		}, 250);
 
-			setTimeout(() => {
-				image?.classList.remove("opacity-0");
-			}, 250);
-		}
 		if (header) {
 			header.style.display = "none";
 		}
@@ -46,16 +44,16 @@ export default function UpcomingProjectsList({ projects }: any) {
 		const header = document.getElementById("header");
 		const lightbox = document.getElementById("project-lightbox");
 		const image = document.getElementById("image");
+
 		if (footer) {
 			footer.style.display = "block";
 		}
-		if (lightbox) {
-			lightbox.classList.add("opacity-0");
-			setTimeout(() => {
-				lightbox.classList.add("invisible");
-				image?.classList.add("opacity-0");
-			}, 250);
-		}
+		lightbox?.classList.add("opacity-0");
+		setTimeout(() => {
+			lightbox?.classList.add("invisible");
+			image?.classList.add("opacity-0");
+		}, 250);
+
 		if (header) {
 			header.style.display = "block";
 		}
@@ -168,10 +166,12 @@ export default function UpcomingProjectsList({ projects }: any) {
 						width={1000}
 						height={1000}
 					/>
+
 					<Image
 						alt=""
 						src={upcomingProject.hero_image.imageUrl}
-						className="cursor-pointer upcoming-project col-span-6 md:col-start-7"
+						className="cursor-pointer upcoming-project col-span-6 md:col-start-7
+						"
 						width={1000}
 						height={1000}
 					/>

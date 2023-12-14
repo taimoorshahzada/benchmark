@@ -11,22 +11,14 @@ import Container from "./components/container";
 import Project from "./components/project";
 import AboutSection from "./components/about-us";
 import LatestProjects from "./components/latestProjects";
+import Horizontal from "./components/horizontal-scroll";
+import AboutPinned from "./components/about-pinned";
 
-
-gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
 	return (
 		<>
-			<Container>
+			{/* <Container>
 				<h1 className="font-medium text-sm-3xl lg:text-2xl xl:text-3xl col-span-12 md:col-span-11 m-translate-x-[10px] md:-translate-x-5 mb-large mt-24 md:mt-3 -translate-y-3 ">
-					{/* <Image
-						className="md:pl-5"
-						src={Benchmark}
-						alt="Benchmark Homes"
-						width={3000}
-						height={1000}
-						priority
-					/> */}
 					Benchmark <br />
 					Homes
 				</h1>
@@ -53,9 +45,9 @@ export default function Home() {
 					this. Working with you to turn your wants and needs into a tangible
 					reality is what inspires and drives us to do what we do.
 				</p>
-			</Container>
-
-			<LatestProjects />
+			</Container> */}
+{/* 
+			<LatestProjects /> */}
 
 			<AboutSection />
 		</>

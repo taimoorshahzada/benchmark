@@ -18,8 +18,8 @@ export default async function OurProcess() {
 					walkthroughs={walkthroughs}
 				/>
 			</div>
-			<div className="ml-auto md:w-1/2 grid grid-cols-2 gap-[10px] md:gap-[15px] text-xxs p-5  items-end">
-				<p className="text-sm-xl md:text-xl w-full col-span-2 mb-48 md:mt-[33vh]">
+			<div className="ml-auto md:w-1/2 grid grid-cols-2 gap-[10px] md:gap-[15px] text-xxs p-5  items-end ">
+				<p className="text-sm-xl md:text-xl w-full col-span-2 mb-48 md:mt-[20vh]">
 					Get In Touch
 				</p>
 				<ContactForm />
