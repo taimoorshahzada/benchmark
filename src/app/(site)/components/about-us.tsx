@@ -51,6 +51,7 @@ function AboutSection() {
 				scrub: 1,
 				anticipatePin: 1,
 				pinSpacing: true,
+				markers: true,
 			},
 		});
 
@@ -63,6 +64,7 @@ function AboutSection() {
 				scrub: 1,
 				anticipatePin: 1,
 				pinSpacing: true,
+				markers: true,
 			},
 		});
 
