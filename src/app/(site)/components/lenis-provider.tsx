@@ -12,22 +12,22 @@ interface ChildrenProps {
 
 function LenisScroll({ children }: ChildrenProps) {
 	useEffect(() => {
-		// const lenis = new Lenis();
-		// gsap.registerPlugin(ScrollTrigger);
-		// function raf(time: any) {
-		// 	lenis.raf(time);
-		// 	requestAnimationFrame(raf);
-		// }
+		const lenis = new Lenis();
+		gsap.registerPlugin(ScrollTrigger);
+		function raf(time: any) {
+			lenis.raf(time);
+			requestAnimationFrame(raf);
+		}
 
-		// lenis.on("scroll", ScrollTrigger.update);
+		lenis.on("scroll", ScrollTrigger.update);
 
-		// gsap.ticker.add((time) => {
-		// 	lenis.raf(time * 1000);
-		// });
+		gsap.ticker.add((time) => {
+			lenis.raf(time * 1000);
+		});
 
-		// gsap.ticker.lagSmoothing(0);
+		gsap.ticker.lagSmoothing(0);
 
-		// requestAnimationFrame(raf);
+		requestAnimationFrame(raf);
 	}, []);
 	return <div>{children}</div>;
 }
