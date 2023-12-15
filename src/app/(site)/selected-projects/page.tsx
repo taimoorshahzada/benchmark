@@ -1,12 +1,17 @@
+"use client"
+
 import Image from "next/image";
 import { SelectedProject } from "../../../../types/SelectedProject";
 import Link from "next/link";
 import { getProjects } from "../../../../sanity/sanity-utils";
+import LenisScroll from "../components/lenis-provider";
 
 export default async function SelectedProjects() {
 	const selectedProjectsSections = await getProjects();
 
 	return (
+		<>
+		<LenisScroll>
 		<div className="pt-6 bg-white pb-5 grid">
 			<h1 className="mx-[10px] font-medium text-sm-3xl md:text-3xl my-24 md:mt-0 md:mb-large">
 				Selected <br /> Projects
@@ -151,5 +156,7 @@ export default async function SelectedProjects() {
 				)}
 			</div>
 		</div>
+		</LenisScroll>
+		</>
 	);
 }

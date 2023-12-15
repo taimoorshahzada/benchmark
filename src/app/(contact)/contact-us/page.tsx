@@ -6,9 +6,12 @@ import Link from "next/link";
 import React from "react";
 import ContactImage from "../../(site)/assets/images/Projects-Marshall-81500-x-1000-High-Res.jpg";
 import Image from "next/image";
+import LenisScroll from "@/app/(site)/components/lenis-provider";
 
 function Contact() {
 	return (
+		<>
+		<LenisScroll>
 		<section className="md:h-screen bg-white">
 			<div>
 				<div className="grid md:grid-cols-2">
@@ -120,6 +123,8 @@ function Contact() {
 				</div>
 			</div>
 		</section>
+		</LenisScroll>
+		</>
 	);
 }
 export default Contact;

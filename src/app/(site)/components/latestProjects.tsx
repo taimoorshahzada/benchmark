@@ -29,17 +29,15 @@ function LatestProjects() {
 					trigger: triggerRef.current,
 					start: "top top",
 					end: "2000 top",
-					scrub: 0.1,
-					// snap: {
-					// 	snapTo: 0.333333,
-					// 	duration: 1,
-					// 	delay: 0.1,
-					// 	ease: "power3.inOut",
-					// },
+					scrub: 1,
+					snap: {
+						snapTo: 0.333333,
+						duration: 1,
+						ease: "power1.inOut",
+					},
 					pin: true,
 					onUpdate: (self) => {
 						let currentTranslation = self.progress * 300;
-
 						const project2 = document.querySelector(".project-2");
 						const project3 = document.querySelector(".project-3");
 						const project4 = document.querySelector(".project-4");

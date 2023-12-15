@@ -13,7 +13,8 @@ import {
 import { useEffect, useRef, useState } from "react";
 import AboutAccordions from "./about-accordions";
 import AboutTeam from "./about-team";
-
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 function AboutSection({ info }: any) {
 	const [countersOn, setCountersOn] = useState([false, false, false]);
@@ -21,7 +22,7 @@ function AboutSection({ info }: any) {
 	const [isInView, setIsInView] = useState(false);
 	const sectionRef = useRef(null);
 
-	
+	gsap.registerPlugin(ScrollTrigger);
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(
@@ -36,10 +37,36 @@ function AboutSection({ info }: any) {
 			observer.observe(sectionRef.current);
 		}
 
+		const experience = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".numbers",
+				pin: true,
+				start: "top-=100 top",
+				end: "bottom+=620 top",
+				scrub: 1,
+				anticipatePin: 1,
+				pinSpacing: true,
+			},
+		});
+
+		const awards = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".awards",
+				pin: true,
+				start: "top-=400 top",
+				end: "bottom-=675 top",
+				scrub: 1,
+				anticipatePin: 1,
+				pinSpacing: true,
+			},
+		});
 		return () => {
 			if (sectionRef.current) {
 				observer.unobserve(sectionRef.current);
 			}
+
+			awards.kill();
+			experience.kill();
 		};
 	}, []);
 
@@ -50,8 +77,6 @@ function AboutSection({ info }: any) {
 			return newState;
 		});
 	};
-
-	
 
 	return (
 		<section className={`col-span-12`}>
@@ -115,7 +140,9 @@ function AboutSection({ info }: any) {
 						className="block md:hidden mb-20 md:mb-32"
 					/>
 
-					<div className="years bg-white sticky top-0 md:top-[0] z-[3] border-t border-dotted border-grey pt-3 pb-24 md:h-screen mx-[10px] md:mx-5">
+					<div
+						className={`numbers md:h-screen bg-white z-[2] border-t md:border-b border-dotted border-grey pt-3 pb-32 md:pb-24 mx-[10px] md:mx-5 col-span-2  md:col-span-1 mt-12`}
+					>
 						<h4 className="pt-3 text-xs-medium">Years of Experience</h4>
 						<CountScrollTrigger onEnter={() => handleEnterViewport(0)}>
 							{countersOn[0] && (
@@ -130,7 +157,9 @@ function AboutSection({ info }: any) {
 						</CountScrollTrigger>
 					</div>
 
-					<div className="bg-white sticky top-[33vh] z-[4] border-t border-dotted border-grey pt-3 pb-24 md:min-h-screen mx-[10px] md:mx-5">
+					<div className={`awards md:h-screen z-[3] relative bg-white border-t border-dotted border-grey pt-3 pb-32 md:pb-24 mx-[10px] md:mx-5 col-span-2 md:col-span-1 ${
+							isInView ? "" : ""
+						} `}>
 						<h4 className="pt-3 text-xs-medium">Master Builders Awards</h4>
 						<CountScrollTrigger onEnter={() => handleEnterViewport(1)}>
 							{countersOn[1] && (

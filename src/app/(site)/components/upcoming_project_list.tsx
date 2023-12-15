@@ -66,6 +66,7 @@ export default function UpcomingProjectsList({ projects }: any) {
 	}, []);
 
 	return (
+		
 		<div className="col-span-12">
 			{project ? (
 				<div

@@ -1,19 +1,22 @@
-/* components/lenis-provider.tsx */
-"use client";
-import { Lenis as ReactLenis } from "@studio-freight/react-lenis";
-import * as React from "react";
+import React, { useEffect } from "react";
+import Lenis from "@studio-freight/lenis";
 
-export function LenisProvider({
-	children,
-	options,
-	...props
-}: {
-	children: React.ReactNode;
-	options?: any;
-}) {
-	return (
-		<ReactLenis root {...props}>
-			{children}
-		</ReactLenis>
-	);
+interface ChildrenProps {
+    children: any;
+  }
+
+function LenisScroll({ children }: ChildrenProps) {
+	useEffect(() => {
+		const lenis = new Lenis();
+
+		function raf(time: any) {
+			lenis.raf(time);
+			requestAnimationFrame(raf);
+		}
+
+		requestAnimationFrame(raf);
+	}, []);
+	return <div>{children}</div>;
 }
+
+export default LenisScroll;
