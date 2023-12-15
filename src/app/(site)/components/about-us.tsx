@@ -51,7 +51,7 @@ function AboutSection() {
 				scrub: 1,
 				anticipatePin: 1,
 				pinSpacing: true,
-				markers: true,
+				// markers: true,
 			},
 		});
 
@@ -64,7 +64,7 @@ function AboutSection() {
 				scrub: 1,
 				anticipatePin: 1,
 				pinSpacing: true,
-				markers: true,
+				// markers: true,
 			},
 		});
 
@@ -210,7 +210,7 @@ function AboutSection() {
 					<p className="block md:hidden text-black text-xs-medium  md:py-5 p-[10px]">
 						About Us
 					</p>
-					<div className="bg-black md:sticky top-0">
+					<div className="bg-black md:sticky top-0 z-[6]">
 						<Image
 							className=" object-cover"
 							src={Photo}
