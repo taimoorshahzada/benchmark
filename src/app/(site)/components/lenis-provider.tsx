@@ -1,9 +1,11 @@
+"use client";
+
 import React, { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
 
 interface ChildrenProps {
-    children: any;
-  }
+	children: any;
+}
 
 function LenisScroll({ children }: ChildrenProps) {
 	useEffect(() => {
