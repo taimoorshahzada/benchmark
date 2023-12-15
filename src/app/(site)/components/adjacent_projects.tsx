@@ -37,8 +37,8 @@ export default function AdjacentProjects({ projects, id }: any) {
 	return (
 		<div className="col-span-12 grid grid-cols-12 gap-x-5 border-grey border-dashed border-t border-1 text-xs-medium mb-[200px]">
 			{project._id != prevProject._id ? (
-				<div className="col-span-3 flex flex-col mt-[10px]">
-					<div className="flex justify-between w-full mb-9">
+				<div className="col-span-6 md:col-span-3 flex flex-col mt-[10px]">
+					<div className="flex justify-between w-full mb-9 text-xxs md:text-xs">
 						<div>Previous Project</div>
 						<div>{prevProject.title}</div>
 					</div>
@@ -79,8 +79,8 @@ export default function AdjacentProjects({ projects, id }: any) {
 				""
 			)}
 			{project._id != prevProject._id ? (
-				<div className="col-span-3 col-start-10 flex flex-col mt-[10px]">
-					<div className="flex justify-between w-full mb-9">
+				<div className="col-span-6 col-start-7 md:col-span-3  md:col-start-10 flex flex-col mt-[10px]">
+					<div className="flex justify-between w-full mb-9 text-xxs md:text-xs">
 						<div>Next Project</div>
 						<div>{nextProject.title}</div>
 					</div>

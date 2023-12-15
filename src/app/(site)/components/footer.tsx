@@ -72,7 +72,7 @@ export default function Footer() {
 				<a
 					target="_blank"
 					href="https://buildertrend.net/"
-					className="pl-[10px] md:ml-0 col-span-2 row-start-3 w-fit bg-[#F5F5F5] rounded-[5px]  text-xxs p-3 mb-[80px] cursor-pointer hover:opacity-50 flex items-center"
+					className="mx-[10px] h-[50px] px-[10px] md:ml-0 col-span-2 row-start-3 w-fit bg-[#F5F5F5] rounded-[5px]  text-xxs p-3 mb-[80px]  hover:opacity-50 flex items-center"
 				>
 					<span>Login</span>
 					<div className="ml-[50px] flex items-center">

@@ -61,6 +61,8 @@ function AboutSection({ info }: any) {
 				pinSpacing: true,
 			},
 		});
+
+
 		return () => {
 			if (sectionRef.current) {
 				observer.unobserve(sectionRef.current);

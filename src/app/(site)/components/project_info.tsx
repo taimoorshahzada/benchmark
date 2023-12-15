@@ -24,7 +24,7 @@ export default function ProjectInfo({ projects, id }: any) {
   const project: Project = projects.find((project: any) => project._id === id);
   return (
 		<div className="col-span-12 grid grid-cols-12 gap-x-5 bg-white">
-			<div className="mt-[10px]">{project.title}</div>
+			<div className="absolute mt-[10px]">{project.title}</div>
 			<div className="md:col-start-5 col-span-7 md:col-span-2 mt-[10px] font-medium text-xxs md:text-xs mb-5 md:mb-0">
 				Points of interest:
 			</div>

@@ -14,7 +14,7 @@ export default async function Project({ params }: { params: { id: string } }) {
 	return (
 		<>
 			<LenisScroll>
-				<div className="grid grid-cols-12 gap-x-5 text-xs px-[10px] md:px-5 w-full mt-[10px] bg-white mb-5">
+				<div className="grid grid-cols-12 gap-x-5 text-xs px-[10px] md:px-5 w-full pt-[10px] bg-white mb-5">
 					<ProjectInfo projects={projects.props.projects} id={params.id} />
 					<ProjectImages projects={projects.props.projects} id={params.id} />
 

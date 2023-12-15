@@ -29,6 +29,8 @@ function AboutSection() {
 	const [isInView, setIsInView] = useState(false);
 	const sectionRef = useRef(null);
 
+	let mm = gsap.matchMedia();
+
 	useEffect(() => {
 		gsap.registerPlugin(ScrollTrigger);
 		const observer = new IntersectionObserver(
@@ -68,12 +70,26 @@ function AboutSection() {
 			},
 		});
 
+		const process = gsap.timeline({
+			scrollTrigger: {
+				trigger: ".process",
+				pin: true,
+				start: "top top",
+				end: "bottom top",
+				scrub: 1,
+				anticipatePin: 1,
+				pinSpacing: true,
+				// markers: true,
+			},
+		});
+
 		return () => {
 			if (sectionRef.current) {
 				observer.unobserve(sectionRef.current);
 			}
 			awards.kill();
 			experience.kill();
+			process.kill();
 		};
 	}, []);
 
@@ -175,15 +191,18 @@ function AboutSection() {
 				</div>
 
 				<div
-					className={`bg-black text-white h-screen flex flex-col justify-end z-[5] pl-3 pb-10 col-span-2 md:col-span-1 md:row-start-6 border-r border-grey border-dotted md:sticky top-0 row-span-6 `}
+					className={`process bg-black text-white h-screen flex flex-col justify-end z-[5] pl-3 pb-10 col-span-2 md:col-span-1 md:row-start-6 border-r border-grey border-dotted md:sticky top-0 row-span-6 `}
 				>
 					<p className="absolute top-5 left-5">Our Process</p>
-					<h1 className="font-medium text-sm-xl md:text-xl mb-medium">01</h1>
-					<h1 className="font-medium text-sm-xl md:text-xl text-wrap">
-						Meeting/
-						<br />
-						Design
-					</h1>
+					<div className="process">
+						<h1 className="font-medium text-sm-xl md:text-xl mb-medium">01</h1>
+						<h1 className="font-medium text-sm-xl md:text-xl text-wrap">
+							Meeting/
+							<br />
+							Design
+						</h1>
+					</div>
+
 					<Link
 						href="/about-us"
 						className="mt-[60px] w-fit bg-[#F5F5F5] rounded-[5px] flex text-xxs p-[10px] cursor-pointer hover:opacity-50 col-span-6 text-black"
