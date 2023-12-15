@@ -13,7 +13,7 @@ import Link from "next/link";
 import ReviewCards from "./reviewcards";
 import AboutAccordions from "./about-accordions";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function AboutSection() {
 	const [countersOn, setCountersOn] = useState([false, false, false]);

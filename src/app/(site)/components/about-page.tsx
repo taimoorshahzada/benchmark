@@ -14,7 +14,7 @@ import { useEffect, useRef, useState } from "react";
 import AboutAccordions from "./about-accordions";
 import AboutTeam from "./about-team";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function AboutSection({ info }: any) {
 	const [countersOn, setCountersOn] = useState([false, false, false]);
