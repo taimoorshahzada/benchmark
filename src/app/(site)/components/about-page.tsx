@@ -22,9 +22,10 @@ function AboutSection({ info }: any) {
 	const [isInView, setIsInView] = useState(false);
 	const sectionRef = useRef(null);
 
-	gsap.registerPlugin(ScrollTrigger);
-
+	
 	useEffect(() => {
+		gsap.registerPlugin(ScrollTrigger);
+
 		const observer = new IntersectionObserver(
 			([entry]) => {
 				console.log(entry.isIntersecting);
